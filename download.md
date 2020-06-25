@@ -3,15 +3,19 @@
 
 ## Registration
 
-In order to be able to browse/download data, you will need to register by
-following this link . On the dHCP data login page, select ‘Register’ and
-fill out the mandatory fields . You will receive a verification email. After
-you verify your email address, you will be able to login to sign an agreement
-and access the public face of the dHCP database (db). This includes browsing
-(although not downloading) available Projects (data sets).  
+In order to be able to browse/download data,
+you will need to register by following [this
+link](https://data.developingconnectome.org/app/template/Login.vm). On
+the dHCP data login page, select ‘Register’ and fill out the mandatory
+fields. You will receive a verification email. After you verify your email
+address, you will be able to login to sign an agreement and access the
+public face of the dHCP database (db). This includes browsing (although
+not downloading) available Projects (data sets).
 
-If you experience any technical issues, please submit your query here.
-Data review and download
+If you experience any technical issues, please [submit your query
+here](https://neurostars.org/t/dhcp-infant-data-downloading-issue/2500).
+
+## Data review and download
 
 In order to unlock download options for available Projects (data sets),
 you will have to sign user terms. Open any Project and hit ‘Sign user
@@ -21,20 +25,22 @@ will be provided two download options.
 
 ## Academic Torrent download (recommended)
 
-Since data sets are fairly large (expect ~500GB) this is a fail-safe
-way to get hold of desired releases. A separate document provides more
-detailed instructions. Be sure to have a Torrent client such as BitTorrent
-installed on your computer. Clicking on the ‘Download Data Set (Torrent)’
-button will provide you with a .torrent file a few kB in size. Opening this
-.torrent file in your Torrent client will give you the option to select among
-subsets of the selected release. Once confirmed, your torrent client will
-automatically start the download from multiple peers. You can pause/stop the
-download at any time. By downloading parts of the bundle you automatically
-become a peer for the selected .torrent file, which increases bandwidth for
-other peers. You are encouraged to at least upload the same amount of data
-that you downloaded (a download/upload ratio of 1.0 in the Torrent client),
-however this is not a must. Caveat: Your system administrator / institution
-might block (or be unhappy with) peer-to-peer traffic for various reasons.
+Since data sets are fairly large (expect ~500GB) this is
+a fail-safe way to get hold of desired releases. A [separate
+document](https://drive.google.com/file/d/1llcifaLWicGZ-DxVWCpyhBqJfEwToWb_/view)
+provides more detailed instructions. Be sure to have a Torrent client such as
+[BitTorrent](https://www.bittorrent.com/) installed on your computer. Clicking
+on the ‘Download Data Set (Torrent)’ button will provide you with a
+`.torrent` file a few kB in size. Opening this .torrent file in your Torrent
+client will give you the option to select among subsets of the selected
+release. Once confirmed, your torrent client will automatically start the
+download from multiple peers. You can pause/stop the download at any time. By
+downloading parts of the bundle you automatically become a peer for the
+selected .torrent file, which increases bandwidth for other peers. You are
+encouraged to at least upload the same amount of data that you downloaded
+(a download/upload ratio of 1.0 in the Torrent client), however this is
+not a must. Caveat: Your system administrator / institution might block
+(or be unhappy with) peer-to-peer traffic for various reasons.
 
 Once you start downloading the dataset, you will notice that your torrent
 client mentions a sharing / seeding ratio. It means that as soon as you
