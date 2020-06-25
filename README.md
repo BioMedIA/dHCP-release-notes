@@ -1,3 +1,9 @@
+## This site
+
+Go here to view this site:
+
+  https://biomedia.github.io/dHCP-release-notes/
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/BioMedIA/dHCP-release-notes/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
