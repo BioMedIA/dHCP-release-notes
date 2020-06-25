@@ -191,7 +191,7 @@ Human Connectome Project** *NeuroImage (2018), 185: 750-763.* [DOI:
 
 The pipeline can be downloaded from: 
 
-    https://git.fmrib.ox.ac.uk/matteob/dHCP_neo_dMRI_pipeline_release
+https://git.fmrib.ox.ac.uk/matteob/dHCP_neo_dMRI_pipeline_release
 
 **Diffusion imaging distortion correction and quality control:** Techniques
 described in the following references were applied to all dHCP open access

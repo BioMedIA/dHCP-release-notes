@@ -1,7 +1,7 @@
 ---
 ---
 
-## Registration
+## Download
 
 In order to be able to browse/download data,
 you will need to register by following [this
