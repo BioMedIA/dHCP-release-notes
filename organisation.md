@@ -87,16 +87,17 @@ perinatal neuroradiologist who scored the subjects using a 5 point scale
 
 Imaging was carried out on 3T Philips Achieva (running modified R3.2.2
 software) using a dedicated neonatal imaging system which included a neonatal
-32 channel phased array head coil<sup>1</sup>. Infants were imaged without sedation
-except for 6 who are indicated. Anatomical images (T1w and T2w), resting
-state functional (rs-fMRI) and diffusion (dMRI) acquisitions were acquired in
-a total examination time of 63 minutes. Sequence parameters were as follows:
+32 channel phased array head coil<sup>1</sup>. Infants were imaged without
+sedation except for 6 who are indicated. Anatomical images (T1w and T2w),
+resting state functional (rs-fMRI) and diffusion (dMRI) acquisitions were
+acquired in a total examination time of 63 minutes. Sequence parameters
+were as follows:
 
 **Calibration scans:** B0 mapping was performed using an interleaved dual TE
 spoiled gradient echo sequence and localised image based shimming performed
-for use with all EPI sequences as described in<sup>2</sup>. B0 field maps using the
-optimised higher order shims were subsequently re-acquired between the fMRI
-and dMRI acquisitions.
+for use with all EPI sequences as described in<sup>2</sup>. B0 field maps
+using the optimised higher order shims were subsequently re-acquired between
+the fMRI and dMRI acquisitions.
 
 **Anatomical acquisition:** T2w and inversion recovery T1w multi-slice fast
 spin-echo images were each acquired in sagittal and axial slice stacks with
@@ -105,23 +106,23 @@ in T1w Sagittal which used a slice overlap of 0.74mm). Other parameters were
 – T2w: 12000/156ms TR/TE, SENSE factor 2.11 (axial) and 2.60 (sagittal);
 T1w: 4795/1740/8.7ms TR/TI/TE, SENSE factor 2.27 (axial) and 2.66 (sagittal).
 
-**rs-fMRI:** High temporal resolution fMRI developed for neonates<sup>3</sup> used
-multiband (MB) 9x accelerated echo-planar imaging and was collected for
+**rs-fMRI:** High temporal resolution fMRI developed for neonates<sup>3</sup>
+used multiband (MB) 9x accelerated echo-planar imaging and was collected for
 15 minutes, TE/TR=38/392ms gave 2300 volumes, with an acquired resolution
 of 2.15mm isotropic. No in-plane acceleration or partial Fourier was
 used. Single-band reference scans were also acquired with bandwidth matched
 readout, along with additional spin-echo acquisitions with both AP/PA
 fold-over encoding directions.
 
-**dMRI:** A spherically optimized set of directions on 4 shells (b0: 20,
-b400: 64, b1000: 88, b2600: 128)<sup>4</sup> was split into 4 optimal subsets (one
-per Phase Encoding Direction). These directions were then spread temporally
-taking motion and duty cycle considerations into account. If the baby woke
-up during the diffusion scan, the acquisition could be halted and restarted
-(after resettling the subject) with a user defined overlap in acquired
-diffusion weightings<sup>5</sup>. Acceleration of MB 4, SENSE factor 1.2 and Partial
-Fourier 0.86 was used, acquired resolution 1.5x1.5mm, 3mm slices with 1.5mm
-overlap, 3800/90ms TR/TE.
+**dMRI:** A spherically optimized set of directions on 4 shells (b0:
+20, b400: 64, b1000: 88, b2600: 128)<sup>4</sup> was split into 4 optimal
+subsets (one per Phase Encoding Direction). These directions were then spread
+temporally taking motion and duty cycle considerations into account. If the
+baby woke up during the diffusion scan, the acquisition could be halted
+and restarted (after resettling the subject) with a user defined overlap
+in acquired diffusion weightings<sup>5</sup>. Acceleration of MB 4, SENSE
+factor 1.2 and Partial Fourier 0.86 was used, acquired resolution 1.5x1.5mm,
+3mm slices with 1.5mm overlap, 3800/90ms TR/TE.
 
 ### References
 
@@ -198,72 +199,222 @@ The inclusion criteria for dMRI data is:
 3. Must PASS structural pipeline QC
 4. Must PASS dMRI pipeline QC
 
-Pipelines
+## Pipelines
 
-Reconstruction pipeline
+### Reconstruction pipeline
 
 The reconstruction pipeline was developed by the team at King’s College
 London. It performs motion correction and reconstruction of T1 and T2
 weighted images.
 
 The reconstruction pipeline performs motion corrected volumetric
-reconstructions of multi-slice T1 and T2 weighted images extending the aligned
-sensitivity encoding (SENSE) method1 to the multi-slice case2. Corrections
-are performed for both within-plane and through-plane motion from
-partial k-space information. Methods and example data are available at
-https://github.com/mriphysics/multiSliceAlignedSENSE/releases/tag/1.0.1.
+reconstructions of multi-slice T1 and T2 weighted images extending
+the aligned sensitivity encoding (SENSE) method<sup>1</sup>
+to the multi-slice case<sup>2</sup>. Corrections are performed
+for both within-plane and through-plane motion from partial
+k-space information. Methods and example data are available at
+https://github.com/mriphysics/multiSliceAlignedSENSE/releases/tag/1.0.1 .
 The two acquired orthogonal stacks are integrated by a super-resolution
-scheme3. fMRI and dMRI simultaneous multi-slice (SMS) echo planar imaging
-(EPI) is reconstructed using the extended SENSE technique4, with details
-in5,6,7; sensitivity estimates from a conventional reference scan are refined
-with the information from non-SMS reference acquisitions with matched
-readouts to promote matched coil map and image distortions. Sensitivity
-estimation uses a variational formulation8.
+scheme<sup>3</sup>. fMRI and dMRI simultaneous multi-slice (SMS) echo planar
+imaging (EPI) is reconstructed using the extended SENSE technique<sup>4</sup>,
+with details described elsewhere<sup>5,6,7</sup>; sensitivity estimates
+from a conventional reference scan are refined with the information from
+non-SMS reference acquisitions with matched readouts to promote matched
+coil map and image distortions. Sensitivity estimation uses a variational
+formulation<sup>8</sup>.
 
-References:
-Cordero-Grande, L., Teixeira. R. P. A. G., Hughes, E. J., Hutter, J., Price, A. N., and Hajnal, J. V. Sensitivity encoding for aligned multishot magnetic resonance reconstruction. IEEE Transactions on Computational Imaging (2016),  2(3): 266-280. DOI: 10.1109/TCI.2016.2557069
-Cordero-Grande, L., Hughes, E. J., Hutter, J., Hutter, J., Price, A. N., and Hajnal, J. V. Three-Dimensional Motion Corrected Sensitivity Encoding Reconstruction for Multi-Shot Multi-Slice MRI: Application to Neonatal Brain Imaging. Magnetic Resonance in Medicine 2018, 79(3): 1365-1376. DOI: 10.1002/mrm.26796
-Kuklikova-Murgasova, M., Quaghebeur, G., Rutherford, M. A., Hajnal, J. V., and Schnabel, J. A. Reconstruction of fetal brain MRI with intensity matching and complete outlier removal. Medical Image Analysis (2012), 16(8): 1550-1564. DOI: 10.1016/j.media.2012.07.004
-Zhu, K., Dougherty, R. F., Wu, H., Middione, M. J., Takahashi, A. M, Zhang, T., Pauly, J. M., Kerr, A. B. Hybrid-space SENSE reconstruction for simultaneous multi-slice MRI. IEEE Transactions on Medical Imaging, 35(8) (2016):1824-1836. DOI: 10.1109/TMI.2016.2531635
-Cordero-Grande, L., Price, A. N., and Hajnal, J. V. Comprehensive CG-SENSE reconstruction of SMS-EPI. ISMRM 2016: 3239.
-Cordero-Grande, L., Hutter, J., Price, A., Hughes, E., and Hajnal, J. V. Goodness of fit factor in SENSE reconstruction: a tool for pseudolesion detection and fat unfolding. ESMRMB 2016: 458.
-Hennel, F.,Buehrer, M., von Deuster, C., Seuven, A., and Pruessmann, K. P. SENSE reconstruction for multiband EPI including slice-dependent N/2 ghost correction. Magnetic Resonance in Medicine (2016), 76(3): 873-879. DOI: 10.1002/mrm.25915
-Allison, M. J., Ramani, S., and Fessler, J. A. Accelerated regularized estimation of MR coil sensitivities using augmented Lagrangian methods. IEEE Transactions on Medical Imaging (2013), 32(3): 556-564. DOI: 10.1109/TMI.2012.2229711
-Structural pipeline
-The structural pipeline (https://github.com/BioMedIA/dhcp-structural-pipeline) was encapsulated as a Docker container image and run via the OpenMOLE10 platform on a local cluster.
-Registration
-Segmentation
-Structural scans are pre-processed by first running bias correction using the N4 algorithm1.
-Scans are then brain extracted using BET2 from FSL. 
-Segmentation of the T2w volume is performed using the DRAW-EM algorithm3.  DRAW-EM is an atlas-based segmentation technique that segments the volumes into 87 regions (see region names). Manually labelled atlases, annotated by an expert neuroanatomist4, are registered to the volume and their labels are fused to the subject space to provide structure priors. Segmentation is then performed with an Expectation-Maximization scheme that combines the structure priors and an intensity model of the volume. The 87 regions are further merged to provide the tissue segmentation (see tissue types). 
-All T1 weighted images have been pre-aligned to the T2w volumes using rigid alignment.
-Both T1w and T2w volumes are defaced for anonymization based on registration and transformation of a manually annotated face mask.
-      III.   Surface extraction
-Surface mesh extraction is performed with the method described in5. A white matter mask enclosing the white surface is computed by merging the white matter and the subcortical structures with the exception of the brainstem and the cerebellum. Similarly, a pial mask is computed by merging the grey matter structure with the white matter mask. The white and pial surfaces of the left and right hemispheres are then reconstructed with the method outlined in5 using a deformable model. The model in5 includes forces to avoid self-intersections and includes an image-based refinement step that corrects regions such as deep sulci mislabelled by the volumetric segmentation.
-Midthickness surfaces are generated as the middle surface between the white and pial surfaces. The midthickness surface is computed using the Euclidean distance between corresponding points of the white and pial surface. 
-Spherical projection is performed6, and it is based on the inflated white matter surface. The inflated white matter surface is produced in a similar manner as in the FreeSurfer pipeline7. Inflated and very inflated surfaces used for visualisation are generated similarly to8. 
-The following metrics are further estimated from the surfaces: curvature, thickness, sulcal depth, T1w/T2w myelin, labels (projected from the volume). All surfaces have one-to-one vertex correspondence for all points on the surface ensuring that the same vertex indexes the same point, in the same relative position, on the anatomy for all surfaces.
-The structural pipeline is described in detail9.
+#### References
 
+1. Cordero-Grande, L., Teixeira. R. P. A. G., Hughes, E. J.,
+Hutter, J., Price, A. N., and Hajnal, J. V. **Sensitivity encoding
+for aligned multishot magnetic resonance reconstruction** *IEEE
+Transactions on Computational Imaging (2016),  2(3): 266-280.* [DOI:
+10.1109/TCI.2016.2557069](https://doi.org/10.1109/TCI.2016.2557069)
 
-References:
-Tustison, N. J., Avants, B. B., Cook, P. A., Zheng, Y., Egan, A., Yushkevich, P. A. and Gee, J. C.  N4ITK: improved N3 bias correction. IEEE transactions on medical imaging (2010), 29(6): 1310-1320. DOI: 10.1109/TMI.2010.2046908
-Smith, S. M.  Fast robust automated brain extraction. Human Brain Mapping (2002), 17(3): 143-55. DOI: 10.1002/hbm.10062
-Makropoulos, A., Gousias I. S., Ledig C., Aljabar P., Serag A, Hajnal J. V., Edwards A. D., Counsell S. J., and Rueckert D. Automatic whole brain MRI segmentation of the developing neonatal brain. IEEE transactions on medical imaging (2014), 33(9): 1818-1831. DOI: 10.1109/TMI.2014.2322280
-Gousias, I. S., Edwards A. D., Rutherford M. A., Counsell S. J., Hajnal J. V., Rueckert D., and Hammers, A. Magnetic resonance imaging of the newborn brain: manual segmentation of labelled atlases in term-born and preterm infants. Neuroimage (2012), 62(3): 1499-1509. DOI: 10.1016/j.neuroimage.2012.05.083
-Schuh, A., Makropoulos, A., Wright, R., Robinson, E. C., Tusor, N., Steinweg, J., Hughes, E., Cordero Grande, L.,  Price, A., Hutter, J., Hajnal, J., and  Rueckert, D. A deformable model for reconstruction of the neonatal cortex. IEEE 14th International Symposium on Biomedical Imaging 2017. DOI: 10.1109/ISBI.2017.7950639
-Elad, A., Keller, Y.,  and Kimmel, R. Texture Mapping via Spherical Multidimensional Scaling. International Conference on Scale-Space Theories in Computer Vision  (2005): 443–455.
-Fischl, B., Sereno M. I., and Dale, A. M. Cortical surface-based analysis: II: inflation, flattening, and a surface-based coordinate system. Neuroimage (1999), 9(2): 195-207. DOI: 10.1006/nimg.1998.0396
-Glasser, M., Sotiropoulo, S. N., Wilson, J. A, Coalson, T. S, Fischl, B., Andersson, L., Xu, J., Jbabdi, S., Webster, M., Polimeni, J. R., Van Essen, D. C., Jenkinson, M., WU-Minn HCP Consortium. The minimal preprocessing pipelines for the Human Connectome Project. NeuroImage (2013)., 80: 105–124. DOI: 10.1016/j.neuroimage.2013.04.127
-Makropoulos, A., Robinson, E., Schuh, A., Wright, R., Fitzgibbon, S., Bozek, J., Counsell, S. J., Steinweg, J., Vecchiato, K., Passerat-Palmbach, J., Lenz, G., Mortari, F., Tenev, T., Duff, E. P., Bastiani, M., Cordero-Grande, L., Hughes, E., Tusor, N., Tournier, J. D., Hutter, J., Price, A. N., Teixeira, R. P. A. G., Murgasova M, Victor, S., Kelly, C., Rutherford, M. A., Smith, S. M., Edwards, A. D., Hajnal, J. V., Jenkinson, M., and Rueckert, D. The developing Human Connectome Project: a Minimal Processing Pipeline for Neonatal Cortical Surface Reconstruction. NeuroImage (2018), 173:  88-112. DOI: 10.1016/j.neuroimage.2018.01.054
-Passerat-Palmbach, J., Reuillon, R., Leclaire, M., Makropoulos, A., Robinson, E.C., Parisot, S., and Ryeckert, D.  Reproducible Large-Scale Neuroimaging Studies with the OpenMOLE Workflow Management System. Frontiers in Neuroinformatics (2017), 11. DOI: 10.3389/fninf.2017.00021
-Diffusion pipeline
-For a complete and detailed description of all the steps involved in the dHCP neonatal diffusion MRI (dMRI) data processing pipeline (https://git.fmrib.ox.ac.uk/matteob/dHCP_neo_dMRI_pipeline_release), the reader is referred to1. The main processing steps are briefly summarised below:
+2. Cordero-Grande, L., Hughes, E. J., Hutter, J., Hutter, J., Price, A. N.,
+and Hajnal, J. V. **Three-Dimensional Motion Corrected Sensitivity Encoding
+Reconstruction for Multi-Shot Multi-Slice MRI: Application to Neonatal
+Brain Imaging** *Magnetic Resonance in Medicine 2018, 79(3): 1365-1376.*
+[DOI: 10.1002/mrm.26796](https://doi.org/10.1002/mrm.26796)
+
+3. Kuklikova-Murgasova, M., Quaghebeur, G., Rutherford, M. A.,
+Hajnal, J. V., and Schnabel, J. A. **Reconstruction of fetal
+brain MRI with intensity matching and complete outlier removal**
+*Medical Image Analysis (2012), 16(8): 1550-1564.* [DOI:
+10.1016/j.media.2012.07.004](https://doi.org/10.1016/j.media.2012.07.004)
+
+4. Zhu, K., Dougherty, R. F., Wu, H., Middione, M. J., Takahashi,
+A. M, Zhang, T., Pauly, J. M., Kerr, A. B. **Hybrid-space
+SENSE reconstruction for simultaneous multi-slice MRI** *IEEE
+Transactions on Medical Imaging, 35(8) (2016):1824-1836.* [DOI:
+10.1109/TMI.2016.2531635](https://doi.org/10.1109/TMI.2016.2531635)
+
+5. Cordero-Grande, L., Price, A. N., and
+Hajnal, J. V. [**Comprehensive CG-SENSE reconstruction of
+SMS-EPI**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Comprehensive-CG-SENSE-reconstruction-of-SMS-EPI.pdf)
+*ISMRM 2016: 3239.*
+
+6. Cordero-Grande, L., Hutter, J., Price,
+A., Hughes, E., and Hajnal, J. V. [**Goodness of
+fit factor in SENSE reconstruction: a tool for pseudolesion detection and fat
+unfolding**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Goodness-of-fit-factor-in-SENSE-reconstruction-a-tool-for-pseudolesion-detection-and-fat-unfolding.pdf)
+*ESMRMB 2016: 458.*
+
+7. Hennel, F.,Buehrer, M., von Deuster, C., Seuven, A., and Pruessmann,
+K. P. **SENSE reconstruction for multiband EPI including slice-dependent N/2
+ghost correction** *Magnetic Resonance in Medicine (2016), 76(3): 873-879.*
+[DOI: 10.1002/mrm.25915](https://doi.org/10.1002/mrm.25915)
+
+8. Allison, M. J., Ramani, S., and Fessler, J. A. **Accelerated regularized
+estimation of MR coil sensitivities using augmented Lagrangian methods**
+*IEEE Transactions on Medical Imaging (2013), 32(3): 556-564.* [DOI:
+10.1109/TMI.2012.2229711](https://doi.org/10.1109/TMI.2012.2229711)
+
+### Structural pipeline
+
+The structural pipeline (https://github.com/BioMedIA/dhcp-structural-pipeline)
+was encapsulated as a Docker container image and run via the
+OpenMOLE<sup>10</sup> platform on a local cluster.
+
+* Registration
+
+* Segmentation
+
+    1. Structural scans are pre-processed by first running bias correction using
+    the N4 algorithm<sup>1</sup>.
+
+    2. Scans are then brain extracted using BET<sup>2</sup> from FSL. 
+
+    3. Segmentation of the T2w volume is performed using the DRAW-EM
+    algorithm<sup>3</sup>.  DRAW-EM is an atlas-based segmentation technique
+    that segments the volumes into 87 regions (see region names). Manually
+    labelled atlases, annotated by an expert neuroanatomist<sup>4</sup>, are
+    registered to the volume and their labels are fused to the subject
+    space to provide structure priors. Segmentation is then performed with
+    an Expectation-Maximization scheme that combines the structure priors
+    and an intensity model of the volume. The 87 regions are further merged
+    to provide the tissue segmentation (see tissue types).
+
+    4. All T1 weighted images have been pre-aligned to the T2w volumes
+    using rigid alignment.
+
+    5. Both T1w and T2w volumes are defaced for anonymization based on
+    registration and transformation of a manually annotated face mask.
+
+* Surface extraction
+
+    6. Surface mesh extraction is performed with the method described
+    elsewhere<sup>5</sup>. A white matter mask enclosing the white surface is
+    computed by merging the white matter and the subcortical structures with
+    the exception of the brainstem and the cerebellum. Similarly, a pial mask
+    is computed by merging the grey matter structure with the white matter
+    mask. The white and pial surfaces of the left and right hemispheres
+    are then reconstructed with the method outlined in5 using a deformable
+    model. The model in5 includes forces to avoid self-intersections and
+    includes an image-based refinement step that corrects regions such as
+    deep sulci mislabelled by the volumetric segmentation.
+
+    7. Midthickness surfaces are generated as the middle surface between
+    the white and pial surfaces. The midthickness surface is computed using
+    the Euclidean distance between corresponding points of the white and
+    pial surface.
+
+    8. Spherical projection is performed6, and it is based on the inflated
+    white matter surface. The inflated white matter surface is produced in
+    a similar manner as in the FreeSurfer pipeline<sup>7</sup>. Inflated and
+    very inflated surfaces used for visualisation are generated 
+    similarly<sup>8</sup>.
+
+    9. The following metrics are further estimated from the surfaces:
+    curvature, thickness, sulcal depth, T1w/T2w myelin, labels (projected
+    from the volume). All surfaces have one-to-one vertex correspondence for
+    all points on the surface ensuring that the same vertex indexes the same
+    point, in the same relative position, on the anatomy for all surfaces.
+
+The structural pipeline is described in detail elsewhere<sup>9</sup>.
+
+#### References
+
+1. Tustison, N. J., Avants, B. B., Cook, P. A., Zheng, Y., Egan, A.,
+Yushkevich, P. A. and Gee, J. C.  **N4ITK: improved N3 bias correction. IEEE
+transactions on medical imaging (2010)** *29(6): 1310-1320.* [DOI:
+10.1109/TMI.2010.2046908](https://doi.org/10.1109/TMI.2010.2046908)
+
+2. Smith, S. M.  **Fast robust automated brain extraction**
+*Human Brain Mapping (2002), 17(3): 143-55.* [DOI:
+10.1002/hbm.10062](https://doi.org/10.1002/hbm.10062)
+
+3. Makropoulos, A., Gousias I. S., Ledig C., Aljabar P., Serag A,
+Hajnal J. V., Edwards A. D., Counsell S. J., and Rueckert D. **Automatic
+whole brain MRI segmentation of the developing neonatal brain** *IEEE
+transactions on medical imaging (2014), 33(9): 1818-1831.* [DOI:
+10.1109/TMI.2014.2322280](https://doi.org/10.1109/TMI.2014.2322280)
+
+4. Gousias, I. S., Edwards A. D., Rutherford M. A., Counsell S. J., Hajnal
+J. V., Rueckert D., and Hammers, A. **Magnetic resonance imaging of the
+newborn brain: manual segmentation of labelled atlases in term-born
+and preterm infants** *Neuroimage (2012), 62(3): 1499-1509.* [DOI:
+10.1016/j.neuroimage.2012.05.083](https://doi.org/10.1016/j.neuroimage.2012.05.083)
+
+5. Schuh, A., Makropoulos, A., Wright, R., Robinson, E. C., Tusor, N.,
+Steinweg, J., Hughes, E., Cordero Grande, L.,  Price, A., Hutter, J., Hajnal,
+J., and  Rueckert, D. **A deformable model for reconstruction of the neonatal
+cortex** *IEEE 14th International Symposium on Biomedical Imaging 2017.*
+[DOI: 10.1109/ISBI.2017.7950639](https://doi.org/10.1109/ISBI.2017.7950639)
+
+6. Elad, A., Keller, Y.,  and Kimmel,
+R. [**Texture Mapping via Spherical Multidimensional
+Scaling**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Texture-Mapping-via-Spherical-Multidimensional-Scaling-.pdf)
+*International Conference on Scale-Space Theories in Computer Vision
+(2005): 443–455.*
+
+7. Fischl, B., Sereno M. I., and Dale, A. M. **Cortical surface-based
+analysis: II: inflation, flattening, and a surface-based
+coordinate system** N*euroimage (1999), 9(2): 195-207.* [DOI:
+10.1006/nimg.1998.0396](https://doi.org/10.1006/nimg.1998.0396)
+
+8. Glasser, M., Sotiropoulo, S. N., Wilson, J. A, Coalson, T. S,
+Fischl, B., Andersson, L., Xu, J., Jbabdi, S., Webster, M.,
+Polimeni, J. R., Van Essen, D. C., Jenkinson, M., WU-Minn HCP
+Consortium. **The minimal preprocessing pipelines for the Human
+Connectome Project** *NeuroImage (2013)., 80: 105–124.* [DOI:
+10.1016/j.neuroimage.2013.04.127](https://doi.org/10.1016/j.neuroimage.2013.04.127)
+
+9. Makropoulos, A., Robinson, E., Schuh, A., Wright, R., Fitzgibbon,
+S., Bozek, J., Counsell, S. J., Steinweg, J., Vecchiato, K.,
+Passerat-Palmbach, J., Lenz, G., Mortari, F., Tenev, T., Duff, E. P.,
+Bastiani, M., Cordero-Grande, L., Hughes, E., Tusor, N., Tournier,
+J. D., Hutter, J., Price, A. N., Teixeira, R. P. A. G., Murgasova M,
+Victor, S., Kelly, C., Rutherford, M. A., Smith, S. M., Edwards, A. D.,
+Hajnal, J. V., Jenkinson, M., and Rueckert, D. **The developing Human
+Connectome Project: a Minimal Processing Pipeline for Neonatal Cortical
+Surface Reconstruction** *NeuroImage (2018), 173: 88-112.* [DOI:
+10.1016/j.neuroimage.2018.01.054](https://doi.org/10.1016/j.neuroimage.2018.01.054)
+
+10. Passerat-Palmbach, J., Reuillon, R., Leclaire, M., Makropoulos,
+A., Robinson, E.C., Parisot, S., and Rueckert, D. **Reproducible
+Large-Scale Neuroimaging Studies with the OpenMOLE Workflow
+Management System** *Frontiers in Neuroinformatics (2017), 11.* [DOI:
+10.3389/fninf.2017.00021](https://doi.org/10.3389/fninf.2017.00021)
+
+## Diffusion pipeline
+
+For a complete and detailed description of all the steps involved
+in the dHCP neonatal diffusion MRI (dMRI) data processing pipeline
+(https://git.fmrib.ox.ac.uk/matteob/dHCP_neo_dMRI_pipeline_release), the
+reader is referred to<sup>1<sup>. The main processing steps are briefly summarised
+below:
+
 For each phase encoding (PE) direction, the diffusion un-weighted b0 volume pairs least-affected by intra-volume motion are automatically selected. The dataset is then re-organised by moving the least-affected b0 volume and the volumes that follow (until the end of the acquisition) at the beginning of the 4D raw data file.
+
 Field maps for correcting susceptibility-induced distortions are estimated using FSL TOPUP2.
+
 Distortions caused by susceptibility, motion, motion-induced signal drop-out and eddy currents are corrected; outlier slices are detected and replaced in raw distorted space using FSL EDDY3-6.
+
 A super-resolution algorithm7 is applied along the slice-selection direction, to achieve isotropic resolution of 1.5 mm.
+
 Diffusion data are aligned to high-resolution structural (T2-weighted) space using boundary-based registration8, 9  on the average attenuation volume for the b=1000 s/mm2 shell (i.e. b1k/b0). This transformation is combined with a non-linear registration10 of the T2w volume to the 40 weeks template11 to allow transformations between diffusion and atlas spaces.
+
  
 Diffusion MRI QC
 Numerous quality assurance metrics are calculated by the EDDY QC tools12.  Four of these are specifically compared against the population distribution to flag outliers for manual inspection and potential exclusion:
