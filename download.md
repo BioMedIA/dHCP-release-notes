@@ -66,3 +66,22 @@ downloaded as an Excel spreadsheet by selecting ‘Spreadsheet’ from the
 ‘Options’ drop down menu from the table view page.  The data release
 supplementary documentation can be directly downloaded by clicking on the
 link ‘documentation: Data Release’ on the main table view page.
+
+### Via dHCP XNAT web service
+
+Image data for individual subjects (without any pipeline pre-processing)
+can be downloaded directly through dHCP XNAT web interface. The image data
+are NIfTI files and if downloaded directly from  the XNAT web page they will
+be delivered as zips. On the XNAT web interface the files are organized in
+subdirectories:
+
+Directory   | Type  | Notes
+:---------- | :---- | :----
+`<sesid>_0` |  anat |  T1 weighted image
+`<sesid>_1` |  anat |  T2 weighted image
+`<sesid>_2` |  dwi  |  Multi-band dMRI EPI
+`<sesid>_3` |  func |  Dual echo-time field-map (magnitude)
+`<sesid>_4` |  func |  Dual echo-time field-map (phase difference)
+`<sesid>_5` |  func |  Multi-band resting state fMRI EPI
+`<sesid>_6` |  func |  Single-band reference spin echo EPI image
+`<sesid>_7` |  func |  Single band reference spin echo EPI with different phase encode directions.
