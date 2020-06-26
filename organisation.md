@@ -586,7 +586,7 @@ A. Numerous quality assurance metrics are calculated during the
 pre-processing. Six of these are specifically compared against the population
 distribution to flag outliers for manual inspection and potential exclusion:
 
-    1. Mean DVARS5 of the ICA denoised functional EPI
+    1. Mean DVARS<sup>5</sup> of the ICA denoised functional EPI
 
     2. Mean tSNR of the ICA denoised functional EPI
 
@@ -610,451 +610,145 @@ a z-score < -2.5 on any QC metric were excluded.
 
 ### References
 
-Andersson, J. L., Skare, S. and Ashburner, J. **How to correct susceptibility
+1. Andersson, J. L., Skare, S. and Ashburner, J. **How to correct susceptibility
 distortions in spin-echo echo-planar images: application to diffusion tensor
 imaging** *Neuroimage (2003), 20: 870-888.* DOI: 10.1016/S1053-8119(03)00336-7
 
-Andersson, J. L. and Sotiropoulos, S. N. **An integrated approach
+2. Andersson, J. L. and Sotiropoulos, S. N. **An integrated approach
 to correction for off-resonance effects and subject movement in
-diffusion MR imaging** *Neuroimage (2016), 125: 1063-1078.* DOI:
-10.1016/j.neuroimage.2015.10.019
+diffusion MR imaging** *Neuroimage (2016), 125: 1063-1078.* [DOI:
+10.1016/j.neuroimage.2015.10.019](https://doi.org/10.1016/S1053-8119(03)00336-7)
 
-Jenkinson, M., and Smith, S. **A global optimisation method for robust
-affine registration of brain images** *Medical image analysis (2001), 5(2):
-143–156.* DOI: 10.1016/S1361-8415(01)00036-6
+3. Jenkinson, M., and Smith, S. **A global optimisation
+method for robust affine registration of brain images**
+*Medical image analysis (2001), 5(2): 143–156.* [DOI:
+10.1016/S1361-8415(01)00036-6](https://doi.org/10.1016/j.neuroimage.2015.10.019)
 
-Salimi-Khorshidi, G., Douad, G, Beckman, C. F., Glasser, M. F., Griffanti,
-L., and Smith, S. M. **Automatic denoising of functional MRI data: combining
-independent component analysis and hierarchical fusion of classifiers**
-*NeuroImage (2014), 90: 449–468.* DOI: 10.1016/j.neuroimage.2013.11.046
+4. Salimi-Khorshidi, G., Douad, G, Beckman, C. F., Glasser, M. F.,
+Griffanti, L., and Smith, S. M. **Automatic denoising of functional
+MRI data: combining independent component analysis and hierarchical
+fusion of classifiers** *NeuroImage (2014), 90: 449–468.* [DOI:
+10.1016/j.neuroimage.2013.11.046](https://doi.org/10.1016/S1361-8415(01)00036-6)
 
-Power, J. D., Barnes, K. A., Snyder, A. Z., Schlaggar, B. L.,  and Petersen,
-S. E. **Spurious but Systematic Correlations in Functional Connectivity MRI
-Networks Arise from Subject Motion** *NeuroImage (2012), 59(3): 2142–54.*
-DOI: 10.1016/j.neuroimage.2011.10.018
+5. Power, J. D., Barnes, K. A., Snyder, A. Z., Schlaggar,
+B. L.,  and Petersen, S. E. **Spurious but Systematic
+Correlations in Functional Connectivity MRI Networks Arise from
+Subject Motion** *NeuroImage (2012), 59(3): 2142–54.* [DOI:
+10.1016/j.neuroimage.2011.10.018](https://doi.org/10.1016/j.neuroimage.2011.10.018)
 
 ## Metadata
 
-The participants.tsv for each BIDS pipeline has a number of extra columns beyond participant_id. These have the following meaning:
+The `participants.tsv` for each BIDS pipeline has a number of extra columns
+beyond `participant_id`. These have the following meaning:
 
-gender
-Male / Female
-birth_age
-Gestational age at birth in weeks
-birth_weight
-Birthweight (kg)
-singleton
-Singleton / multiple status of the pregnancy
+Field          | Meaning
+:------------- | :------
+`gender`       | Male / Female
+`birth_age`    | Gestational age at birth in weeks
+`birth_weight` | Birthweight (kg)
+`singleton`    | Singleton / multiple status of the pregnancy
 
+The `sessions.tsv` file has extra columns beyond `session_id`. These have
+the following meaning:
 
+Field                     | Meaning
+:------------------------ | :------
+`scan_age`                | Gestational age at scan in weeks
+`scan_head_circumference` | Head circumference (cm)
+`scan_number`             | 1 for the first scan, 2 for the second
+`radiology_score`         | Subject status, see below
+`sedation`                | 1 if the subject was sedated during the scan, 
+                            0 otherwise
 
-The sessions.tsv file has extra columns beyond session_id. These have the following meaning:
+The MRI scans were reviewed by a specialist perinatal neuroradiologist who
+scored each subject using the following scale:
 
-scan_age
-Gestational age at scan in weeks
-scan_head_circumference
-Head circumference (cm)
-scan_number
-1 for the first scan, 2 for the second
-radiology_score
-The MRI scans were reviewed by a specialist perinatal neuroradiologist who scored each subject using the following scale:
-1=Normal appearance for age
-2=Incidental findings with unlikely significance for clinical outcome or analysis (e.g. subdural haemorrhage. Isolated subependymal cysts. Mild inferior vermis rotation)
-3=Incidental findings with unlikely clinical significance but possible analysis significance (e.g. several punctate lesions or other focal white matter / cortical lesions not thought to be of clinical significance) 
-4=Incidental findings with possible clinical significance. Unlikely analysis significance (e.g. Isolated non brain anomaly for example in pituitary / on tongue)
-5=Incidental finding with possible / likely significance for both clinical and imaging analysis (e.g. Major lesions within white matter cortex, cerebellum and or basal ganglia; small head / brain < 1st centile)
-Q=Poor quality anatomical data
-sedation
-1 if the subject was sedated during the scan, 0 otherwise
+1. Normal appearance for age
 
-As a convenience, an extra top-level file called combined.tsv lists all these fields for all scans in a single large table.
-Data directory structure and naming convention
+2. Incidental findings with unlikely significance for clinical outcome
+or analysis (e.g. subdural haemorrhage. Isolated subependymal cysts. Mild
+inferior vermis rotation)
+
+3. Incidental findings with unlikely clinical significance but possible
+analysis significance (e.g. several punctate lesions or other focal white
+matter / cortical lesions not thought to be of clinical significance)
+
+4. Incidental findings with possible clinical significance. Unlikely analysis
+significance (e.g. Isolated non brain anomaly for example in pituitary /
+on tongue)
+
+5. Incidental finding with possible / likely significance for both clinical and imaging analysis (e.g. Major lesions within white matter cortex, cerebellum and or basal ganglia; small head / brain < 1st centile)
+
+Q. Poor quality anatomical data
+
+As a convenience, an extra top-level file called `combined.tsv` lists all
+these fields for all scans in a single large table.
+
+## Data directory structure and naming convention
+
 The data directory structure and naming of files is organized as follows. 
 
-<subid>    subject ID
-<sesid>    refers to session ID
-CSF        cerebrospinal fluid
-WM        white matter
-cGM        cortical grey matter
-sGM        subcortical grey matter
-EPI        echo-planar imaging
+Abbreviation | Meaning
+:----------- | :------
+`<subid>`    | subject ID
+`<sesid>`    | refers to session ID
+`CSF`        | cerebrospinal fluid
+`WM`         | white matter
+`cGM`        | cortical grey matter
+`sGM`        | subcortical grey matter
+`EPI`        | echo-planar imaging
+
+### Structural pipeline
+
+Inputs             | Filename
+:----------------- | :-------
+Reconstructed data | `sourcedata/sub-<subid>/ses-<sesid>/anat`
+T1 weighted image  | `sub-<subid>_ses-<sesid>_T1w.nii.gz`
+T2 weighted image  | `sub-<subid>_ses-<sesid>_T2w.nii.gz`
+
+Outputs                            | Filename
+:--------------------------------- | :-------
+Derived data                       | `derivatives/dhcp_anat_pipeline/sub-<subid>/ses-<sesid>`
+FSL BET brain mask                 | `anat/sub-<subid>_ses-<sesid>_desc-bet_space-T2w_brainmask.nii.gz`
+Draw-EM brain mask                 | `anat/sub-<subid>_ses-<sesid>_desc-drawem_space-T2w_brainmask.nii.gz`
+Draw-EM regional segmentation (87 labels) | `anat/sub-<subid>_ses-<sesid>_desc-drawem87_space-T2w_dseg.nii.gz`
+Draw-EM tissue segmentation (9 labels)    | `anat/sub-<subid>_ses-<sesid>_desc-drawem9_space-T2w_dseg.nii.gz`
+Cortical ribbon                    | `anat/sub-<subid>_ses-<sesid>_desc-ribbon_space-T2w_dseg.nii.gz`
+T1 weighted image (in T2 space)    | `anat/sub-<subid>_ses-<sesid>_space-T2w_T1w.nii.gz`
+T1 weighted, bias corrected image (in T2 space) | `anat/sub-<subid>_ses-<sesid>_desc-restore_space-T2w_T1w.nii.gz`
+T2 weighted, bias corrected image  | `anat/sub-<subid>_ses-<sesid>_desc-restore_T2w.nii.gz`
+T1/T2 ratio                        | `anat/sub-<subid>_ses-<sesid>_space-T2w_myelinmap.nii.gz`
+T1/T2 ratio on the cortical ribbon | `anat/sub-<subid>_ses-<sesid>_space-T2w_desc-myelinmapribbon_dseg.nii.gz`
+QC report                          | `sub-<subid>_ses-<sesid>_qc.pdf`
+Left/Right white surface           | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_wm.surf.gii`
+Left/Right pial surface            | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_pial.surf.gii`
+Left/Right mid-thickness surface   | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_midthickness.surf.gii`
+Left/Right inflated surface        | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_inflated.surf.gii`
+Left/Right very inflated surface   | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_veryinflated.surf.gii`
+Left/Right spherical surface       | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_sphere.surf.gii`
+Cortical curvature                 | `anat/sub-<subid>_ses-<sesid>_space-T2w_curv.dscalar.nii`
+Left/Right cortical curvature      | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_curv.shape.gii`
+Sulcal depth                       | `anat/sub-<subid>_ses-<sesid>_space-T2w_sulc.dscalar.nii`
+Left/Right sulcal depth            | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_sulc.shape.gii`
+Cortical thickness                 | `anat/sub-<subid>_ses-<sesid>_space-T2w_thickness.dscalar.nii`
+Left/Right cortical thickness      | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_thickness.shape.gii`
+Cortical thickness (curvature regressed out) | `anat/sub-<subid>_ses-<sesid>_desc-corr_space-T2w_thickness.dscalar.nii`
+Left/Right cortical thickness (curvature regressed out) | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_desc-corr_space-T2w_thickness.shape.gii`
+Cortical myelin                    | `anat/sub-<subid>_ses-<sesid>_space-T2w_myelinmap.dscalar.nii`
+Left/Right cortical myelin         | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_myelinmap.shape.gii`
+Smoothed cortical myelin           | `anat/sub-<subid>_ses-<sesid>_desc-smoothed_space-T2w_myelinmap.dscalar.nii`
+Left/Right smoothed cortical myelin | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_desc-smoothed_space-T2w_myelinmap.shape.gii`
+Cortical regional labels projected from volume | `anat/sub-<subid>_ses-<sesid>_desc-drawem_space-T2w_dparc.dlabel.nii`
+Left/Right cortical regional labels projected from volume | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_desc-drawem_space-T2w_dparc.dlabel.gii`
+Left/Right Medial wall             | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_desc-medialwall_mask.shape.gii`
+Workbench file for loading surfaces | `anat/wb.spec`
+Warp from structural space to the subject’s age respective template space | `xfm/sub-<subid>_ses-<sesid>_from-T2w_to-template{subage}wk_mode-image.nii.gz`
+Warp from the subject’s age respective template space to the structural space | `xfm/sub-<subid>_ses-<sesid>_from-template{subage}wk_to-T2w_mode-image.nii.gz`
+Warp from structural space to the 40 weeks template space | `xfm/sub-<subid>_ses-<sesid>_from-T2w_to-template40wk_mode-image.nii.gz`
+Warp from the 40 weeks template space to the structural space | `xfm/sub-<subid>_ses-<sesid>_from-template40wk_to-T2w_mode-image.nii.gz`
+
+### Diffusion pipeline
 
-
-derivatives (contains output files from pipelines)
-
-
-
-
-
-
-|__
-
-dhcp_anat_pipeline
-
-
-
-
-
-
-   |
-|__
-
-sub-<subid>
-
-
-
-
-
-
-   |
-  
-|__
-
-ses-<sesid>
-
-
-
-
-   |
-  
-  
-  
-|___
-
-anat
-
-
-
-
-
-
-   |
-  
-  
-  
-|___
-
-xfm
-
-
-
-
-
-
-|__
-
-dhcp_fmri_pipeline
-
-
-
-
-
-
-   |
-|__
-
-sub-<subid>
-
-
-
-
-
-
-   |
-
-
-|__
-ses-<sesid>
-
-
-
-
-
-
-   |
-
-
-
-
-|___
-
-func
-
-
-
-
-
-
-   |
-
-
-
-
-|___
-
-fmap
-
-
-
-
-
-
-   |
-
-
-
-
-|___
-
-xfm
-
-
-
-
-
-
-|__
-
-dhcp_dmri_pipeline
-
-
-
-
-
-
- 
-|__
-sub-<subid>
-
-
-
-
-
-
-
-
-
-
-   |__ses-<sesid>
-
-
-
-
-
-
-   
-
-
-
-
-|___
-
-dwi
-
-
-
-
-
-
-   
-
-
-
-
-|___
-
-fmap
-
-
-
-
-
-
-   
-
-
-
-
-|___
-
-xfm
-
-
-
-
-
-
-        
-
-sourcedata (contains input files for pipelines)
-
-
-
-
-
-
-|__
-
-sub-<subid>
-
-
-
-
-
-
-
-
-|__
-
-ses-<sesid>
-
-
-
-
-
-
-
-
-
-
-|__
-
-anat
-
-
-
-
-
-
-
-
-  |
-  |---
-  |
-
-dwi
-
-
-
-
-
-
-
-
-  |---
-  |
-
-func
-
-
-
-
-
-
-
-
-  |__
-
-fmap
-
-
-
-
-
-
-Explanation of filenames 
-Structural pipeline
-Inputs:
-Reconstructed data: sourcedata/sub-<subid>/ses-<sesid>/anat
-T1 weighted image
-sub-<subid>_ses-<sesid>_T1w.nii.gz
-T2 weighted image
-sub-<subid>_ses-<sesid>_T2w.nii.gz
-
-Outputs:
-Derived data: derivatives/dhcp_anat_pipeline/sub-<subid>/ses-<sesid>
-FSL BET brain mask
-anat/sub-<subid>_ses-<sesid>_desc-bet_space-T2w_brainmask.nii.gz
-Draw-EM brain mask
-anat/sub-<subid>_ses-<sesid>_desc-drawem_space-T2w_brainmask.nii.gz
-Draw-EM regional segmentation (87 labels)
-anat/sub-<subid>_ses-<sesid>_desc-drawem87_space-T2w_dseg.nii.gz
-Draw-EM tissue segmentation (9 labels)
-anat/sub-<subid>_ses-<sesid>_desc-drawem9_space-T2w_dseg.nii.gz
-Cortical ribbon
-anat/sub-<subid>_ses-<sesid>_desc-ribbon_space-T2w_dseg.nii.gz
-T1 weighted image (in T2 space)
-anat/sub-<subid>_ses-<sesid>_space-T2w_T1w.nii.gz
-T1 weighted, bias corrected image (in T2 space)
-anat/sub-<subid>_ses-<sesid>_desc-restore_space-T2w_T1w.nii.gz
-T2 weighted, bias corrected image
-anat/sub-<subid>_ses-<sesid>_desc-restore_T2w.nii.gz
-T1/T2 ratio
-anat/sub-<subid>_ses-<sesid>_space-T2w_myelinmap.nii.gz
-T1/T2 ratio on the cortical ribbon
-anat/sub-<subid>_ses-<sesid>_space-T2w_desc-myelinmapribbon_dseg.nii.gz
-QC report
-sub-<subid>_ses-<sesid>_qc.pdf
-
-surface files
-
-
-Left/Right white surface
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_wm.surf.gii
-Left/Right pial surface
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_pial.surf.gii
-Left/Right mid-thickness surface
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_midthickness.surf.gii
-Left/Right inflated surface
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_inflated.surf.gii
-Left/Right very inflated surface
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_veryinflated.surf.gii
-Left/Right spherical surface
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_sphere.surf.gii
-Cortical curvature
-anat/sub-<subid>_ses-<sesid>_space-T2w_curv.dscalar.nii
-Left/Right cortical curvature
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_curv.shape.gii
-Sulcal depth
-anat/sub-<subid>_ses-<sesid>_space-T2w_sulc.dscalar.nii
-Left/Right sulcal depth
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_sulc.shape.gii
-Cortical thickness
-anat/sub-<subid>_ses-<sesid>_space-T2w_thickness.dscalar.nii
-Left/Right cortical thickness
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_thickness.shape.gii
-Cortical thickness (curvature regressed out)
-anat/sub-<subid>_ses-<sesid>_desc-corr_space-T2w_thickness.dscalar.nii
-Left/Right cortical thickness (curvature regressed out)
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_desc-corr_space-T2w_thickness.shape.gii
-Cortical myelin
-anat/sub-<subid>_ses-<sesid>_space-T2w_myelinmap.dscalar.nii
-Left/Right cortical myelin
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_myelinmap.shape.gii
-Smoothed cortical myelin
-anat/sub-<subid>_ses-<sesid>_desc-smoothed_space-T2w_myelinmap.dscalar.nii
-Left/Right smoothed cortical myelin
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_desc-smoothed_space-T2w_myelinmap.shape.gii
-Cortical regional labels projected from volume
-anat/sub-<subid>_ses-<sesid>_desc-drawem_space-T2w_dparc.dlabel.nii
-Left/Right cortical regional labels projected from volume
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_desc-drawem_space-T2w_dparc.dlabel.gii
-Left/Right Medial wall
-anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_desc-medialwall_mask.shape.gii
-Workbench file for loading surfaces
-anat/wb.spec
-Folder containing registration files
-xfm/
-Warp from structural space to the subject’s age respective template space
-xfm/sub-<subid>_ses-<sesid>_from-T2w_to-template{subage}wk_mode-image.nii.gz
-Warp from the subject’s age respective template space to the structural space
-xfm/sub-<subid>_ses-<sesid>_from-template{subage}wk_to-T2w_mode-image.nii.gz
-Warp from structural space to the 40 weeks template space
-xfm/sub-<subid>_ses-<sesid>_from-T2w_to-template40wk_mode-image.nii.gz
-Warp from the 40 weeks template space to the structural space
-xfm/sub-<subid>_ses-<sesid>_from-template40wk_to-T2w_mode-image.nii.gz
-
-Diffusion pipeline
 Inputs:
 Reconstructed data: sourcedata/sub-<subid>/ses-<sesid>/dwi
 Multi-band dMRI EPI
@@ -1094,10 +788,14 @@ Warp from diffusion space to 40 week template space (Schuh)
 xfm/sub-<subid>_ses-<sesid>_from-dwi_to-template40wk_mode-image.nii.gz
 Warp from 40 week template space (Schuh) to diffusion space
 xfm/sub-<subid>_ses-<sesid>_from-template40wk_to-dwi_mode-image.nii.gz
-Functional pipeline
+
+### Functional pipeline
+
 Inputs:
 Reconstructed data: sourcedata/sub-<subid>/ses-<sesid>
+
 Resting fMRI
+
 func/sub-<subid>_ses-<sesid>_task-rest_bold.nii.gz
 Single-band Ref
 func/sub-<subid>_ses-<sesid>_task-rest_sbref.nii.gz
@@ -1147,7 +845,12 @@ xfm/sub-<subid>_ses-<sesid>_from-bold_to-template40wk_mode-image.nii.gz
 Warp from the structural space to the 40wk template space
 xfm/sub-<subid>_ses-<sesid>_from-T2w_to-template40wk_mode-image.nii.gz
 
-Acknowledgments:
-The research leading to these data has received funding from the European Research Council under the European Union Seventh Framework Programme (FP/20072013)/ERC Grant Agreement no. 319456. The work was also supported by the NIHR Biomedical Research Centres at Guys and St Thomas NHS Trust.  We are grateful to the families who generously supported this trial.   We are also thankful to the WU-Minn-Oxford Human Connectome Project consortium (1U54MH091657-01) for access to their computing resources.
+## Acknowledgments
 
-
+The research leading to these data has received funding from the European
+Research Council under the European Union Seventh Framework Programme
+(FP/20072013)/ERC Grant Agreement no. 319456. The work was also supported
+by the NIHR Biomedical Research Centres at Guys and St Thomas NHS Trust.
+We are grateful to the families who generously supported this trial.   We are
+also thankful to the WU-Minn-Oxford Human Connectome Project consortium
+(1U54MH091657-01) for access to their computing resources.
