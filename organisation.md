@@ -281,12 +281,12 @@ platform on a local cluster.
 
 2. Segmentation
 
-    2.1. Structural scans are pre-processed by first running bias correction
+    1. Structural scans are pre-processed by first running bias correction
     using the N4 algorithm<sup>1</sup>.
 
-    2.2. Scans are then brain extracted using BET<sup>2</sup> from FSL.
+    2. Scans are then brain extracted using BET<sup>2</sup> from FSL.
 
-    2.3. Segmentation of the T2w volume is performed using the DRAW-EM
+    3. Segmentation of the T2w volume is performed using the DRAW-EM
     algorithm<sup>3</sup>.  DRAW-EM is an atlas-based segmentation technique
     that segments the volumes into 87 regions (see region names). Manually
     labelled atlases, annotated by an expert neuroanatomist<sup>4</sup>, are
@@ -296,15 +296,15 @@ platform on a local cluster.
     and an intensity model of the volume. The 87 regions are further merged
     to provide the tissue segmentation (see tissue types).
 
-    2.4. All T1 weighted images have been pre-aligned to the T2w volumes
+    4. All T1 weighted images have been pre-aligned to the T2w volumes
     using rigid alignment.
 
-    2.5. Both T1w and T2w volumes are defaced for anonymization based on
+    5. Both T1w and T2w volumes are defaced for anonymization based on
     registration and transformation of a manually annotated face mask.
 
 3. Surface extraction
 
-    3.1. Surface mesh extraction is performed with the method described
+    1. Surface mesh extraction is performed with the method described
     elsewhere<sup>5</sup>. A white matter mask enclosing the white surface is
     computed by merging the white matter and the subcortical structures with
     the exception of the brainstem and the cerebellum. Similarly, a pial mask
@@ -315,18 +315,18 @@ platform on a local cluster.
     includes an image-based refinement step that corrects regions such as
     deep sulci mislabelled by the volumetric segmentation.
 
-    3.2. Midthickness surfaces are generated as the middle surface between
+    2. Midthickness surfaces are generated as the middle surface between
     the white and pial surfaces. The midthickness surface is computed using
     the Euclidean distance between corresponding points of the white and
     pial surface.
 
-    3.3. Spherical projection is performed6, and it is based on the inflated
+    3. Spherical projection is performed6, and it is based on the inflated
     white matter surface. The inflated white matter surface is produced in
     a similar manner as in the FreeSurfer pipeline<sup>7</sup>. Inflated and
     very inflated surfaces used for visualisation are generated 
     similarly<sup>8</sup>.
 
-    3.4. The following metrics are further estimated from the surfaces:
+    4. The following metrics are further estimated from the surfaces:
     curvature, thickness, sulcal depth, T1w/T2w myelin, labels (projected
     from the volume). All surfaces have one-to-one vertex correspondence for
     all points on the surface ensuring that the same vertex indexes the same
@@ -436,9 +436,9 @@ tools<sup>12</sup>.  Four of these are specifically compared against
 the population distribution to flag outliers for manual inspection and
 potential exclusion:
 
-    1.1. Mean signal-to-noise ratio (SNR) from the b0 volumes
+    1. Mean signal-to-noise ratio (SNR) from the b0 volumes
 
-    1.2. Mean contrast-to-noise ratio (CNR) for each b-shell, i.e., 400,
+    2. Mean contrast-to-noise ratio (CNR) for each b-shell, i.e., 400,
     1000 and 2600 s/mm2.
 
 2. All QC metrics are then converted to Z-scores and averaged, to generate
@@ -522,32 +522,32 @@ and distortion correction** *Neuroimage (2019), 184: 801-812.* [DOI:
 
 1. Prepare fieldmaps for correction of susceptibility distortions
 
-    1.1. Estimate field map from the two “best” spin-echo volumes (1 per
+    1. Estimate field map from the two “best” spin-echo volumes (1 per
     phase-encode direction) using FSL TOPUP<sup>1</sup>.  “Best” is
     defined by smoothness in the z-dimension (stdev of the slice-to-slice
     difference in the z-dimension)
 
-    1.2. If visual inspection indicates that the spin-echo has significant 
+    2. If visual inspection indicates that the spin-echo has significant 
     motion contamination then use the dual-echo-derived fieldmap instead
     of the spin-echo-derived fieldmap
 
 2. Registration
 
-    2.1. Boundary-based registration (BBR, FSL FLIRT3) of the fieldmap to
+    1. Boundary-based registration (BBR, FSL FLIRT3) of the fieldmap to
     the T2 structural
 
-    2.2. Boundary-based registration (BBR, FSL FLIRT3) of the sbref to the
+    2. Boundary-based registration (BBR, FSL FLIRT3) of the sbref to the
     T2 structural incorporating field map-based distortion correction of
     the sbref
 
-    2.3. Linear registration (6-dof, corratio, FSL FLIRT3) of the first volume
+    3. Linear registration (6-dof, corratio, FSL FLIRT3) of the first volume
     of the functional multiband EPI to the sbref
 
-    2.4. After susceptibility and motion correction, linear registration (6-dof,
+    4. After susceptibility and motion correction, linear registration (6-dof,
     corratio, FSL FLIRT3) of the temporal mean of the motion and distortion
     corrected functional multiband EPI to the distortion corrected sbref
 
-    2.5. Nonlinear diffeomorphic multimodal registration of the age-matched
+    5. Nonlinear diffeomorphic multimodal registration of the age-matched
     T1/T2 templates from the dHCP volumetric atlas (Schuh et al., 2018) to
     the subjects T1/T2 structurals using ANTs SyN (Avants, Epstein, Grossman,
     & Gee, 2008).  If the age of the subject is outside the range covered by
@@ -557,27 +557,27 @@ and distortion correction** *Neuroimage (2019), 184: 801-812.* [DOI:
     registration (ANTs SyN).  The appropriate transforms are then combined
     to yield a (40 week) template-to-structural transform
 
-    2.6. From these primary registrations the following composite transforms
+    6. From these primary registrations the following composite transforms
     are calculated:
 
-        2.6.1.  fieldmap to native functional
+        1. Fieldmap to native functional
 
-        2.6.2. motion and distortion corrected functional to 40-week template
+        2. Motion and distortion corrected functional to 40-week template
         from the dHCP volumetric atlas
 
 3. Susceptibility and motion correction
 
-    3.1. Slice-to-volume motion correction and motion-by-susceptibility
+    1. Slice-to-volume motion correction and motion-by-susceptibility
     correction is performed using FSL EDDY2
 
 4. ICA Denoising
 
-    4.1. Temporal high-pass filter (150s high-pass cutoff) and ICA denoising
+    1. Temporal high-pass filter (150s high-pass cutoff) and ICA denoising
     using FSL FIX4, pre-trained with manually-labelled data from 35 dHCP
     neonatal subjects, to identify artefactual ICs (accuracy: median TPR=100%,
     median TNR=95.4%). The ICA dimensionality was capped at 600 ICs.
 
-    4.2. Noise ICs and motion parameters regressed from motion and distortion
+    2. Noise ICs and motion parameters regressed from motion and distortion
     corrected functional multiband EPI.
 
 ### fMRI QC
@@ -586,23 +586,23 @@ and distortion correction** *Neuroimage (2019), 184: 801-812.* [DOI:
 pre-processing. Six of these are specifically compared against the population
 distribution to flag outliers for manual inspection and potential exclusion:
 
-    1.1. Mean DVARS<sup>5</sup> of the ICA denoised functional EPI
+    1. Mean DVARS<sup>5</sup> of the ICA denoised functional EPI
 
-    1.2. Mean tSNR of the ICA denoised functional EPI
+    2. Mean tSNR of the ICA denoised functional EPI
 
-    1.3. Normalised mutual information of the source (moving) image, re-sampled
+    3. Normalised mutual information of the source (moving) image, re-sampled
     to reference space, and the reference (fixed) image, for each of the
     primary registrations:
 
-        1.3.1. Fieldmap to structural T2
+        1. Fieldmap to structural T2
 
-        1.3.2. Native functional to sbref
+        2. Native functional to sbref
 
-        1.3.3. Motion and distortion corrected functional to sbref
+        3. Motion and distortion corrected functional to sbref
 
-        1.3.4. Sbref to structural T2
+        4. Sbref to structural T2
 
-        1.3.5. Age-matched atlas template T2 to native structural T2
+        5. Age-matched atlas template T2 to native structural T2
 
 2. All QA measures were converted to Z-scores and flipped as necessary so
 that positive z-scores are good and negative bad.  Subject/sessions with
@@ -754,101 +754,60 @@ Warp from the 40 weeks template space to the structural space | `xfm/sub-<subid>
 
 #### Inputs
 
-Reconstructed data: sourcedata/sub-<subid>/ses-<sesid>/dwi
-Multi-band dMRI EPI
-sub-<subid>_ses-<sesid>_dwi.nii.gz
-List of b-values
-sub-<subid>_ses-<sesid>_dwi.bval
-List of gradient directions
-sub-<subid>_ses-<sesid>_dwi.bvec
- 
-Structural pipeline derived data: derivatives/dhcp_anat_pipeline/sub-<subid>/ses-<sesid>
-T2 weighted, bias corrected and brain extracted image
-sub-<subid>_ses-<sesid>_T2w.nii.gz
-Draw-EM tissue segmentation (9 labels)
-sub-<subid>_ses-<sesid>_space-T2w_desc-drawem_dseg.nii.gz
-T2 brain mask
-sub-<subid>_ses-<sesid>_space-T2w_brainmask.nii.gz
+Inputs                       | Filename
+:--------------------------- | :-------
+Multi-band dMRI EPI          | `sub-<subid>_ses-<sesid>_dwi.nii.gz`
+List of b-values             | `sub-<subid>_ses-<sesid>_dwi.bval`
+List of gradient directions  | `sub-<subid>_ses-<sesid>_dwi.bvec`
+T2 weighted, bias corrected and brain extracted image | `sub-<subid>_ses-<sesid>_T2w.nii.gz`
+Draw-EM tissue segmentation (9 labels) | `sub-<subid>_ses-<sesid>_space-T2w_desc-drawem_dseg.nii.gz`
+T2 brain mask                | `sub-<subid>_ses-<sesid>_space-T2w_brainmask.nii.gz`
  
 #### Outputs
 
-Derived data: derivatives/dhcp_dmri_pipeline/sub-<subid>/ses-<sesid>
-Eddy current, susceptibility-by-motion and motion (within and between volumes) corrected super-resolved 4D volume with outlier rejection and replacement
-dwi/sub-<subid>_ses-<sesid>_desc-preproc_dwi.nii.gz
-List of b-values
-dwi/sub-<subid>_ses-<sesid>_desc-preproc_dwi.bval
-List of post-EDDY rotated gradient directions
-dwi/sub-<subid>_ses-<sesid>_desc-preproc_dwi.bvec
-Brain mask
-dwi/sub-<subid>_ses-<sesid>_desc-preproc_space-dwi_brainmask.nii.gz
-Estimated field map
-fmap/sub-<subid>_ses-<sesid>_fieldmap.nii.gz
-QC report
-sub-<subid>_ses-<sesid>_qc.pdf
-Rigid-body transform from structural to diffusion space
-xfm/sub-<subid>_ses-<sesid>_from-T2w_to-dwi_mode-image.mat
-Rigid-body transform from diffusion to structural space
-xfm/sub-<subid>_ses-<sesid>_from-dwi_to-T2w_mode-image.mat
-Warp from diffusion space to 40 week template space (Schuh)
-xfm/sub-<subid>_ses-<sesid>_from-dwi_to-template40wk_mode-image.nii.gz
-Warp from 40 week template space (Schuh) to diffusion space
-xfm/sub-<subid>_ses-<sesid>_from-template40wk_to-dwi_mode-image.nii.gz
+Outputs                            | Filename
+:--------------------------------- | :-------
+Eddy current, susceptibility-by-motion and motion (within and between volumes) corrected super-resolved 4D volume with outlier rejection and replacement | `dwi/sub-<subid>_ses-<sesid>_desc-preproc_dwi.nii.gz`
+List of b-values                   | `dwi/sub-<subid>_ses-<sesid>_desc-preproc_dwi.bval`
+List of post-EDDY rotated gradient directions | `dwi/sub-<subid>_ses-<sesid>_desc-preproc_dwi.bvec`
+Brain mask                         | `dwi/sub-<subid>_ses-<sesid>_desc-preproc_space-dwi_brainmask.nii.gz`
+Estimated field map                | `fmap/sub-<subid>_ses-<sesid>_fieldmap.nii.gz`
+QC report                          | `sub-<subid>_ses-<sesid>_qc.pdf`
+Rigid-body transform from structural to diffusion space | `xfm/sub-<subid>_ses-<sesid>_from-T2w_to-dwi_mode-image.mat`
+Rigid-body transform from diffusion to structural space | `xfm/sub-<subid>_ses-<sesid>_from-dwi_to-T2w_mode-image.mat`
+Warp from diffusion space to 40 week template space (Schuh) | `xfm/sub-<subid>_ses-<sesid>_from-dwi_to-template40wk_mode-image.nii.gz`
+Warp from 40 week template space (Schuh) to diffusion space | `xfm/sub-<subid>_ses-<sesid>_from-template40wk_to-dwi_mode-image.nii.gz`
 
 ### Functional pipeline
 
-Inputs:
-Reconstructed data: sourcedata/sub-<subid>/ses-<sesid>
+#### Inputs
 
-Resting fMRI
+Inputs                       | Filename
+:--------------------------- | :-------
+Resting fMRI                 | `func/sub-<subid>_ses-<sesid>_task-rest_bold.nii.gz`
+Single-band Ref              | `func/sub-<subid>_ses-<sesid>_task-rest_sbref.nii.gz`
+Spin Echo EPI with different phase encode directions (for topup fieldmap estimation)                         | `fmap/sub-<subid>_ses-<sesid>-{sesid}_dir-APPA_epi.nii.gz`
+Dual echo-time field-map, magnitude | `fmap/sub-<subid>_ses-<sesid>_magnitude.nii.gz`
+Dual echo-time field-map     | `fmap/sub-<subid>_ses-<sesid>_fieldmap.nii.gz`
+ T2 weighted, bias corrected image (in T2 space) | `anat/sub-<subid>_ses-<sesid>_T2w.nii.gz`
+T2 brain mask                | `anat/sub-<subid>_ses-<sesid>_space-T2w_brainmask.nii.gz`
+Draw-EM tissue segmentation (9 labels) | `anat/sub-<subid>_ses-<sesid>_space-T2w_desc-drawem_dseg.nii.gz`
+T1 weighted, bias corrected image (in T2 space) | `anat/sub-<subid>_ses-<sesid>_space-T2w_T1w.nii.gz`
 
-func/sub-<subid>_ses-<sesid>_task-rest_bold.nii.gz
-Single-band Ref
-func/sub-<subid>_ses-<sesid>_task-rest_sbref.nii.gz
-Spin Echo EPI with different phase encode directions (for topup fieldmap estimation)
-fmap/sub-<subid>_ses-<sesid>-{sesid}_dir-APPA_epi.nii.gz
-Dual echo-time field-map, magnitude
-fmap/sub-<subid>_ses-<sesid>_magnitude.nii.gz
-Dual echo-time field-map
-fmap/sub-<subid>_ses-<sesid>_fieldmap.nii.gz
- 
-Structural pipeline derived data: derivatives/dhcp_anat_pipeline/sub-<subid>/ses-<sesid>
-T2 weighted, bias corrected image (in T2 space)
-anat/sub-<subid>_ses-<sesid>_T2w.nii.gz
-T2 brain mask
-anat/sub-<subid>_ses-<sesid>_space-T2w_brainmask.nii.gz
-Draw-EM tissue segmentation (9 labels)
-anat/sub-<subid>_ses-<sesid>_space-T2w_desc-drawem_dseg.nii.gz 
-T1 weighted, bias corrected image (in T2 space)
-anat/sub-<subid>_ses-<sesid>_space-T2w_T1w.nii.gz 
-
-Outputs:
-Derived data: derivatives/dhcp_fmri_pipeline/sub-<subid>/ses-<sesid>
-Multi-band EPI, distortion corrected, motion corrected, FIX denoised, 4D image
-func/sub-<subid>_ses-<sesid>_task-rest_desc-preproc_bold.nii.gz
-Motion parameters
-func/sub-<subid>_ses-<sesid>_motion.tsv
-Brain mask
-func/sub-<subid>_ses-<sesid>_task-rest_desc-preproc_space-bold_brainmask.nii.gz
-Derived fieldmap, magnitude
-fmap/sub-<subid>_ses-<sesid>_magnitude.nii.gz
-Derived fieldmap (rad/s)
-fmap/sub-<subid>_ses-<sesid>_fieldmap.nii.gz
-QC report
-sub-<subid>_ses-<sesid>_funcqc.html
-Folder containing registration files
-xfm
-Rigid-body transform from functional (mcdc) to single-band Ref space
-xfm/sub-<subid>_ses-<sesid>_from-bold_to-sbref_mode-image.mat
-Rigid-body transform from single-band Ref space to structural space
-xfm/sub-<subid>_ses-<sesid>_from-sbref_to-T2w_mode-image.mat
-Rigid-body transform from functional (mcdc) to structural space
-xfm/sub-<subid>_ses-<sesid>_from-bold_to-T2w_mode-image.mat
-Rigid-body transform from field-map to structural space
-xfm/sub-<subid>_ses-<sesid>_from-fieldmap_to-T2w_mode-image.mat
-Warp from functional (mcdc) space to the 40 weeks template space
-xfm/sub-<subid>_ses-<sesid>_from-bold_to-template40wk_mode-image.nii.gz
-Warp from the structural space to the 40wk template space
-xfm/sub-<subid>_ses-<sesid>_from-T2w_to-template40wk_mode-image.nii.gz
+Outputs                            | Filename
+:--------------------------------- | :-------
+Multi-band EPI, distortion corrected, motion corrected, FIX denoised, 4D image | `func/sub-<subid>_ses-<sesid>_task-rest_desc-preproc_bold.nii.gz`
+Motion parameters                  | `func/sub-<subid>_ses-<sesid>_motion.tsv`
+Brain mask                         | `func/sub-<subid>_ses-<sesid>_task-rest_desc-preproc_space-bold_brainmask.nii.gz`
+Derived fieldmap, magnitude        | `fmap/sub-<subid>_ses-<sesid>_magnitude.nii.gz`
+Derived fieldmap (rad/s)           | `fmap/sub-<subid>_ses-<sesid>_fieldmap.nii.gz`
+QC report                          | `sub-<subid>_ses-<sesid>_funcqc.html`
+Rigid-body transform from functional (mcdc) to single-band Ref space | `xfm/sub-<subid>_ses-<sesid>_from-bold_to-sbref_mode-image.mat`
+Rigid-body transform from single-band Ref space to structural space | `xfm/sub-<subid>_ses-<sesid>_from-sbref_to-T2w_mode-image.mat`
+Rigid-body transform from functional (mcdc) to structural space | `xfm/sub-<subid>_ses-<sesid>_from-bold_to-T2w_mode-image.mat`
+Rigid-body transform from field-map to structural space | `xfm/sub-<subid>_ses-<sesid>_from-fieldmap_to-T2w_mode-image.mat`
+Warp from functional (mcdc) space to the 40 weeks template space | `xfm/sub-<subid>_ses-<sesid>_from-bold_to-template40wk_mode-image.nii.gz`
+Warp from the structural space to the 40wk template space | `xfm/sub-<subid>_ses-<sesid>_from-T2w_to-template40wk_mode-image.nii.gz`
 
 ## Acknowledgments
 
