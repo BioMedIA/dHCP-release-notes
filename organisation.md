@@ -277,9 +277,9 @@ pipeline](https://github.com/BioMedIA/dhcp-structural-pipeline) was
 encapsulated as a Docker container image and run via the OpenMOLE<sup>10</sup>
 platform on a local cluster.
 
-A. Registration
+1. Registration
 
-B. Segmentation
+2. Segmentation
 
     1. Structural scans are pre-processed by first running bias correction using
     the N4 algorithm<sup>1</sup>.
@@ -302,7 +302,7 @@ B. Segmentation
     5. Both T1w and T2w volumes are defaced for anonymization based on
     registration and transformation of a manually annotated face mask.
 
-C. Surface extraction
+3. Surface extraction
 
     6. Surface mesh extraction is performed with the method described
     elsewhere<sup>5</sup>. A white matter mask enclosing the white surface is
@@ -406,23 +406,23 @@ pipeline](https://git.fmrib.ox.ac.uk/matteob/dHCP_neo_dMRI_pipeline_release),
 the reader is referred elsewhere<sup>1</sup>. The main processing steps
 are briefly summarised below:
 
-A. For each phase encoding (PE) direction, the diffusion un-weighted
+1. For each phase encoding (PE) direction, the diffusion un-weighted
 b0 volume pairs least-affected by intra-volume motion are automatically
 selected. The dataset is then re-organised by moving the least-affected
 b0 volume and the volumes that follow (until the end of the acquisition)
 at the beginning of the 4D raw data file.
 
-B. Field maps for correcting susceptibility-induced distortions are estimated
+2. Field maps for correcting susceptibility-induced distortions are estimated
 using FSL TOPUP<sup>2</sup>.
 
-C. Distortions caused by susceptibility, motion, motion-induced signal
+3. Distortions caused by susceptibility, motion, motion-induced signal
 drop-out and eddy currents are corrected; outlier slices are detected and
 replaced in raw distorted space using FSL EDDY<sup>3-6</sup>.
 
-D. A super-resolution algorithm<sup>7</sup> is applied along the
+4. A super-resolution algorithm<sup>7</sup> is applied along the
 slice-selection direction, to achieve isotropic resolution of 1.5 mm.
 
-E. Diffusion data are aligned to high-resolution structural (T2-weighted)
+5. Diffusion data are aligned to high-resolution structural (T2-weighted)
 space using boundary-based registration<sup>8,9</sup>  on the average
 attenuation volume for the b=1000 s/mm2 shell (i.e. b1k/b0). This
 transformation is combined with a non-linear registration<sup>10</sup> of
@@ -431,7 +431,7 @@ between diffusion and atlas spaces.
 
 ### Diffusion MRI QC
 
-A. Numerous quality assurance metrics are calculated by the EDDY QC
+1. Numerous quality assurance metrics are calculated by the EDDY QC
 tools<sup>12</sup>.  Four of these are specifically compared against
 the population distribution to flag outliers for manual inspection and
 potential exclusion:
@@ -441,7 +441,7 @@ potential exclusion:
     2. Mean contrast-to-noise ratio (CNR) for each b-shell, i.e., 400,
     1000 and 2600 s/mm2.
 
-B. All QC metrics are then converted to Z-scores and averaged, to generate
+2. All QC metrics are then converted to Z-scores and averaged, to generate
 a summary QC metric. Subject/sessions with a summary Z-score < -2.0 were
 excluded.
 
@@ -520,7 +520,7 @@ and distortion correction** *Neuroimage (2019), 184: 801-812.* [DOI:
 
 ### Pre-processing for fMRI
 
-A. Prepare fieldmaps for correction of susceptibility distortions
+1. Prepare fieldmaps for correction of susceptibility distortions
 
     1. Estimate field map from the two “best” spin-echo volumes (1 per
     phase-encode direction) using FSL TOPUP<sup>1</sup>.  “Best” is
@@ -531,7 +531,7 @@ A. Prepare fieldmaps for correction of susceptibility distortions
     motion contamination then use the dual-echo-derived fieldmap instead
     of the spin-echo-derived fieldmap
 
-B. Registration
+2. Registration
 
     3. Boundary-based registration (BBR, FSL FLIRT3) of the fieldmap to
     the T2 structural
@@ -560,17 +560,17 @@ B. Registration
     8. From these primary registrations the following composite transforms
     are calculated:
 
-        i.  fieldmap to native functional
+        1.  fieldmap to native functional
 
-        ii. motion and distortion corrected functional to 40-week template
+        2. motion and distortion corrected functional to 40-week template
         from the dHCP volumetric atlas
 
-C. Susceptibility and motion correction
+3. Susceptibility and motion correction
 
     9. Slice-to-volume motion correction and motion-by-susceptibility
     correction is performed using FSL EDDY2
 
-D. ICA Denoising
+4. ICA Denoising
 
     10. Temporal high-pass filter (150s high-pass cutoff) and ICA denoising
     using FSL FIX4, pre-trained with manually-labelled data from 35 dHCP
@@ -582,7 +582,7 @@ D. ICA Denoising
 
 ### fMRI QC
 
-A. Numerous quality assurance metrics are calculated during the
+1. Numerous quality assurance metrics are calculated during the
 pre-processing. Six of these are specifically compared against the population
 distribution to flag outliers for manual inspection and potential exclusion:
 
@@ -594,17 +594,17 @@ distribution to flag outliers for manual inspection and potential exclusion:
     to reference space, and the reference (fixed) image, for each of the
     primary registrations:
 
-        i. Fieldmap to structural T2
+        1. Fieldmap to structural T2
 
-        ii. Native functional to sbref
+        2. Native functional to sbref
 
-        iii. Motion and distortion corrected functional to sbref
+        3. Motion and distortion corrected functional to sbref
 
-        iv. Sbref to structural T2
+        4. Sbref to structural T2
 
-        v. Age-matched atlas template T2 to native structural T2
+        5. Age-matched atlas template T2 to native structural T2
 
-B. All QA measures were converted to Z-scores and flipped as necessary so
+2. All QA measures were converted to Z-scores and flipped as necessary so
 that positive z-scores are good and negative bad.  Subject/sessions with
 a z-score < -2.5 on any QC metric were excluded.
 
@@ -657,8 +657,7 @@ Field                     | Meaning
 `scan_head_circumference` | Head circumference (cm)
 `scan_number`             | 1 for the first scan, 2 for the second
 `radiology_score`         | Subject status, see below
-`sedation`                | 1 if the subject was sedated during the scan, 
-                            0 otherwise
+`sedation`                | 1 if the subject was sedated during the scan, 0 otherwise
 
 The MRI scans were reviewed by a specialist perinatal neuroradiologist who
 scored each subject using the following scale:
@@ -679,7 +678,7 @@ on tongue)
 
 5. Incidental finding with possible / likely significance for both clinical and imaging analysis (e.g. Major lesions within white matter cortex, cerebellum and or basal ganglia; small head / brain < 1st centile)
 
-Q. Poor quality anatomical data
+6. `Q`, meaning poor quality anatomical data
 
 As a convenience, an extra top-level file called `combined.tsv` lists all
 these fields for all scans in a single large table.
@@ -700,11 +699,15 @@ Abbreviation | Meaning
 
 ### Structural pipeline
 
+#### Inputs
+
 Inputs             | Filename
 :----------------- | :-------
 Reconstructed data | `sourcedata/sub-<subid>/ses-<sesid>/anat`
 T1 weighted image  | `sub-<subid>_ses-<sesid>_T1w.nii.gz`
 T2 weighted image  | `sub-<subid>_ses-<sesid>_T2w.nii.gz`
+
+#### Outputs
 
 Outputs                            | Filename
 :--------------------------------- | :-------
@@ -749,7 +752,8 @@ Warp from the 40 weeks template space to the structural space | `xfm/sub-<subid>
 
 ### Diffusion pipeline
 
-Inputs:
+#### Inputs
+
 Reconstructed data: sourcedata/sub-<subid>/ses-<sesid>/dwi
 Multi-band dMRI EPI
 sub-<subid>_ses-<sesid>_dwi.nii.gz
@@ -766,7 +770,8 @@ sub-<subid>_ses-<sesid>_space-T2w_desc-drawem_dseg.nii.gz
 T2 brain mask
 sub-<subid>_ses-<sesid>_space-T2w_brainmask.nii.gz
  
-Outputs:
+#### Outputs
+
 Derived data: derivatives/dhcp_dmri_pipeline/sub-<subid>/ses-<sesid>
 Eddy current, susceptibility-by-motion and motion (within and between volumes) corrected super-resolved 4D volume with outlier rejection and replacement
 dwi/sub-<subid>_ses-<sesid>_desc-preproc_dwi.nii.gz
