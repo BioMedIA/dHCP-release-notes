@@ -16,14 +16,14 @@
 
 2. Registration
 
-    1. Boundary-based registration (BBR, FSL FLIRT3) of the fieldmap to
+    1. Boundary-based registration (BBR, FSL FLIRT<sup>3</sup>) of the fieldmap to
     the T2 structural
 
-    2. Boundary-based registration (BBR, FSL FLIRT3) of the sbref to the
+    2. Boundary-based registration (BBR, FSL FLIRT<sup>3</sup>) of the sbref to the
     T2 structural incorporating field map-based distortion correction of
     the sbref
 
-    3. Linear registration (6-dof, corratio, FSL FLIRT3) of the first volume
+    3. Linear registration (6-dof, corratio, FSL FLIRT<sup>3</sup>) of the first volume
     of the functional multiband EPI to the sbref
 
     4. After susceptibility and motion correction, linear registration (6-dof,
@@ -56,7 +56,7 @@
 4. ICA Denoising
 
     1. Temporal high-pass filter (150s high-pass cutoff) and ICA denoising
-    using FSL FIX4, pre-trained with manually-labelled data from 35 dHCP
+    using FSL FIX<sup>4</sup>, pre-trained with manually-labelled data from 35 dHCP
     neonatal subjects, to identify artefactual ICs (accuracy: median TPR=100%,
     median TNR=95.4%). The ICA dimensionality was capped at 600 ICs.
 
