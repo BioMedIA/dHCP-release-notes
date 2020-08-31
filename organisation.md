@@ -13,7 +13,9 @@
 
 ### [The structural pipeline](struct.md)
 
-### [The diffusion pipeline](dwi.md)
+### [The diffusion pipeline I](dwi.md)
+
+### [The diffusion pipeline II](dwi-shard.md)
 
 ### [The functional pipeline](fmri.md)
 
