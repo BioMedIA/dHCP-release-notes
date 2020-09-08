@@ -49,19 +49,6 @@ M. A., Counsell, S. J.,  and Hajnal, J. V. **A dedicated neonatal brain
 imaging system** *Magnetic Resonance Medicine (2017), 78(2): 794–804* [DOI:
 10.1002/mrm.26462](https://doi.org/10.1002/mrm.26462)
 
-**MR pulse sequences and reconstruction for anatomical and multi-band EPI data
-(diffusion and BOLD fMRI):** For any studies that make use of dHCP functional
-and/or diffusion MRI data, it is appropriate to cite the following references.
-
-**Anatomical MRI - Motion corrected reconstruction:** All anatomical images
-for all dHCP subjects have had motion corrected reconstruction:
-
-Cordero-Grande, L., Teixeira, R. P. A. G., Hughes, E. J.,
-Hutter, J., Price, A. N., & Hajnal, J. V. **Sensitivity Encoding
-for Aligned Multishot Magnetic Resonance Reconstruction** *IEEE
-Transactions on Computational Imaging (2016), 2(3): 266–280.* [DOI:
-10.1109/TCI.2016.2557069](https://doi.org/10.1002/mrm.26462)
-
 **Diffusion MRI data acquisition:** All dHCP diffusion data was acquired
 with a purpose designed multiband EPI acquisition featuring optimised
 multi-shell diffusion sensitisation scheme, gradient demand optimisation,
@@ -100,6 +87,22 @@ Malik, SJ, Price AN, and Hajnal
 JV. [**Optimized Amplitude Modulated Multi-Band RF
 pulses**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Optimized-Amplitude-Modulated-Muli-Band-RF-pulses.pdf)
 In Proc ISMRM 2015: p2398
+
+**Anatomical MRI - Motion corrected reconstruction:** All anatomical images
+for all dHCP subjects have had motion corrected reconstruction:
+
+Cordero-Grande, L., Hughes, E. J., Hutter, J., Hutter, J., Price, A. N., 
+and Hajnal, J. V. **Three-Dimensional Motion Corrected Sensitivity Encoding 
+Reconstruction for Multi-Shot Multi-Slice MRI: Application to Neonatal 
+Brain Imaging** *Magnetic Resonance in Medicine (2018), 79(3): 1365–1376.* [DOI:
+10.1002/mrm.26796](https://doi.org/10.1002/mrm.26796)
+
+**Diffusion MRI signal retrieval:** Denoised diffusion images are obtained by:
+
+Cordero-Grande, L., Christiaens, D., Hutter, J., Price, A. N., and Hajnal, J. V. 
+**Complex diffusion-weighted image estimation via matrix recovery under general 
+noise models** *Neuroimage (2019), 200: 391–404.* [DOI:
+10.1016/j.neuroimage.2019.06.039](https://doi.org/10.1016/j.neuroimage.2019.06.039)
 
 ### Publications relevant to the dHCP pre-processed data
 
