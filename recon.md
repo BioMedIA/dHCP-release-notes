@@ -4,24 +4,28 @@
 ## Reconstruction pipeline
 
 The reconstruction pipeline was developed by the team at King’s College
-London. It performs motion correction and reconstruction of T1 and T2
-weighted images.
+London.
 
-The reconstruction pipeline performs motion corrected volumetric
-reconstructions of multi-slice T1 and T2 weighted images extending
-the aligned sensitivity encoding (SENSE) method<sup>1</sup>
+Motion corrected volumetric reconstructions of multi-slice inversion 
+recovery T1- and turbo spin echo T2-weighted images are obtained by 
+extending the aligned sensitivity encoding (SENSE) method<sup>1</sup>
 to the multi-slice case<sup>2</sup>. Corrections are performed
 for both within-plane and through-plane motion from partial
-k-space information. Methods and example data are available at
-https://github.com/mriphysics/multiSliceAlignedSENSE/releases/tag/1.0.1 .
-The two acquired orthogonal stacks are integrated by a super-resolution
-scheme<sup>3</sup>. fMRI and dMRI simultaneous multi-slice (SMS) echo planar
+k-space information. The two acquired orthogonal stacks are 
+integrated by a super-resolution scheme<sup>3</sup>. Methods and example 
+data for the aligned SENSE method are available at 
+https://github.com/mriphysics/multiSliceAlignedSENSE/releases/tag/1.0.1.
+
+fMRI and dMRI simultaneous multi-slice (SMS) echo planar
 imaging (EPI) is reconstructed using the extended SENSE technique<sup>4</sup>,
 with details described elsewhere<sup>5,6,7</sup>; sensitivity estimates
 from a conventional reference scan are refined with the information from
 non-SMS reference acquisitions with matched readouts to promote matched
-coil map and image distortions. Sensitivity estimation uses a variational
-formulation<sup>8</sup>.
+coil map and image distortions. As for dMRI, complex data retrieval is 
+performed by the generalized singular value shrinkage (GSVS) denoising 
+technique using noise measures performed during the acquisition<sup>8</sup>. 
+Methods and example data for the GSVS method are available at 
+https://github.com/mriphysics/complexSVDShrinkageDWI/releases/tag/1.1.0.
 
 ## References
 
@@ -65,9 +69,9 @@ K. P. **SENSE reconstruction for multiband EPI including slice-dependent N/2
 ghost correction** *Magnetic Resonance in Medicine (2016), 76(3): 873-879.*
 [DOI: 10.1002/mrm.25915](https://doi.org/10.1002/mrm.25915)
 
-8. Allison, M. J., Ramani, S., and Fessler, J. A. **Accelerated regularized
-estimation of MR coil sensitivities using augmented Lagrangian methods**
-*IEEE Transactions on Medical Imaging (2013), 32(3): 556-564.* [DOI:
-10.1109/TMI.2012.2229711](https://doi.org/10.1109/TMI.2012.2229711)
+8. Cordero-Grande, L., Christiaens, D., Hutter, J., Price, A. N., and 
+Hajnal, J. V. **Complex diffusion-weighted image estimation via matrix 
+recovery under general noise models** *Neuroimage (2019),  200: 391-404.* [DOI:
+10.1016/j.neuroimage.2019.06.039](https://doi.org/10.1016/j.neuroimage.2019.06.039)
 
 
