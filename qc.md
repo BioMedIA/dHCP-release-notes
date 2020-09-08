@@ -13,8 +13,8 @@ subsequently.
 manually flagged as pass/fail depending on if the issue affects the fMRI,
 the dMRI, or other.
 
-2. After reconstruction the images were visually inspected and each image was
-flagged as PASS/FAIL
+2. After reconstruction the T2, T1, fMRI and dMRI datasets were visually 
+inspected and each of them was flagged as PASS/FAIL.
 
 3. The structural pipeline QC combined several sources of information: 479
 scans were scored visually as part of an atlas construction project --
