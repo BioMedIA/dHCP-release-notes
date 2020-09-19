@@ -23,9 +23,9 @@ terms’. Once confirmed you will be able to view a list of subjects,
 preview the available data as acquired (without any pre-processing) and
 will be provided two download options.
 
-## Academic Torrent download (recommended)
+### Academic Torrent download (recommended)
 
-Since data sets are fairly large (expect ~500GB) this is
+Since data sets are fairly large (expect > 700GB) this is
 a fail-safe way to get hold of desired releases. A [separate
 document](https://drive.google.com/file/d/1llcifaLWicGZ-DxVWCpyhBqJfEwToWb_/view)
 provides more detailed instructions. Be sure to have a Torrent client such as
@@ -59,20 +59,12 @@ Over time, the dataset will grow and your contribution will be more and
 more important so that each and everyone of you can still obtain the data
 in the smoothest possible way.
 
-##  Downloading non-imaging data
-
-The data release contains some non-imaging data, which can be directly
-downloaded as an Excel spreadsheet by selecting ‘Spreadsheet’ from the
-‘Options’ drop down menu from the table view page.  The data release
-supplementary documentation can be directly downloaded by clicking on the
-link ‘documentation: Data Release’ on the main table view page.
-
 ### Via dHCP XNAT web service
 
 Image data for individual subjects (without any pipeline pre-processing)
 can be downloaded directly through dHCP XNAT web interface. The image data
 are NIfTI files and if downloaded directly from  the XNAT web page they will
-be delivered as zips. On the XNAT web interface the files are organized in
+be delivered as zips. **NOTE**: Only **one** MR session can be downloaded each time. On the XNAT web interface the files are organized in
 subdirectories:
 
 Directory   | Type  | Notes
@@ -85,3 +77,12 @@ Directory   | Type  | Notes
 `<sesid>_5` |  func |  Multi-band resting state fMRI EPI
 `<sesid>_6` |  func |  Single-band reference spin echo EPI image
 `<sesid>_7` |  func |  Single band reference spin echo EPI with different phase encode directions.
+
+##  Downloading non-imaging data
+
+The data release contains some non-imaging data, which can be directly
+downloaded as an Excel spreadsheet by selecting ‘Spreadsheet’ from the
+‘Options’ drop down menu from the table view page.  The data release
+supplementary documentation can be directly downloaded by clicking on the
+link ‘documentation: Data Release’ on the main table view page.
+
