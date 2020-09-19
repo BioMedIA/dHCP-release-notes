@@ -7,7 +7,7 @@ In order to be able to browse/download data,
 you will need to register by following [this
 link](https://data.developingconnectome.org/app/template/Login.vm). On
 the dHCP data login page, select ‘Register’ and fill out the mandatory
-fields. You will receive a verification email. After you verify your email
+fields including **Lab/Department, Institute Full Name, Country and your institutional email address**. You will receive a verification email. After you verify your email
 address, you will be able to login to sign an agreement and access the
 public face of the dHCP database (db). This includes browsing (although
 not downloading) available Projects (data sets).
