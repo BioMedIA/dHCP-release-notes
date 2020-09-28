@@ -94,7 +94,7 @@ Columns   |  Notes
 `scan_age` |  Gestational age at scan in weeks
 `scan_head_circumference` |  Head circumference (cm)
 `scan_number` | 1 for the first scan, 2 for the second
-`radiology_score` |  The MRI scans were reviewed by a specialist perinatal\ neuroradiologist who scored each subject using the following scale:\ 1=Normal appearance for age 2=Incidental findings with unlikely significance for clinical outcome or analysis (e.g. subdural haemorrhage. Isolated subependymal cysts. Mild inferior vermis rotation) 3=Incidental findings with unlikely clinical significance but possible analysis significance (e.g. several punctate lesions or other focal white matter / cortical lesions not thought to be of clinical significance) 4=Incidental findings with possible clinical significance. Unlikely analysis significance (e.g. Isolated non brain \\
+`radiology_score` |  The MRI scans were reviewed by a specialist perinatal<br /> neuroradiologist who scored each subject using the following scale:<br /> 1=Normal appearance for age 2=Incidental findings with unlikely significance for clinical outcome or analysis (e.g. subdural haemorrhage. Isolated subependymal cysts. Mild inferior vermis rotation) 3=Incidental findings with unlikely clinical significance but possible analysis significance (e.g. several punctate lesions or other focal white matter / cortical lesions not thought to be of clinical significance) 4=Incidental findings with possible clinical significance. Unlikely analysis significance (e.g. Isolated non brain \\
  | anomaly for example in pituitary / on tongue) \\
  | 5=Incidental finding with possible / likely significance for \\
  | both clinical and imaging analysis (e.g. Major lesions within \\
