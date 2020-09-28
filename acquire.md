@@ -68,6 +68,7 @@ in-plane resolution 0.8x0.8mm2 and 1.6mm slices overlapped by 0.8mm (except
 in T1w Sagittal which used a slice overlap of 0.74mm). Other parameters were
 – T2w: 12000/156ms TR/TE, SENSE factor 2.11 (axial) and 2.60 (sagittal);
 T1w: 4795/1740/8.7ms TR/TI/TE, SENSE factor 2.27 (axial) and 2.66 (sagittal).
+In addition, 3D MPRAGE was acquired with 0.8mm isotropic resolution and parameters: 11/4.6/1400ms TR/TE/TI, SENSE factor 1.2 (RL).
 
 **rs-fMRI:** High temporal resolution fMRI developed for neonates<sup>3</sup>
 used multiband (MB) 9x accelerated echo-planar imaging and was collected for
