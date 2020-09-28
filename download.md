@@ -89,6 +89,8 @@ link ‘documentation: Data Release’ on the main table view page.
 
 ### Metadata 
 
+Metadata file includes the following information.
+
 Columns   |  Notes
 :---------- | :----
 `birth_age` | Gestational age at birth in weeks
