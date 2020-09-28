@@ -103,4 +103,4 @@ Columns   |  Notes
 `sedation` |  1 if the subject was sedated during the scan, 0 otherwise
 
 The file can be downloaded from: [combined.tsv](
-https://raw.githubusercontent.com/BioMedIA/dHCP-release-notes/master/rel02/combined_rel02.tsv) (right click and save as to download the tsv file)
+https://raw.githubusercontent.com/BioMedIA/dHCP-release-notes/master/rel02/combined_rel02.tsv) (right click and "save link as" to download the tsv file)
