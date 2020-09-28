@@ -94,11 +94,7 @@ Columns   |  Notes
 `scan_age` |  Gestational age at scan in weeks
 `scan_head_circumference` |  Head circumference (cm)
 `scan_number` | 1 for the first scan, 2 for the second
-`radiology_score` |  The MRI scans were reviewed by a specialist perinatal \\
- | neuroradiologist who scored each subject using the \\
- | following scale: \\
- | 1=Normal appearance for age \\
- | 2=Incidental findings with unlikely significance for clinical \\
+`radiology_score` |  The MRI scans were reviewed by a specialist perinatal neuroradiologist who scored each subject using the following scale: 1=Normal appearance for age 2=Incidental findings with unlikely significance for clinical \\
  | outcome or analysis (e.g. subdural haemorrhage. Isolated \\
  | subependymal cysts. Mild inferior vermis rotation) \\
  | 3=Incidental findings with unlikely clinical significance but \\
