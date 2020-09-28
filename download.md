@@ -91,6 +91,9 @@ link ‘documentation: Data Release’ on the main table view page.
 
 Columns   |  Notes
 :---------- | :----
+`birth_age` | Gestational age at birth in weeks
+`birth_weight` | Birthweight (kg)
+`singleton` | Singleton / multiple status of the pregnancy
 `scan_age` |  Gestational age at scan in weeks
 `scan_head_circumference` |  Head circumference (cm)
 `scan_number` | 1 for the first scan, 2 for the second
