@@ -9,9 +9,7 @@ subsequently.
 
 ## Five stages of QC  
 
-1. Scanning notes were recorded by the radiographers, and failed scans were
-manually flagged as pass/fail depending on if the issue affects the fMRI,
-the dMRI, or other.
+1. Scanning notes were recorded by the radiographers at the time of the scan. Notes were made of any disruption during the scan process and if the protocol was not completed. Image qualtiy of the structural scans were noted as either perfect, moderate or poor for (a)coverage of brain anatomy, (b) rotation of brain anatomy and (c) motion artefact.  
 
 2. After reconstruction the T2, T1, fMRI and dMRI datasets were visually 
 inspected and each of them was flagged as PASS/FAIL.
