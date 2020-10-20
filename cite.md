@@ -140,19 +140,9 @@ Developing Human Connectome Project** *NeuroImage (2018), 179: 11-29.* [DOI:
 #### Resting-fMRI data processing 
 
 **Automated processing pipeline:** The pipeline described in the following
-conference abstract was applied to all dHCP open access fMRI data.  A full
-manuscript will be available soon and this page will be updated with that
-citation.
+paper was applied to all dHCP open access fMRI data.  
 
-Fitzgibbon, S. P., Andersson, J., Harrison. S., Robinson, E., Bozek, J.,
-Makropoulos, A., Bastiani, M., Griffanti, L., Wright, R., Schuh, A., Hughes,
-E., O’Muircheartaigh, J., Gomes, A., Allsop, J., Steinweg, J., Tusor,
-N., Wurie, J., Bueno-Conde, J., Abaei, M., Price, A., Cordero-Grande,
-L., Hutter, J., Beckmann, C., Hajnal, J., Rueckert, D., Edwards,
-D., Smith, S., Jenkinson, M., and Duff, E. [**The developing
-Human Connectome Project automated functional processing framework for
-neonates**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/The-developing-Human-Connectome-Project-automated-functional-processing-framework-for-neonates.pdf)
-OHBM 2018.
+Fitzgibbon, SP, Harrison, SJ, Jenkinson, M, Baxter, L, Robinson, EC, Bastiani, M, Bozek, J, Karolis, V, Cordero Grande, L, Price, AN, Hughes, E, Makropoulos, A, Passerat-Palmbach, J, Schuh, A, Gao, J, Farahibozorg, S, O'Muircheartaigh, J, Ciarrusta, J, O'Keeffe, C, Brandon, J, Arichi, T, Rueckert, D, Hajnal, JV, Edwards, AD, Smith, SM, \*Duff, E, \*Andersson, J  **The developing Human Connectome Project automated functional processing framework for neonates.**, *NeuroImage (2020), 223: 117303*, 2020. **doi:** https://doi.org/10.1016/j.neuroimage.2020.117303 _\*Authors contributed equally._
 
 **fMRI motion and distortion correction:** Techniques described in the
 following papers were applied to all open access pre-processed fMRI data:
