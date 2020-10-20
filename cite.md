@@ -142,7 +142,7 @@ Developing Human Connectome Project** *NeuroImage (2018), 179: 11-29.* [DOI:
 **Automated processing pipeline:** The pipeline described in the following
 paper was applied to all dHCP open access fMRI data.  
 
-Fitzgibbon, SP, Harrison, SJ, Jenkinson, M, Baxter, L, Robinson, EC, Bastiani, M, Bozek, J, Karolis, V, Cordero Grande, L, Price, AN, Hughes, E, Makropoulos, A, Passerat-Palmbach, J, Schuh, A, Gao, J, Farahibozorg, S, O'Muircheartaigh, J, Ciarrusta, J, O'Keeffe, C, Brandon, J, Arichi, T, Rueckert, D, Hajnal, JV, Edwards, AD, Smith, SM, \*Duff, E, \*Andersson, J.  **The developing Human Connectome Project automated functional processing framework for neonates.**, *NeuroImage (2020), 223: 117303*, 2020. **doi:** https://doi.org/10.1016/j.neuroimage.2020.117303 _\*Authors contributed equally._
+Fitzgibbon, SP, Harrison, SJ, Jenkinson, M, Baxter, L, Robinson, EC, Bastiani, M, Bozek, J, Karolis, V, Cordero Grande, L, Price, AN, Hughes, E, Makropoulos, A, Passerat-Palmbach, J, Schuh, A, Gao, J, Farahibozorg, S, O'Muircheartaigh, J, Ciarrusta, J, O'Keeffe, C, Brandon, J, Arichi, T, Rueckert, D, Hajnal, JV, Edwards, AD, Smith, SM, \*Duff, E, \*Andersson, J.  **The developing Human Connectome Project automated functional processing framework for neonates.**, *NeuroImage (2020), 223: 117303*, 2020. https://doi.org/10.1016/j.neuroimage.2020.117303 _\*Authors contributed equally._
 
 **fMRI motion and distortion correction:** Techniques described in the
 following papers were applied to all open access pre-processed fMRI data:
