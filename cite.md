@@ -169,7 +169,7 @@ susceptibility distortions in spin-echo echo-planar images: application
 to diffusion tensor imaging** *NeuroImage (2003), 20(2): 870–888.* [DOI:
 10.1016/S1053-8119(03)00336-7](https://doi.org/10.1016/S1053-8119(03)00336-7)
 
-#### Diffusion MRI data processing
+#### Diffusion MRI data processing - Pipeline I
 
 **Automated processing pipeline:** The pipeline described in the following
 reference was applied to all dHCP open access diffusion data:
@@ -226,5 +226,16 @@ J.L.R. **Automated quality control for within and between studies
 diffusion MRI data using a non-parametric framework for movement
 and distortion correction** *NeuroImage (2018), 184: 801-812.* [DOI:
 10.1016/j.neuroimage.2018.09.073](https://doi.org/10.1016/j.neuroimage.2018.09.073)
+
+
+#### Diffusion MRI data processing - Pipeline II
+
+The second dMRI processing pipeline is described in:
+
+Christiaens, D., Cordero-Grande, L., Pietsch, M., Hutter, J., Price, A.N., 
+Hughes, E.J., Vecchiato, K., Deprez, M., Edwards, A.D., Hajnal, J.V., & 
+Tournier, J-D. **Scattered slice SHARD reconstruction for motion correction in 
+multi-shell diffusion MRI** *NeuroImage (2021), 225: 117437.* [DOI:
+10.1016/j.neuroimage.2020.117437](https://doi.org/10.1016/j.neuroimage.2020.117437)
 
 

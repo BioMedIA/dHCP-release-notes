@@ -59,7 +59,24 @@ between diffusion and atlas spaces.
 
 ## Diffusion MRI QC
 
-TODO
+Automated quality control metrics are calculated for several key steps in the 
+pipeline. Specifically, the data release includes estimates of:
+
+- **Signal-to-Noise Ratio**: A measure of SNR is calculated based on the 
+  residuals of denoising (Step 1). The reported metrics are the median across a
+  brain mask of the RMS residuals, divided by the median of the mean b=0 signal.
+
+- **Motion metrics**: Measures of the mean translation and rotation that was 
+  detected/estimated in the motion correction method.<sup>2</sup> These metrics 
+  are based on the gradient of the motion trace, thus measuring the subject 
+  activity during the scan.
+
+- **Outlier ratio**: The mean outlier weight of all slices in the data, as 
+  detected in slice-to-volume reconstruction.<sup>2</sup>
+
+In addition, overview screenshots of the motion traces and destriped output data 
+are generated. Based on these screenshots, visual pass/fail Quality Control 
+identified a small subset of cases to be discarded from analysis.
 
 
 ## References
@@ -72,7 +89,8 @@ TODO
 2. Christiaens, D., Cordero-Grande, L., Pietsch, M., Hutter, J., Price, A.N., 
 Hughes, E.J., Vecchiato, K., Deprez, M., Edwards, A.D., Hajnal, V., Tournier, J-D.
  **Scattered slice SHARD reconstruction for motion correction in multi-shell 
-diffusion MRI** *arXiv (2020).* [arXiv:1905.02996](https://arxiv.org/abs/1905.02996)
+diffusion MRI** *NeuroImage (2021), 225: 117437.* [DOI:
+ 10.1016/j.neuroimage.2020.117437](https://doi.org/10.1016/j.neuroimage.2020.117437)
 
 3. Christiaens, D., Cordero-Grande, L., Price, A.N., Hutter, J., Hughes, E.J.,
 ounsell, S.J., Tournier, J-D., Hajnal, J.V. **Fetal diffusion MRI acquisition and 
