@@ -91,16 +91,16 @@ In Proc ISMRM 2015: p2398
 **Anatomical MRI - Motion corrected reconstruction:** All anatomical images
 for all dHCP subjects have had motion corrected reconstruction:
 
-Cordero-Grande, L., Hughes, E. J., Hutter, J., Hutter, J., Price, A. N., 
-and Hajnal, J. V. **Three-Dimensional Motion Corrected Sensitivity Encoding 
-Reconstruction for Multi-Shot Multi-Slice MRI: Application to Neonatal 
+Cordero-Grande, L., Hughes, E. J., Hutter, J., Hutter, J., Price, A. N.,
+and Hajnal, J. V. **Three-Dimensional Motion Corrected Sensitivity Encoding
+Reconstruction for Multi-Shot Multi-Slice MRI: Application to Neonatal
 Brain Imaging** *Magnetic Resonance in Medicine (2018), 79(3): 1365–1376.* [DOI:
 10.1002/mrm.26796](https://doi.org/10.1002/mrm.26796)
 
 **Diffusion MRI signal retrieval:** Denoised diffusion images are obtained by:
 
-Cordero-Grande, L., Christiaens, D., Hutter, J., Price, A. N., and Hajnal, J. V. 
-**Complex diffusion-weighted image estimation via matrix recovery under general 
+Cordero-Grande, L., Christiaens, D., Hutter, J., Price, A. N., and Hajnal, J. V.
+**Complex diffusion-weighted image estimation via matrix recovery under general
 noise models** *Neuroimage (2019), 200: 391–404.* [DOI:
 10.1016/j.neuroimage.2019.06.039](https://doi.org/10.1016/j.neuroimage.2019.06.039)
 
@@ -137,10 +137,10 @@ a neonatal cortical surface atlas using Multimodal Surface Matching in the
 Developing Human Connectome Project** *NeuroImage (2018), 179: 11-29.* [DOI:
 10.1016/j.neuroimage.2018.06.018](https://doi.org/10.1016/j.neuroimage.2018.06.018)
 
-#### Resting-fMRI data processing 
+#### Resting-fMRI data processing
 
 **Automated processing pipeline:** The pipeline described in the following
-paper was applied to all dHCP open access fMRI data.  
+paper was applied to all dHCP open access fMRI data.
 
 Fitzgibbon, SP, Harrison, SJ, Jenkinson, M, Baxter, L, Robinson, EC, Bastiani, M, Bozek, J, Karolis, V, Cordero Grande, L, Price, AN, Hughes, E, Makropoulos, A, Passerat-Palmbach, J, Schuh, A, Gao, J, Farahibozorg, S, O'Muircheartaigh, J, Ciarrusta, J, O'Keeffe, C, Brandon, J, Arichi, T, Rueckert, D, Hajnal, JV, Edwards, AD, Smith, SM, \*Duff, E, \*Andersson, J.  **The developing Human Connectome Project automated functional processing framework for neonates.**, *NeuroImage (2020), 223: 117303*, 2020. https://doi.org/10.1016/j.neuroimage.2020.117303 _\*Authors contributed equally._
 
@@ -182,7 +182,7 @@ processing pipeline for neonatal diffusion MRI in the developing
 Human Connectome Project** *NeuroImage (2018), 185: 750-763.* [DOI:
 10.1016/j.neuroimage.2018.05.064](https://doi.org/10.1016/j.neuroimage.2018.05.064)
 
-The pipeline can be downloaded from: 
+The pipeline can be downloaded from:
 
 https://git.fmrib.ox.ac.uk/matteob/dHCP_neo_dMRI_pipeline_release
 
@@ -232,10 +232,16 @@ and distortion correction** *NeuroImage (2018), 184: 801-812.* [DOI:
 
 The second dMRI processing pipeline is described in:
 
-Christiaens, D., Cordero-Grande, L., Pietsch, M., Hutter, J., Price, A.N., 
-Hughes, E.J., Vecchiato, K., Deprez, M., Edwards, A.D., Hajnal, J.V., & 
-Tournier, J-D. **Scattered slice SHARD reconstruction for motion correction in 
+Christiaens, D., Cordero-Grande, L., Pietsch, M., Hutter, J., Price, A.N.,
+Hughes, E.J., Vecchiato, K., Deprez, M., Edwards, A.D., Hajnal, J.V., &
+Tournier, J-D. **Scattered slice SHARD reconstruction for motion correction in
 multi-shell diffusion MRI** *NeuroImage (2021), 225: 117437.* [DOI:
 10.1016/j.neuroimage.2020.117437](https://doi.org/10.1016/j.neuroimage.2020.117437)
+
+Additionally, inter-slice intensity inconsistencies were corrected with
+
+Pietsch, M. and Christiaens, D. and Hajnal, J.V. &
+Tournier, J-D. **dStripe: slice artefact correction in diffusion MRI via constrained neural network** *biorxiv (2020)* [bioRxiv 2020.10.20.347518](https://doi.org/10.1101/2020.10.20.347518)
+
 
 
