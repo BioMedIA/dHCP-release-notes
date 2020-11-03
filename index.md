@@ -76,5 +76,10 @@ SN., REDCap Consortium, **The REDCap consortium: Building an international
 community of software partners**, *J Biomed Inform. 2019 May 9* [doi:
 10.1016/j.jbi.2019.103208](https://doi.org/10.1016/j.jbi.2019.103208)
 
+Burns, SS., Browne, A., Davis, GN., Rimrodt, SL., Cutting, LE. **PyCap
+(Version 1.0)** *Nashville, TN: Vanderbilt University
+and Philadelphia, PA: Childrens Hospital of Philadelphia. 
+[https://github.com/sburns/PyCap](https://github.com/sburns/PyCap)*
+[DOI: 10.5281/zenodo.9917](http://doi.org/10.5281/zenodo.9917)
 
 
