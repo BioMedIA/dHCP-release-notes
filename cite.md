@@ -10,7 +10,7 @@ As stipulated in the User Terms, authors of publications or presentations
 that use KCL-Imperial-Oxford developing Human Connectome Project (dHCP)
 data should acknowledge the funding sources and cite relevant publications
 that describe key methods used by the dHCP to acquire and process the data.
-This web page provides guidance on both fronts.
+This page provides guidance on both fronts.
 
 ## Acknowledge the Funding Source
 
@@ -61,16 +61,15 @@ Bastiani, M., Sotiropoulos, S.N., Jbabdi, S., Andersson, J., Edwards, A.D.,
 HARDI diffusion** *Magnetic Resonance in Medicine (2018), 79 (3): 1276-1292.*
 [DOI: 10.1002/mrm.26765](https://doi.org/10.1002/mrm.26765)
 
-Tournier, J. D., E. Hughes, N. Tusor, A.D. Edwards and J.V
-Hajnal. [**Optimisation of single-shell HARDI for neonatal
-imaging**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Optimisation-of-single-shell-HARDI-for-neonatal-imaging-.pdf)
-*Proc ISMRM 2015: p2895.*
+Tournier, J. D., E. Hughes, N. Tusor, A.D. Edwards
+and J.V Hajnal. **Optimisation of single-shell
+HARDI for neonatal imaging** [*Proc ISMRM 2015:
+p2895.*](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Optimisation-of-single-shell-HARDI-for-neonatal-imaging-.pdf)
 
-Tournier, J. D.  E. Hughes, N. Tusor,
-S.N. Sotiropoulos, S. Jbabdi, J. Andersson, D. Rueckert,
-A.D. Edwards, J.V Hajnal. [**Data-driven optimisation of multi-shell
-HARDI**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Data-driven-optimisation-of-multi-shell-HARDI.pdf)
-ISMRM 2015: p2897.
+Tournier, J. D.  E. Hughes, N. Tusor, S.N. Sotiropoulos,
+S. Jbabdi, J. Andersson, D. Rueckert, A.D. Edwards, J.V
+Hajnal. **Data-driven optimisation of multi-shell HARDI** [*ISMRM 2015:
+p2897.*](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Data-driven-optimisation-of-multi-shell-HARDI.pdf)
 
 **Resting state functional MRI data acquisition:** All dHCP functional
 imaging acquisitions were obtained using an optimised multiband sequence
@@ -78,15 +77,14 @@ tuned for neonatal, in particular by deploying a high multiband factor to
 achieve a repeat time short enough to avoid aliasing cardiac fluctuations
 into the fMRI signal. Phase optimised multiband pulses were used throughout.
 
-Price A. N., Cordero-Grande L, Malik S. J., Abaei M., Arichi T., Hughes
-E. J., Rueckert D., Edwards A. D., Hajnal J. V. [**Accelerated Neonatal fMRI
-Using Multiband
-EPI**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Accelerated-Neonatal-fMRI-using-Multiband-EPI.-ISMRM-2015.pdf). In Proc ISMRM 2015: p3911.
+Price A. N., Cordero-Grande L, Malik S. J., Abaei M., Arichi T.,
+Hughes E. J., Rueckert D., Edwards A. D., Hajnal J. V. **Accelerated
+Neonatal fMRI Using Multiband EPI** [*In Proc ISMRM 2015:
+p3911.*](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Accelerated-Neonatal-fMRI-using-Multiband-EPI.-ISMRM-2015.pdf).
 
-Malik, SJ, Price AN, and Hajnal
-JV. [**Optimized Amplitude Modulated Multi-Band RF
-pulses**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Optimized-Amplitude-Modulated-Muli-Band-RF-pulses.pdf)
-In Proc ISMRM 2015: p2398
+Malik, SJ, Price AN, and Hajnal JV. **Optimized Amplitude
+Modulated Multi-Band RF pulses** (*In Proc ISMRM 2015:
+p2398*](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Optimized-Amplitude-Modulated-Muli-Band-RF-pulses.pdf)
 
 **Anatomical MRI - Motion corrected reconstruction:** All anatomical images
 for all dHCP subjects have had motion corrected reconstruction:
@@ -99,9 +97,9 @@ Brain Imaging** *Magnetic Resonance in Medicine (2018), 79(3): 1365–1376.* [DO
 
 **Diffusion MRI signal retrieval:** Denoised diffusion images are obtained by:
 
-Cordero-Grande, L., Christiaens, D., Hutter, J., Price, A. N., and Hajnal, J. V.
-**Complex diffusion-weighted image estimation via matrix recovery under general
-noise models** *Neuroimage (2019), 200: 391–404.* [DOI:
+Cordero-Grande, L., Christiaens, D., Hutter, J., Price, A. N., and Hajnal,
+J. V.  **Complex diffusion-weighted image estimation via matrix recovery
+under general noise models** *Neuroimage (2019), 200: 391–404.* [DOI:
 10.1016/j.neuroimage.2019.06.039](https://doi.org/10.1016/j.neuroimage.2019.06.039)
 
 ### Publications relevant to the dHCP pre-processed data
@@ -142,7 +140,15 @@ Developing Human Connectome Project** *NeuroImage (2018), 179: 11-29.* [DOI:
 **Automated processing pipeline:** The pipeline described in the following
 paper was applied to all dHCP open access fMRI data.
 
-Fitzgibbon, SP, Harrison, SJ, Jenkinson, M, Baxter, L, Robinson, EC, Bastiani, M, Bozek, J, Karolis, V, Cordero Grande, L, Price, AN, Hughes, E, Makropoulos, A, Passerat-Palmbach, J, Schuh, A, Gao, J, Farahibozorg, S, O'Muircheartaigh, J, Ciarrusta, J, O'Keeffe, C, Brandon, J, Arichi, T, Rueckert, D, Hajnal, JV, Edwards, AD, Smith, SM, \*Duff, E, \*Andersson, J.  **The developing Human Connectome Project automated functional processing framework for neonates.**, *NeuroImage (2020), 223: 117303*, 2020. https://doi.org/10.1016/j.neuroimage.2020.117303 _\*Authors contributed equally._
+Fitzgibbon, SP., Harrison, SJ., Jenkinson, M., Baxter, L., Robinson, EC.,
+Bastiani, M., Bozek, J., Karolis, V., Cordero Grande, L., Price, AN., Hughes,
+E., Makropoulos, A., Passerat-Palmbach, J., Schuh, A., Gao, J., Farahibozorg,
+S., O'Muircheartaigh, J., Ciarrusta, J., O'Keeffe, C., Brandon, J., Arichi,
+T., Rueckert, D., Hajnal, JV., Edwards, AD., Smith, SM., Duff, E., Andersson,
+J.  **The developing Human Connectome Project automated functional processing
+framework for neonates.**, *NeuroImage (2020), 223: 117303, 2020.* [DOI:
+10.1016/j.neuroimage.2020.117303](https://doi.org/10.1016/j.neuroimage.2020.117303)
+*Authors contributed equally.*
 
 **fMRI motion and distortion correction:** Techniques described in the
 following papers were applied to all open access pre-processed fMRI data:
@@ -159,9 +165,9 @@ for movement and distortion correction of diffusion MR images:
 Within volume movement** *NeuroImage (2017), 152: 450–466.* [DOI:
 10.1016/j.neuroimage.2017.02.085](https://doi.org/10.1016/j.neuroimage.2017.02.085)
 
-Andersson, J. L. R., Hutton, C., Ashburner, J., Turner, R., and Friston,
-K. **Modeling Geometric Deformations in EPI Time Series** *NeuroImage (2001),
-13(5): 903–919.* [DOI:
+Andersson, J. L. R., Hutton, C., Ashburner, J., Turner, R.,
+and Friston, K. **Modeling Geometric Deformations in EPI
+Time Series** *NeuroImage (2001), 13(5): 903–919.* [DOI:
 10.1006/nimg.2001.0746](https://doi.org/10.1006/nimg.2001.0746)
 
 Andersson, J. L. R., Skare, S., and Ashburner, J. **How to correct
@@ -184,7 +190,7 @@ Human Connectome Project** *NeuroImage (2018), 185: 750-763.* [DOI:
 
 The pipeline can be downloaded from:
 
-https://git.fmrib.ox.ac.uk/matteob/dHCP_neo_dMRI_pipeline_release
+[https://git.fmrib.ox.ac.uk/matteob/dHCP_neo_dMRI_pipeline_release](https://git.fmrib.ox.ac.uk/matteob/dHCP_neo_dMRI_pipeline_release)
 
 **Diffusion imaging distortion correction and quality control:** Techniques
 described in the following references were applied to all dHCP open access
@@ -227,7 +233,6 @@ diffusion MRI data using a non-parametric framework for movement
 and distortion correction** *NeuroImage (2018), 184: 801-812.* [DOI:
 10.1016/j.neuroimage.2018.09.073](https://doi.org/10.1016/j.neuroimage.2018.09.073)
 
-
 #### Diffusion MRI data processing - Pipeline II
 
 The second dMRI processing pipeline is described in:
@@ -240,8 +245,7 @@ multi-shell diffusion MRI** *NeuroImage (2021), 225: 117437.* [DOI:
 
 Additionally, inter-slice intensity inconsistencies were corrected with
 
-Pietsch, M. and Christiaens, D. and Hajnal, J.V. &
-Tournier, J-D. **dStripe: slice artefact correction in diffusion MRI via constrained neural network** *biorxiv (2020)* [bioRxiv 2020.10.20.347518](https://doi.org/10.1101/2020.10.20.347518)
-
-
-
+Pietsch, M. and Christiaens, D. and Hajnal, J.V. & Tournier,
+J-D. **dStripe: slice artefact correction in diffusion MRI
+via constrained neural network** *biorxiv (2020)* [DOI:
+10.1101/2020.10.20.347518](https://doi.org/10.1101/2020.10.20.347518)
