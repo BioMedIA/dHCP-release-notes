@@ -73,7 +73,7 @@ informatics support**, *J Biomed Inform. 2009 Apr;42(2):377-81.*
 Harris, PA., Taylor, R., Minor, BL., Elliott, V., Fernandez, M.,
 O’Neal, L., McLeod, L., Delacqua, G., Delacqua, F., Kirby, J., Duda,
 SN., REDCap Consortium, **The REDCap consortium: Building an international
-community of software partners**, *J Biomed Inform. 2019 May 9* [doi:
+community of software partners**, *J Biomed Inform. 2019 May 9* [DOI:
 10.1016/j.jbi.2019.103208](https://doi.org/10.1016/j.jbi.2019.103208)
 
 Burns, SS., Browne, A., Davis, GN., Rimrodt, SL., Cutting, LE. **PyCap
