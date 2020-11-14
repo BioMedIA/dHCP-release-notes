@@ -31,6 +31,7 @@ over 250 fetal scans, and further data is still being collected. Further
 data releases are planned - these will be announced on the dHCP website
 when they are ready.
 
+<!---
 ## News
 
 <ul class="blog-index">
@@ -42,6 +43,7 @@ when they are ready.
     </li>
   {% endfor %}
 </ul>
+-->
 
 ## Acknowledgments
 
