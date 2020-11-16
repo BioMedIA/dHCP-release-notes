@@ -64,7 +64,7 @@
 ## fMRI QC
 
 1. Numerous quality assurance metrics are calculated during the
-pre-processing. Six of these are specifically compared against the population
+pre-processing. Eight of these are specifically compared against the population
 distribution to flag outliers for manual inspection and potential exclusion:
 
     1. Mean DVARS<sup>5</sup> of the ICA denoised functional EPI; provides a snapshot of output signal quality
@@ -95,7 +95,7 @@ a z-score < -2.5 on any QC metric were flagged for further inspection.
 
 > 27 subject/sessions were flagged for futher inspection (see figure).  All flagged subject/sessions are included in the release.
 
-![](fmri_qc_z_distributions.png)
+![](fmri_qc_z_distns.png)
 
 ## References
 
