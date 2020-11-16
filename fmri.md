@@ -93,6 +93,10 @@ distribution to flag outliers for manual inspection and potential exclusion:
 that positive z-scores are good and negative bad.  Subject/sessions with
 a z-score < -2.5 on any QC metric were flagged for further inspection.
 
+> 27 subject/sessions were flagged for futher inspection (see figure).  All flagged subject/sessions are included in the release.
+
+![](fmri_qc_z_distributions.png)
+
 ## References
 
 1. Andersson, J. L., Skare, S. and Ashburner, J. **How to correct susceptibility
