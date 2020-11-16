@@ -7,8 +7,6 @@ QC is performed at various stages of the dHCP analysis as listed below. The
 final selection of subject data to release made use of these as outlined
 subsequently.
 
-## Stages of QC  
-
 1. After reconstruction the T2, T1, T13D, fMRI and dMRI datasets were visually 
 inspected and each of them was flagged as PASS/FAIL.
 
@@ -16,6 +14,8 @@ inspected and each of them was flagged as PASS/FAIL.
    1. [Functional Pipeline](fmri.md#fmri-qc)
    2. [Diffusion Pipeline I](dwi.md#diffusion-mri-qc)
    3. [Diffusion Pipeline II](dwi-shard.md#diffusion-mri-qc)
+
+## Selection Criteria
 
 The inclusion criteria for reconstructed raw data is:
 1. TBD
