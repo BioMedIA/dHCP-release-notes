@@ -30,7 +30,7 @@ taking them out of the patient immobilization system. Even when sleeping
 peacefully, many babies move and so all data were motion corrected, mostly
 using methods developed specifically for the dHCP project. As a result of
 the challenges of imaging unsedated infants we were not able to obtain high
-quality and complete data for every modality on every subject. There were 886
+quality and complete data for every modality on every subject. There were 887
 sessions from [INSERT FINAL NUMBER] subjects with T2w images that passed QC, then of those,
 [INSERT FINAL NUMBER] had fMRI data that passed QC and [INSERT FINAL NUMBER] had dMRI data that passed QC. The
 T1w images were not subject to the same level of systematic QC as they were
