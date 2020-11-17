@@ -1,7 +1,7 @@
 ---
 ---
 
-## The functional pipeline
+## Functional (fMRI) Pipeline
 
 1. Prepare fieldmaps for correction of susceptibility distortions
 
