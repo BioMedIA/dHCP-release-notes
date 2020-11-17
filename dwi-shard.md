@@ -1,7 +1,7 @@
 ---
 ---
 
-## The diffusion pipeline II
+## The diffusion SHARD pipeline
 
 The third data release includes an alternative dMRI processing pipeline based
 on denoising<sup>[1](#ref1)</sup> and SHARD motion correction<sup>[2](#ref2)</sup>. This
