@@ -9,15 +9,15 @@
 
 ## Pipelines
 
-### [The reconstruction pipeline](recon.md)
+### [Reconstruction Pipeline](recon.md)
 
-### [The structural pipeline](struct.md)
+### [Structural Pipeline](struct.md)
 
-### [The diffusion pipeline I](dwi.md)
+### [Diffusion EDDY Pipeline](dwi.md)
 
-### [The diffusion pipeline II](dwi-shard.md)
+### [Diffusion SHARD Pipeline](dwi-shard.md)
 
-### [The functional pipeline](fmri.md)
+### [Functional Pipeline](fmri.md)
 
 ### [Directory structure and file naming conventions](structure.md)
 
