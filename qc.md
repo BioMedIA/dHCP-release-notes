@@ -12,8 +12,8 @@ inspected and each of them was flagged as PASS/FAIL.
 
 2. The fMRI pipeline and diffusion pipelines generate numerous quantitative QC metrics which are described on their respective pages:
    1. [Functional Pipeline](fmri.md#fmri-qc)
-   2. [Diffusion Pipeline I](dwi.md#diffusion-mri-qc)
-   3. [Diffusion Pipeline II](dwi-shard.md#diffusion-mri-qc)
+   2. [Diffusion EDDY Pipeline](dwi.md#diffusion-mri-qc)
+   3. [Diffusion SHARD Pipeline](dwi-shard.md#diffusion-mri-qc)
 
 ## Selection Criteria
 
