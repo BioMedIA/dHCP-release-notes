@@ -1,7 +1,7 @@
 ---
 ---
 
-## The diffusion pipeline I
+## The diffusion EDDY pipeline
 
 For a complete and detailed description of all the steps
 involved in the [dHCP neonatal diffusion MRI (dMRI) data processing
