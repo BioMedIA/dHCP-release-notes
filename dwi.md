@@ -18,14 +18,17 @@ at the beginning of the 4D raw data file.
 2. Field maps for correcting susceptibility-induced distortions are estimated
 using FSL TOPUP<sup>2</sup>.
 
-3. Distortions caused by susceptibility, between-volume motion, within-volum motion, 
-motion-induced signal drop-out, motion-by-susceptibility interactions, and eddy currents are corrected; 
-outlier slices are detected and replaced in raw distorted space. All these steps use FSL EDDY<sup>3-6</sup>.
+3. Distortions caused by susceptibility, between-volume motion, within-volum
+motion, motion-induced signal drop-out, motion-by-susceptibility interactions,
+and eddy currents are corrected; outlier slices are detected and replaced
+in raw distorted space. All these steps use FSL EDDY<sup>3-6</sup>.
 
 4. A super-resolution algorithm<sup>7</sup> is applied along the
 slice-selection direction, to achieve isotropic resolution of 1.5 mm.
 
-5. Post-processing using traditional tensor fitting, as well as FSL's [BedpostX](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide) for multishell data<sup>13</sup> is applied.
+5. Post-processing using traditional tensor fitting, as well as FSL's
+[BedpostX](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide) for
+multishell data<sup>13</sup> is applied.
 
 6. Diffusion data are aligned to high-resolution structural (T2-weighted)
 space using boundary-based registration<sup>8,9</sup>  on the average
@@ -120,6 +123,8 @@ diffusion MRI data using a non-parametric framework for movement
 and distortion correction** *Neuroimage (2019), 184: 801-812.* [DOI:
 10.1016/j.neuroimage.2018.09.073](https://doi.org/10.1016/j.neuroimage.2018.09.073)
 
-13. Jbabdi S, Sotiropoulos S.N., Savio A., Grana M., Behrens T.E.J.. **Model-based analysis of multishell diffusion MR data for tractography: How to get over fitting problems**. Magn Reson Med (2012), [DOI:10.1002/mrm.24204](https://doi.org/10.1002/mrm.24204)
-
+13. Jbabdi S, Sotiropoulos S.N., Savio A., Grana M., Behrens
+T.E.J. **Model-based analysis of multishell diffusion MR data for
+tractography: How to get over fitting problems** *Magn Reson Med (2012).*
+[DOI:10.1002/mrm.24204](https://doi.org/10.1002/mrm.24204)
 

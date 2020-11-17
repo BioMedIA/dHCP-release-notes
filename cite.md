@@ -80,10 +80,10 @@ into the fMRI signal. Phase optimised multiband pulses were used throughout.
 Price A. N., Cordero-Grande L, Malik S. J., Abaei M., Arichi T.,
 Hughes E. J., Rueckert D., Edwards A. D., Hajnal J. V. **Accelerated
 Neonatal fMRI Using Multiband EPI** [*In Proc ISMRM 2015:
-p3911.*](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Accelerated-Neonatal-fMRI-using-Multiband-EPI.-ISMRM-2015.pdf).
+p3911.*](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Accelerated-Neonatal-fMRI-using-Multiband-EPI.-ISMRM-2015.pdf)
 
 Malik, SJ, Price AN, and Hajnal JV. **Optimized Amplitude
-Modulated Multi-Band RF pulses** (*In Proc ISMRM 2015:
+Modulated Multi-Band RF pulses** [*In Proc ISMRM 2015:
 p2398*](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Optimized-Amplitude-Modulated-Muli-Band-RF-pulses.pdf)
 
 **Anatomical MRI - Motion corrected reconstruction:** All anatomical images
@@ -175,7 +175,7 @@ susceptibility distortions in spin-echo echo-planar images: application
 to diffusion tensor imaging** *NeuroImage (2003), 20(2): 870–888.* [DOI:
 10.1016/S1053-8119(03)00336-7](https://doi.org/10.1016/S1053-8119(03)00336-7)
 
-#### Diffusion MRI data processing - Pipeline I
+#### Diffusion MRI EDDY pipeline
 
 **Automated processing pipeline:** The pipeline described in the following
 reference was applied to all dHCP open access diffusion data:
@@ -233,7 +233,7 @@ diffusion MRI data using a non-parametric framework for movement
 and distortion correction** *NeuroImage (2018), 184: 801-812.* [DOI:
 10.1016/j.neuroimage.2018.09.073](https://doi.org/10.1016/j.neuroimage.2018.09.073)
 
-#### Diffusion MRI data processing - Pipeline II
+#### Diffusion MRI SHARD pipeline 
 
 The second dMRI processing pipeline is described in:
 
