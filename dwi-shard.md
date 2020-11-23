@@ -52,12 +52,11 @@ hence remains unchanged.
 on the motion-corrected projected dMRI volumes from step 6 using *dStripe*<sup>[7](#ref7)</sup>.
 Note that these corrections were applied to the reconstructed dMRI data, not to the 5D SHARD output image.
 
-8. Diffusion data are rigidly aligned to high-resolution structural (T2-weighted)
-space using boundary-based registration<sup>[8](#ref8),[9](#ref9)</sup> on the average
-attenuation volume for the b=1000 s/mm<sup>2</sup> shell (i.e. b1k/b0). This
-transformation is combined with a non-linear registration<sup>[10](#ref10)</sup> of
-the T2w volume to the 40 weeks template<sup>[11](#ref11)</sup> to allow transformations
-between diffusion and atlas spaces.
+8. Rigid alignement to high-resolution structural (T2-weighted) space using normalised 
+mutual information (NMI) based registration with FSL Flirt <sup>[8](#ref8)</sup>on the 
+mean b=1000 s/mm<sup>2</sup> shell. This transformation is combined with a non-linear 
+registration<sup>[9](#ref9)</sup> of the T2w volume to the 40 weeks template<sup>[10](#ref10)</sup> 
+to allow transformations between diffusion and atlas spaces.
 
 ## Diffusion MRI QC
 
@@ -116,21 +115,17 @@ analysis in the developing Human Connectome Project** *ISMRM 2020, O629.*
 <a name="ref7"></a>7. Pietsch, M. and Christiaens, D. and Hajnal, J.V. &
 Tournier, J-D. **dStripe: slice artefact correction in diffusion MRI via constrained neural network** *biorxiv (2020)* [bioRxiv 2020.10.20.347518](https://doi.org/10.1101/2020.10.20.347518)
 
-<a name="ref8"></a>8. Greve, D.N., and Fischl, B. **Accurate and robust brain image alignment
-using boundary-based registration** *Neuroimage (2009), 48(1): 63-72.* [DOI:
-10.1016/j.neuroimage.2009.06.060](https://doi.org/10.1016/j.neuroimage.2009.06.060)
-
-<a name="ref9"></a>9. Jenkinson, M., Bannister, P., Brady, M., and Smith, S. **Improved
+<a name="ref8"></a>8. Jenkinson, M., Bannister, P., Brady, M., and Smith, S. **Improved
 optimization for the robust and accurate linear registration and motion
 correction of brain image** *Neuroimage (2002), 17(2): 825-841.* [DOI:
 10.1006/nimg.2002.1132](https://doi.org/10.1006/nimg.2002.1132)
 
-<a name="ref10"></a>10. Andersson, J.L.R., Jenkinson, M., and
+<a name="ref9"></a>9. Andersson, J.L.R., Jenkinson, M., and
 Smith, S. [**Non-linear registration, aka spatial
 normalisation**](https://www.fmrib.ox.ac.uk/datasets/techrep/tr07ja2/tr07ja2.pdf)
 *FMRIB technical report TR07JA2 (2010).*
 
-<a name="ref11"></a>11. Schuh, A., Makropoulos, A., Robinson, E.C., Cordero-Grande, L., Hughes,
+<a name="ref10"></a>10. Schuh, A., Makropoulos, A., Robinson, E.C., Cordero-Grande, L., Hughes,
 E., Hutter, J., Price, A.N., Murgasova, M., Teixeira, R.P.A.G., Tusor,
 N., Steinweg, J.K., Victor, S., Rutherford, M.A., Hajnal, J.V., Edwards,
 A.D., and Rueckert, D. **Unbiased construction of a temporally consistent
