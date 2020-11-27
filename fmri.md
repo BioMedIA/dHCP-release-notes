@@ -32,7 +32,7 @@
 
     5. Nonlinear diffeomorphic multimodal registration of the age-matched
     T2w and GM/WM tissue probability from the dHCP volumetric atlas<sup>7</sup> to
-    the subjects T2w and GM/WM tissue probability using ANTs SyN<sup>6</sup>. We have [augmented](https://git.fmrib.ox.ac.uk/seanf/dhcp-resources/-/blob/master/docs/dhcp-augmented-volumetric-atlas-extended.md) 
+    the subjects T2w and GM/WM tissue probability using ANTs SyN<sup>6</sup>. The GM/WM probability for each subject was calculated as the partial volume estimate from a tool called [Toblerone](https://toblerone.readthedocs.io/en/latest/). We have [augmented](https://git.fmrib.ox.ac.uk/seanf/dhcp-resources/-/blob/master/docs/dhcp-augmented-volumetric-atlas-extended.md) 
     the dHCP volumetric atlas with week-to-week
     nonlinear transforms estimated using a diffeomorphic T2w
     registration (ANTs SyN).  The appropriate transforms are then combined
