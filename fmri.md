@@ -64,18 +64,14 @@
 ## fMRI QC
 
 1. Numerous quality assurance metrics are calculated during the
-pre-processing. Eight of these are specifically compared against the population
+pre-processing. Six of these are specifically compared against the population
 distribution to flag outliers for manual inspection and potential exclusion:
 
     1. Mean DVARS<sup>5</sup> of the ICA denoised functional EPI; provides a snapshot of output signal quality
     
-    2. Mean DVARS delta (difference) between the denoised (output) functional EPI and the raw (input) functional EPI; provides a measure of signal improvement
-
-    3. Mean tSNR of the ICA denoised functional EPI; provides a snapshot of output signal quality
+    2. Mean tSNR of the ICA denoised functional EPI; provides a snapshot of output signal quality
     
-    4. Mean tNSR delta (difference) between the denoised (output) functional EPI and the raw (input) functional EPI; provides a measure of signal improvement
-
-    4. Normalised mutual information of the source (moving) image, re-sampled
+    3. Normalised mutual information of the source (moving) image, re-sampled
     to reference space, and the reference (fixed) image, for each of the
     primary registrations:
 
