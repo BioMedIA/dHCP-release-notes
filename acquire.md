@@ -31,14 +31,14 @@ peacefully, many babies move and so all data were motion corrected, mostly
 using methods developed specifically for the dHCP project. As a result of
 the challenges of imaging unsedated infants we were not able to obtain high
 quality and complete data for every modality on every subject. There were 887
-sessions from [INSERT FINAL NUMBER] subjects with T2w images that passed QC, then of those,
+sessions from 780 subjects with T2w images that passed QC, then of those,
 [INSERT FINAL NUMBER] had fMRI data that passed QC and [INSERT FINAL NUMBER] had dMRI data that passed QC. The
 T1w images were not subject to the same level of systematic QC as they were
 not processed by pre-processing pipelines. Because of their lower anatomical
 importance, the T1w images were placed at the end of the protocol and are
 of more variable quality than the T2w data.
 
-There is a spread of gestational ages with [INSERT FINAL NUMBER] subjects in the term equivalent
+There is a spread of gestational ages with 579 subjects in the term equivalent
 age range, which we defined as 37 to 44 gestational weeks. Also although
 these subjects were recruited as “normal subjects” (with clearly specified
 inclusion and exclusion criteria), there were inevitably incidental findings
