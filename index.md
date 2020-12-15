@@ -8,7 +8,7 @@ Human Connectome Project (dHCP) – an ERC-funded collaboration between
 King’s College London, Imperial College London and University of Oxford.
 
 This is the project’s third open access data release which consists of
-images of XXX neonatal subjects. The imaging data includes structural imaging,
+images of 780 neonatal subjects (887 datasets). The imaging data includes structural imaging,
 structural connectivity data (diffusion MRI) and functional connectivity
 data (resting-state fMRI). This data release comes with minimal accompanying
 metadata: gender, age at birth, age at scan, birthweight, head circumference
