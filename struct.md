@@ -63,7 +63,7 @@ platform on a local cluster.
     all points on the surface ensuring that the same vertex indexes the same
     point, in the same relative position, on the anatomy for all surfaces. Please 
     note that due to the relatively large voxels (causing partial volume) and/or 
-    the uneven vertex sampling for gyri, relative to sulci, we oberve some artifacts 
+    the uneven vertex sampling for gyri (relative to sulci) we observe some artifacts 
     in the myelin and thickness metric files, which resemble the folding patterns.
     For this, we offer a 'corrected' version of thickness maps (corr_thickness); 
     however, this results only from a linear regressesion based correction. We advise 
