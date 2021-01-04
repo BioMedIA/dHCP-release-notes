@@ -30,17 +30,20 @@ taking them out of the patient immobilization system. Even when sleeping
 peacefully, many babies move and so all data were motion corrected, mostly
 using methods developed specifically for the dHCP project. As a result of
 the challenges of imaging unsedated infants we were not able to obtain high
-quality and complete data for every modality on every subject. There were 887
-sessions from 780 subjects with T2w images that passed QC, then of those,
-[INSERT FINAL NUMBER] had fMRI data that passed QC and [INSERT FINAL NUMBER] had dMRI data that passed QC. The
-T1w images were not subject to the same level of systematic QC as they were
+quality and complete data for every modality on every subject. 
+There were 886 sessions from 783 subjects with T2w images that passed QC 
+and an additional session without T2w images. 
+Of those 887 sessions, 818 had fMRI data that passed QC and 758 had dMRI data that passed QC.
+The T1w images were not subject to the same level of systematic QC as they were
 not processed by pre-processing pipelines. Because of their lower anatomical
 importance, the T1w images were placed at the end of the protocol and are
 of more variable quality than the T2w data.
+The release contains 721 sessions with T1w multi-slice fast spin-echo images 
+and 734 sessions with T1 MPRAGE images.
 
 There is a spread of gestational ages with 579 subjects in the term equivalent
 age range, which we defined as 37 to 44 gestational weeks. Also although
-these subjects were recruited as “normal subjects” (with clearly specified
+these subjects were recruited as "normal subjects" (with clearly specified
 inclusion and exclusion criteria), there were inevitably incidental findings
 on the images obtained. All the anatomical images were reviewed by an expert
 perinatal neuroradiologist who scored the subjects using a 5 point scale
@@ -51,7 +54,8 @@ perinatal neuroradiologist who scored the subjects using a 5 point scale
 Imaging was carried out on 3T Philips Achieva (running modified R3.2.2
 software) using a dedicated neonatal imaging system which included a neonatal
 32 channel phased array head coil<sup>1</sup>. Infants were imaged without
-sedation except for 6 who are indicated. Anatomical images (T1w and T2w),
+sedation except for 6 who are indicated. Anatomical images (
+and T2w),
 resting state functional (rs-fMRI) and diffusion (dMRI) acquisitions were
 acquired in a total examination time of 63 minutes. Sequence parameters
 were as follows:
