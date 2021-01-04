@@ -33,7 +33,7 @@ the challenges of imaging unsedated infants we were not able to obtain high
 quality and complete data for every modality on every subject. 
 There were 886 sessions from 783 subjects with T2w images that passed QC 
 and an additional session without T2w images. 
-Of those 887 sessions, 818 had fMRI data that passed QC and 758 had dMRI data that passed QC.
+Of those 886 sessions, 818 had fMRI data that passed QC and 758 had dMRI data that passed QC.
 The T1w images were not subject to the same level of systematic QC as they were
 not processed by pre-processing pipelines. Because of their lower anatomical
 importance, the T1w images were placed at the end of the protocol and are
