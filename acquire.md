@@ -7,9 +7,9 @@ Infants were recruited and imaged at the Evelina Newborn Imaging Centre,
 St Thomas’ Hospital, London, UK. The study was approved by the UK Health
 Research Authority (Research Ethics Committee reference number: 14/LO/1169)
 and written parental consent was obtained in every case for imaging and data
-release. The images included in this release were obtained from 783 subjects born between 23-44 gestational weeks,
-578 born at term-equivalent age which we defined as 37-44 weeks,
-and 156 and 133 preterm-born subjects scanned before and at term-equivalent age.
+release. The images included in this release were obtained from 783 subjects born between 23-44 gestational weeks:
+578 born and scanned at term-equivalent age which we defined as 37-44 weeks,
+156 preterm-born subjects scanned soon after birth and 133 preterm-born subjects scanned at term-equivalent age.
 The images have been reviewed for evidence of anomalies and abnormalities and a radiology score is provided,
 although users should verify that data they use are fit for their purposes.
 
