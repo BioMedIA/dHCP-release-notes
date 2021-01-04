@@ -54,8 +54,7 @@ perinatal neuroradiologist who scored the subjects using a 5 point scale
 Imaging was carried out on 3T Philips Achieva (running modified R3.2.2
 software) using a dedicated neonatal imaging system which included a neonatal
 32 channel phased array head coil<sup>1</sup>. Infants were imaged without
-sedation except for 6 who are indicated. Anatomical images (
-and T2w),
+sedation except for 6 who are indicated. Anatomical images (T1w and T2w),
 resting state functional (rs-fMRI) and diffusion (dMRI) acquisitions were
 acquired in a total examination time of 63 minutes. Sequence parameters
 were as follows:
