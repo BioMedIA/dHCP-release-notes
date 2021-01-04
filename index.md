@@ -11,7 +11,7 @@ This is the project’s third open access data release which consists of
 images of 780 neonatal subjects (887 datasets). The imaging data includes structural imaging,
 structural connectivity data (diffusion MRI) and functional connectivity
 data (resting-state fMRI). This data release comes with minimal accompanying
-metadata: gender, age at birth, age at scan, birthweight, head circumference
+metadata: sex, age at birth, age at scan, birthweight, head circumference
 and radiology score. More specific information about the available data
 can be found in the [data organisation notes](organisation.html). To
 access the data you will be required to agree to a simple [data sharing
@@ -27,7 +27,7 @@ use this data or the pipelines please cite the appropriate publications as
 detailed in the [How to cite](cite.html) notes.
 
 The project to date has successfully completed over 800 neonatal scans and
-over 250 fetal scans, and further data is still being collected. Further
+300 fetal scans. Further
 data releases are planned - these will be announced on the dHCP website
 when they are ready.
 
