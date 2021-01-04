@@ -38,7 +38,7 @@ The T1w images were not subject to the same level of systematic QC as they were
 not processed by pre-processing pipelines. Because of their lower anatomical
 importance, the T1w images were placed at the end of the protocol and are
 of more variable quality than the T2w data.
-The release contains 721 sessions with T1w multi-slice fast spin-echo images 
+The release contains 711 sessions with T1w multi-slice fast spin-echo images 
 and 734 sessions with T1 MPRAGE images.
 
 There is a spread of gestational ages with 579 subjects in the term equivalent
