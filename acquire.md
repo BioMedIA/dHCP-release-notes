@@ -7,8 +7,9 @@ Infants were recruited and imaged at the Evelina Newborn Imaging Centre,
 St Thomas’ Hospital, London, UK. The study was approved by the UK Health
 Research Authority (Research Ethics Committee reference number: 14/LO/1169)
 and written parental consent was obtained in every case for imaging and data
-release. The images included in this release were obtained from infants born
-and imaged between 24-45 weeks of age. The images have been reviewed for
+release. The images included in this release were obtained from 783 subjects born between 23-44 gestational weeks,
+578 born at term-equivalent age which we defined as 37-44 weeks,
+and 133 preterm-born subjects scanned at term-equivalent age. The images have been reviewed for
 evidence of anomalies and abnormalities and a radiology score is provided,
 although users should verify that data they use are fit for their purposes.
 
@@ -31,14 +32,14 @@ peacefully, many babies move and so all data were motion corrected, mostly
 using methods developed specifically for the dHCP project. As a result of
 the challenges of imaging unsedated infants we were not able to obtain high
 quality and complete data for every modality on every subject. 
-There were 886 sessions from 783 subjects with T2w images that passed QC 
+There were 886 sessions with T2w images that passed QC 
 and an additional session without T2w images. 
-Of those 886 sessions, 818 had fMRI data that passed QC and 758 had dMRI data that passed QC.
+Of those 887 sessions, 818 had fMRI data that passed QC and 758 had dMRI data that passed QC.
 The T1w images were not subject to the same level of systematic QC as they were
 not processed by pre-processing pipelines. Because of their lower anatomical
 importance, the T1w images were placed at the end of the protocol and are
 of more variable quality than the T2w data.
-The release contains 711 sessions with T1w multi-slice fast spin-echo images 
+The release contains 711 sessions with T1w multi-slice fast spin-echo images
 and 734 sessions with T1 MPRAGE images.
 
 There is a spread of gestational ages with 579 subjects in the term equivalent
