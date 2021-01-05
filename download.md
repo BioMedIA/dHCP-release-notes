@@ -81,6 +81,7 @@ Directory   | Type  | Notes
 ##  Downloading non-imaging data
 
 ### List of Subjects, Gender, GA
+
 The data release contains some non-imaging data, which can be directly
 downloaded as an Excel spreadsheet by selecting ‘Spreadsheet’ from the
 ‘Options’ drop down menu from the table view page.  The data release
@@ -102,5 +103,6 @@ Columns   |  Notes
 `radiology_score` |  The MRI scans were reviewed by a specialist perinatal<br /> neuroradiologist who scored each subject using the following scale:<br /> 1=Normal appearance for age<br /> 2=Incidental findings with unlikely significance for clinical<br /> outcome or analysis (e.g. subdural haemorrhage. Isolated<br /> subependymal cysts. Mild inferior vermis rotation)<br /> 3=Incidental findings with unlikely clinical significance but<br /> possible analysis significance (e.g. several punctate lesions<br /> or other focal white matter / cortical lesions not thought to be<br /> of clinical significance)<br /> 4=Incidental findings with possible clinical significance.<br /> Unlikely analysis significance (e.g. Isolated non brain <br /> anomaly for example in pituitary / on tongue) <br /> 5=Incidental finding with possible / likely significance for <br /> both clinical and imaging analysis (e.g. Major lesions within <br /> white matter cortex, cerebellum and or basal ganglia; small <br /> head / brain < 1 st centile) <br /> Q=Poor quality anatomical data 
 `sedation` |  1 if the subject was sedated during the scan, 0 otherwise
 
-The file can be downloaded from: [combined.tsv](
-https://raw.githubusercontent.com/BioMedIA/dHCP-release-notes/master/rel02/combined_rel02.tsv) (right click and "save link as" to download the tsv file)
+The file can be downloaded from:
+[combined_rel02.tsv](supplementary_files/combined_rel02.tsv) (right click
+and "save link as" to download the tsv file)
