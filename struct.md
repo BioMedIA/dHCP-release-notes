@@ -41,8 +41,8 @@ platform on a local cluster.
     the exception of the brainstem and the cerebellum. Similarly, a pial mask
     is computed by merging the grey matter structure with the white matter
     mask. The white and pial surfaces of the left and right hemispheres
-    are then reconstructed with the method outlined in5 using a deformable
-    model. The model in5 includes forces to avoid self-intersections and
+    are then reconstructed with the method outlined in 5 using a deformable
+    model. The model in 5 includes forces to avoid self-intersections and
     includes an image-based refinement step that corrects regions such as
     deep sulci mislabelled by the volumetric segmentation.
 
@@ -59,33 +59,37 @@ platform on a local cluster.
 
     4. The following metrics are further estimated from the surfaces:
     curvature, thickness, sulcal depth, T1w/T2w myelin, labels (projected
-    from the volume). All surfaces have one-to-one vertex correspondence for
-    all points on the surface ensuring that the same vertex indexes the same
-    point, in the same relative position, on the anatomy for all surfaces. Please 
-    note that due to the relatively large voxels (causing partial volume) and/or 
-    the uneven vertex sampling for gyri (relative to sulci) we observe some artifacts 
-    in the myelin and thickness metric files, which resemble the folding patterns.
-    For this, we offer a 'corrected' version of thickness maps (corr_thickness); 
-    however, this results only from a linear regressesion based correction. We advise 
-    careful interpretation of these maps and have chosen at this time not to do the
-    same for myelin.
-    
+    from the volume). All surfaces have one-to-one vertex correspondence
+    for all points on the surface ensuring that the same vertex indexes
+    the same point, in the same relative position, on the anatomy for all
+    surfaces. Please note that due to the relatively large voxels (causing
+    partial volume) and/or the uneven vertex sampling for gyri (relative
+    to sulci) we observe some artifacts in the myelin and thickness metric
+    files, which resemble the folding patterns.  For this, we offer a
+    'corrected' version of thickness maps (corr_thickness); however, this
+    results only from a linear regressesion based correction. We advise
+    careful interpretation of these maps and have chosen at this time not
+    to do the same for myelin.
+
 4. Surface registration
 
-   1. A new symmetric and extended version of the neonatal surface template<sup>11</sup> 
-   is available from the [brain-development.org website](https://brain-development.org/brain-atlases/atlases-from-the-dhcp-project/)
-   
-   2. All surfaces have been nonlinearly aligned to the template using cortical 
-   folding-driven aligment (implemented with MSM<sup>11,12</sup>); alignment has been
-   optimised with relatively weak regularisation to push cortical correspondence of 
-   folds in the frontal lobe. At this time we have no evidence of any negative impact on
-   the dMRI and fMRI correspondence through doing this. However, script to re-run registration
-   wih modifed parameters are available from [here](https://github.com/ecr05/dHCP_template_alignment)
-   
-   3. We release only the registration warp file (sphere.reg.surf.gii). To obtain the warped metric files 
-   and surfaces in template space please run the [resampling scripts](https://github.com/ecr05/dHCP_template_alignment)
-    
-    
+   1. A new symmetric and extended version of the neonatal surface
+   template<sup>11</sup> is available from the [brain-development.org
+   website](https://brain-development.org/brain-atlases/atlases-from-the-dhcp-project/)
+
+   2. All surfaces have been nonlinearly aligned to the template using
+   cortical folding-driven aligment (implemented with MSM<sup>11,12</sup>);
+   alignment has been optimised with relatively weak regularisation
+   to push cortical correspondence of folds in the frontal lobe. At
+   this time we have no evidence of any negative impact on the dMRI
+   and fMRI correspondence through doing this. However, scripts to
+   re-run registration wih modifed parameters are available from
+   [here](https://github.com/ecr05/dHCP_template_alignment)
+
+   3. We release only the registration warp file (`sphere.reg.surf.gii`). To
+   obtain the warped metric files and surfaces in template space please run
+   the [resampling scripts](https://github.com/ecr05/dHCP_template_alignment)
+
 
 The structural pipeline is described in detail elsewhere<sup>9</sup>.
 
@@ -153,21 +157,26 @@ Large-Scale Neuroimaging Studies with the OpenMOLE Workflow
 Management System** *Frontiers in Neuroinformatics (2017), 11.* [DOI:
 10.3389/fninf.2017.00021](https://doi.org/10.3389/fninf.2017.00021)
 
-11. Bozek, J., Makropoulos, A., Schuh, A., Fitzgibbon, S., Wright, R., 
-Glasser, M.F., Coalson, T.S., O'Muircheartaigh, J., Hutter, J., Price, A.N., Cordero-Grande, L.
-Teixeira, R. P. A. G., Hughes, E., Tusor, N., Pegoretti Baruteau, K., Rutherford, M. A.,
-Edwards, A. D., Hajnal, J. V., Smith, S. M.,  Rueckert, D., Jenkinson, M., Robinson, E.C,
-**Construction of a neonatal cortical surface atlas using Multimodal Surface Matching in the 
-Developing Human Connectome Project**. *NeuroImage (2018) 179: 11-29. [DOI:
+11. Bozek, J., Makropoulos, A., Schuh, A., Fitzgibbon, S., Wright, R.,
+Glasser, M.F., Coalson, T.S., O'Muircheartaigh, J., Hutter, J., Price,
+A.N., Cordero-Grande, L.  Teixeira, R. P. A. G., Hughes, E., Tusor, N.,
+Pegoretti Baruteau, K., Rutherford, M. A., Edwards, A. D., Hajnal, J. V.,
+Smith, S. M.,  Rueckert, D., Jenkinson, M., Robinson, E.C, **Construction of
+a neonatal cortical surface atlas using Multimodal Surface Matching in the
+Developing Human Connectome Project**. *NeuroImage (2018) 179: 11-29.* [DOI:
 10.1016/j.neuroimage.2018.06.018](https://doi.org/10.1016/j.neuroimage.2018.06.018)
 
-12. Robinson, E.C., Jbabdi, S., Glasser, M.F., Andersson, J., Burgess, G.C., Harms, M.P., Smith, S.M., 
-Van Essen, D.C. and Jenkinson, M. **MSM: a new flexible framework for Multimodal Surface Matching**. 
-*Neuroimage (2014), 100: 414-26. [DOI: 10.1016/j.neuroimage.2014.05.069](https://doi.org/10.1016/j.neuroimage.2014.05.069)
+12. Robinson, E.C., Jbabdi, S., Glasser, M.F., Andersson, J.,
+Burgess, G.C., Harms, M.P., Smith, S.M., Van Essen, D.C. and
+Jenkinson, M. **MSM: a new flexible framework for Multimodal
+Surface Matching**.  *Neuroimage (2014), 100: 414-26.* [DOI:
+10.1016/j.neuroimage.2014.05.069](https://doi.org/10.1016/j.neuroimage.2014.05.069)
 
-13. Robinson, E.C., Garcia, K., Glasser, M.F., Chen, Z., Coalson, T.S., Makropoulos, A., 
-Bozek, J., Wright, R., Schuh, A., Webster, M. and Hutter, J., Price, A.N., Cordero-Grande, L. 
-Hughes, E., Tusor, N., Bayley, P.V., Van Essen, D.C., Smith, S. M.,  Edwards, A. D., Hajnal, J. 
-Jenkinson, M., Glocker, B., Rueckert, D., **Multimodal surface matching with higher-order 
-smoothness constraints**. *Neuroimage (2018), 167: 453-465. [DOI: 10.1016/j.neuroimage.2017.10.037](https://doi.org/10.1016/j.neuroimage.2017.10.037)
+13. Robinson, E.C., Garcia, K., Glasser, M.F., Chen, Z., Coalson, T.S.,
+Makropoulos, A., Bozek, J., Wright, R., Schuh, A., Webster, M. and Hutter,
+J., Price, A.N., Cordero-Grande, L.  Hughes, E., Tusor, N., Bayley, P.V.,
+Van Essen, D.C., Smith, S. M.,  Edwards, A. D., Hajnal, J.  Jenkinson, M.,
+Glocker, B., Rueckert, D., **Multimodal surface matching with higher-order
+smoothness constraints**. *Neuroimage (2018), 167: 453-465.* [DOI:
+10.1016/j.neuroimage.2017.10.037](https://doi.org/10.1016/j.neuroimage.2017.10.037)
 
