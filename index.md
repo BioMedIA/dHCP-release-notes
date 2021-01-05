@@ -70,7 +70,8 @@ procedures for data integration and interoperability with external sources.
 Harris, PA., Taylor, R., Thielke, R., Payne, J., Gonzalez, N., Conde,
 JG., **Research electronic data capture (REDCap) – A metadata-driven
 methodology and workflow process for providing translational research
-informatics support**, *J Biomed Inform. 2009 Apr;42(2):377-81.*
+informatics support**, *J Biomed Inform. 2009 Apr;42(2):377-81.* [DOI:
+10.1016/j.jbi.2008.08.010](https://doi.org/10.1016/j.jbi.2008.08.010)
 
 Harris, PA., Taylor, R., Minor, BL., Elliott, V., Fernandez, M.,
 O’Neal, L., McLeod, L., Delacqua, G., Delacqua, F., Kirby, J., Duda,

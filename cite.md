@@ -239,8 +239,8 @@ The second dMRI processing pipeline is described in:
 
 Christiaens, D., Cordero-Grande, L., Pietsch, M., Hutter, J., Price, A.N.,
 Hughes, E.J., Vecchiato, K., Deprez, M., Edwards, A.D., Hajnal, J.V., &
-Tournier, J-D. **Scattered slice SHARD reconstruction for motion correction in
-multi-shell diffusion MRI** *NeuroImage (2021), 225: 117437.* [DOI:
+Tournier, J-D. **Scattered slice SHARD reconstruction for motion correction
+in multi-shell diffusion MRI** *NeuroImage (2021), 225: 117437.* [DOI:
 10.1016/j.neuroimage.2020.117437](https://doi.org/10.1016/j.neuroimage.2020.117437)
 
 Additionally, inter-slice intensity inconsistencies were corrected with

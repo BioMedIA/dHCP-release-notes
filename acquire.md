@@ -4,14 +4,16 @@
 ## Subjects
 
 Infants were recruited and imaged at the Evelina Newborn Imaging Centre,
-St Thomas’ Hospital, London, UK. The study was approved by the UK Health
+St Thomas' Hospital, London, UK. The study was approved by the UK Health
 Research Authority (Research Ethics Committee reference number: 14/LO/1169)
 and written parental consent was obtained in every case for imaging and data
-release. The images included in this release were obtained from 783 subjects born between 23-44 gestational weeks:
-578 born and scanned at term-equivalent age which we defined as 37-44 weeks,
-156 preterm-born subjects scanned soon after birth and 133 preterm-born subjects scanned at term-equivalent age.
-The images have been reviewed for evidence of anomalies and abnormalities and a radiology score is provided,
-although users should verify that data they use are fit for their purposes.
+release. The images included in this release were obtained from 783 subjects
+born between 23-44 gestational weeks: 578 born and scanned at term-equivalent
+age which we defined as 37-44 weeks, 156 preterm-born subjects scanned soon
+after birth and 133 preterm-born subjects scanned at term-equivalent age.
+The images have been reviewed for evidence of anomalies and abnormalities
+and a radiology score is provided, although users should verify that data
+they use are fit for their purposes.
 
 ## Overview of data
 
@@ -32,15 +34,15 @@ peacefully, many babies move and so all data were motion corrected, mostly
 using methods developed specifically for the dHCP project. As a result of
 the challenges of imaging unsedated infants we were not able to obtain high
 quality and complete data for every modality on every subject. 
-There were 886 sessions with T2w images that passed QC 
-and an additional session without T2w images. 
-Of those 887 sessions, 818 had fMRI data that passed QC and 758 had dMRI data that passed QC.
-The T1w images were not subject to the same level of systematic QC as they were
-not processed by pre-processing pipelines. Because of their lower anatomical
-importance, the T1w images were placed at the end of the protocol and are
-of more variable quality than the T2w data.
-The release contains 711 sessions with T1w multi-slice fast spin-echo images
-and 734 sessions with T1 MPRAGE images.
+
+There were 886 sessions with T2w images that passed QC and an additional
+session without T2w images.  Of those 887 sessions, 818 had fMRI data that
+passed QC and 758 had dMRI data that passed QC.  The T1w images were not
+subject to the same level of systematic QC as they were not processed by
+pre-processing pipelines. Because of their lower anatomical importance, the
+T1w images were placed at the end of the protocol and are of more variable
+quality than the T2w data.  The release contains 711 sessions with T1w
+multi-slice fast spin-echo images and 734 sessions with T1 MPRAGE images.
 
 There is a spread of gestational ages with 579 subjects in the term equivalent
 age range, which we defined as 37 to 44 gestational weeks. Also although
@@ -48,7 +50,7 @@ these subjects were recruited as "normal subjects" (with clearly specified
 inclusion and exclusion criteria), there were inevitably incidental findings
 on the images obtained. All the anatomical images were reviewed by an expert
 perinatal neuroradiologist who scored the subjects using a 5 point scale
-(see below) - this information is provided
+(see below) -- this information is provided
 
 ## Acquisition details
 
@@ -68,11 +70,12 @@ the fMRI and dMRI acquisitions.
 
 **Anatomical acquisition:** T2w and inversion recovery T1w multi-slice fast
 spin-echo images were each acquired in sagittal and axial slice stacks with
-in-plane resolution 0.8x0.8mm2 and 1.6mm slices overlapped by 0.8mm (except
-in T1w Sagittal which used a slice overlap of 0.74mm). Other parameters were
-– T2w: 12000/156ms TR/TE, SENSE factor 2.11 (axial) and 2.60 (sagittal);
-T1w: 4795/1740/8.7ms TR/TI/TE, SENSE factor 2.27 (axial) and 2.66 (sagittal).
-In addition, 3D MPRAGE was acquired with 0.8mm isotropic resolution and parameters: 11/4.6/1400ms TR/TE/TI, SENSE factor 1.2 (RL).
+in-plane resolution 0.8x0.8mm2 and 1.6mm slices overlapped by 0.8mm (except in
+T1w Sagittal which used a slice overlap of 0.74mm). Other parameters were –
+T2w: 12000/156ms TR/TE, SENSE factor 2.11 (axial) and 2.60 (sagittal); T1w:
+4795/1740/8.7ms TR/TI/TE, SENSE factor 2.27 (axial) and 2.66 (sagittal).
+In addition, 3D MPRAGE was acquired with 0.8mm isotropic resolution and
+parameters: 11/4.6/1400ms TR/TE/TI, SENSE factor 1.2 (RL).
 
 **rs-fMRI:** High temporal resolution fMRI developed for neonates<sup>3</sup>
 used multiband (MB) 9x accelerated echo-planar imaging and was collected for
@@ -117,11 +120,11 @@ A. D., Hajnal, J. V. [**Data-driven optimisation of multi-shell
 HARDI**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Data-driven-optimisation-of-multi-shell-HARDI.pdf)
 *ISMRM 2015: 2897.*
 
-5. Hutter, J., Tournier J. D., Price, A. N., Cordero-Grande, L.,
-Hughes, E. J., Malik, S., Steinweg, J., Bastiani, M., Sotiropoulos,
-S. N., Jbabdi, S., Andersson, J., Edwards, A. D., and Hajnal,
-J. V. [**Time-efficient and flexible design of optimised multi-shell
-HARDI diffusion**](https://www.ncbi.nlm.nih.gov/pubmed/28557055) *Magnetic
-Resonance in Medicine (2018), 79: 1276-1292.*
+5. Hutter, J., Tournier J. D., Price, A. N., Cordero-Grande, L., Hughes,
+E. J., Malik, S., Steinweg, J., Bastiani, M., Sotiropoulos, S. N., Jbabdi,
+S., Andersson, J., Edwards, A. D., and Hajnal, J. V. **Time-efficient
+and flexible design of optimised multi-shell HARDI diffusion** *Magnetic
+Resonance in Medicine (2018), 79: 1276-1292.* [DOI: 10.1002/mrm.26765
+](https://doi.org/10.1002/mrm.26765)
 
 
