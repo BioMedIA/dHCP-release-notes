@@ -16,27 +16,32 @@
 
 2. Registration
 
-    1. Boundary-based registration (BBR, FSL FLIRT<sup>3</sup>) of the fieldmap magnitude to
-    the T2w structural
+    1. Boundary-based registration (BBR, FSL FLIRT<sup>3</sup>) of the
+    fieldmap magnitude to the T2w structural
 
-    2. Boundary-based registration (BBR, FSL FLIRT<sup>3</sup>) of the sbref to the
-    T2 structural incorporating field map-based distortion correction of
-    the sbref
+    2. Boundary-based registration (BBR, FSL FLIRT<sup>3</sup>) of the
+    sbref to the T2 structural incorporating field map-based distortion
+    correction of the sbref
 
-    3. Linear registration (6-dof, corratio, FSL FLIRT<sup>3</sup>) of the first volume
-    of the functional multiband EPI to the sbref
+    3. Linear registration (6-dof, corratio, FSL FLIRT<sup>3</sup>) of the
+    first volume of the functional multiband EPI to the sbref
 
-    4. After susceptibility and motion correction (see below), linear registration (6-dof,
-    corratio, FSL FLIRT<sup>3</sup>) of the temporal mean of the motion and distortion
-    corrected functional multiband EPI to the distortion corrected sbref
+    4. After susceptibility and motion correction (see below), linear
+    registration (6-dof, corratio, FSL FLIRT<sup>3</sup>) of the temporal
+    mean of the motion and distortion corrected functional multiband EPI
+    to the distortion corrected sbref
 
-    5. Nonlinear diffeomorphic multimodal registration of the age-matched
-    T2w and GM/WM tissue probability from the dHCP volumetric atlas<sup>7</sup> to
-    the subjects T2w and GM/WM tissue probability using ANTs SyN<sup>6</sup>. The GM/WM probability for each subject was calculated as the partial volume estimate from a tool called [Toblerone](https://toblerone.readthedocs.io/en/latest/). We have [augmented](https://git.fmrib.ox.ac.uk/seanf/dhcp-resources/-/blob/master/docs/dhcp-augmented-volumetric-atlas-extended.md) 
-    the dHCP volumetric atlas with week-to-week
-    nonlinear transforms estimated using a diffeomorphic T2w
-    registration (ANTs SyN).  The appropriate transforms are then combined
-    to yield a (40 week) template-to-structural transform
+    5. Nonlinear diffeomorphic multimodal registration of the
+    age-matched T2w and GM/WM tissue probability from the dHCP
+    volumetric atlas<sup>7</sup> to the subjects T2w and GM/WM tissue
+    probability using ANTs SyN<sup>6</sup>. The GM/WM probability for
+    each subject was calculated as the partial volume estimate from a tool
+    called [Toblerone](https://toblerone.readthedocs.io/en/latest/). We have
+    [augmented](https://git.fmrib.ox.ac.uk/seanf/dhcp-resources/-/blob/master/docs/dhcp-augmented-volumetric-atlas-extended.md)
+    the dHCP volumetric atlas with week-to-week nonlinear transforms estimated
+    using a diffeomorphic T2w registration (ANTs SyN).  The appropriate
+    transforms are then combined to yield a (40 week) template-to-structural
+    transform
 
     6. From these primary registrations the following composite transforms
     are calculated:
@@ -94,7 +99,8 @@ a z-score < -2.5 on any QC metric were flagged for further inspection.
 &gt; 28 subject/sessions were flagged for futher inspection (see figure).
 All flagged subject/sessions are included in the release.
 
-![][assets/images/fmri_qc_z_distns.png](assets/images/fmri_qc_z_distns.png)
+[![QC
+overview](assets/images/fmri_qc_z_distns.png)](assets/images/fmri_qc_z_distns.png)
 
 ## References
 
