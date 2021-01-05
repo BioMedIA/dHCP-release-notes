@@ -94,7 +94,7 @@ a z-score < -2.5 on any QC metric were flagged for further inspection.
 &gt; 28 subject/sessions were flagged for futher inspection (see figure).
 All flagged subject/sessions are included in the release.
 
-![](assets/images/fmri_qc_z_distns.png)
+![][assets/images/fmri_qc_z_distns.png](assets/images/fmri_qc_z_distns.png)
 
 ## References
 
@@ -137,5 +137,5 @@ Murgasova, Rui Pedro A. G. Teixeira, Nora Tusor, Johannes Steinweg,
 Suresh Victor, Mary A. Rutherford, Joseph V. Hajnal, A. David Edwards,
 and Daniel Rueckert. **Unbiased construction of a temporally consistent
 morphological atlas of neonatal brain development**, *bioRxiv, 2018.* [DOI:
-10.1002/mrm.26796](https://doi.org/10.1002/mrm.26796)
+10.1101/251512](https://doi.org/10.1101/251512)
 
