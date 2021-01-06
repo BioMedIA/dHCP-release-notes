@@ -61,15 +61,11 @@ Bastiani, M., Sotiropoulos, S.N., Jbabdi, S., Andersson, J., Edwards, A.D.,
 HARDI diffusion** *Magnetic Resonance in Medicine (2018), 79 (3): 1276-1292.*
 [DOI: 10.1002/mrm.26765](https://doi.org/10.1002/mrm.26765)
 
-Tournier, J. D., E. Hughes, N. Tusor, A.D. Edwards
-and J.V Hajnal. **Optimisation of single-shell
-HARDI for neonatal imaging** [*Proc ISMRM 2015:
-p2895.*](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Optimisation-of-single-shell-HARDI-for-neonatal-imaging-.pdf)
-
-Tournier, J. D.  E. Hughes, N. Tusor, S.N. Sotiropoulos,
-S. Jbabdi, J. Andersson, D. Rueckert, A.D. Edwards, J.V
-Hajnal. **Data-driven optimisation of multi-shell HARDI** [*ISMRM 2015:
-p2897.*](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Data-driven-optimisation-of-multi-shell-HARDI.pdf)
+Tournier, J. D., Christiaens, D., Hutter, J., Price, A. N., Cordero-Grande, L., 
+Hughes, E., Bastiani, M., Sotiropoulos, S. N., Smith S. M., Rueckert, D., 
+Counsell, S. J., Edwards, A. D., Hajnal, J. V.
+**A data‐driven approach to optimising the encoding for multi‐shell diffusion MRI 
+with application to neonatal imaging.** NMR in Biomedicine. 2020; 33:e4348. [doi: 10.1002/nbm.4348](https://doi.org/10.1002/nbm.4348)
 
 **Resting state functional MRI data acquisition:** All dHCP functional
 imaging acquisitions were obtained using an optimised multiband sequence
@@ -77,12 +73,12 @@ tuned for neonatal, in particular by deploying a high multiband factor to
 achieve a repeat time short enough to avoid aliasing cardiac fluctuations
 into the fMRI signal. Phase optimised multiband pulses were used throughout.
 
-Price A. N., Cordero-Grande L, Malik S. J., Abaei M., Arichi T.,
+Price A. N., Cordero-Grande L., Malik S. J., Abaei M., Arichi T.,
 Hughes E. J., Rueckert D., Edwards A. D., Hajnal J. V. **Accelerated
 Neonatal fMRI Using Multiband EPI** [*In Proc ISMRM 2015:
 p3911.*](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Accelerated-Neonatal-fMRI-using-Multiband-EPI.-ISMRM-2015.pdf)
 
-Malik, SJ, Price AN, and Hajnal JV. **Optimized Amplitude
+Malik, S. J., Price A. N., and Hajnal J. V. **Optimized Amplitude
 Modulated Multi-Band RF pulses** [*In Proc ISMRM 2015:
 p2398*](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Optimized-Amplitude-Modulated-Muli-Band-RF-pulses.pdf)
 
