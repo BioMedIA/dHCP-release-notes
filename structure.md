@@ -22,7 +22,6 @@ Field                     | Meaning
 :------------------------ | :------
 `scan_age`                | Gestational age at scan in weeks
 `scan_head_circumference` | Head circumference (cm)
-`scan_number`             | 1 for the first scan, 2 for the second
 `radiology_score`         | Subject status, see below
 
 The MRI scans were reviewed by a specialist perinatal neuroradiologist who
