@@ -11,7 +11,7 @@ beyond `participant_id`. These have the following meaning:
 
 Field          | Meaning
 :------------- | :------
-`gender`       | Male / Female
+`sex`       | Male / Female
 `birth_age`    | Gestational age at birth in weeks
 `birth_weight` | Birthweight (kg)
 
