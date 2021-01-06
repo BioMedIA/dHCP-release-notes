@@ -52,7 +52,7 @@ on tongue)
 **Path:** `rawdata/sub-{subid}/ses-{sesid}`
 
 | Group   | Filename                                                                  | Description                                                                             |
-|:--------|:--------------------------------------------------------------------------|:----------------------------------------------------------------------------------------|
+|:---|:---|:---|
 | T1      | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_T1w.nii`                       | T1w image (native acquired stack)                                                       |
 | T1      | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_T1w.nii`             | T1w phase (native acquired stack)                                                       |
 | T1      | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsr_T1w.nii`              | T1w image (motion corrected and super resolved)                                         |
@@ -97,7 +97,7 @@ on tongue)
 **Path:** `sourcedata/sub-{subid}/ses-{sesid}`
 
 | Group   | Filename                                                         | Description                      |
-|:--------|:-----------------------------------------------------------------|:---------------------------------|
+|:---|:---|:---|
 | fMRI    | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_physio.log` | Resting fMRI Physlog (uncropped) |
 
 ### Structural pipeline
@@ -105,7 +105,7 @@ on tongue)
 **Path:** `derivatives/dhcp_anat_pipeline/sub-{subid}/ses-{sesid}`
 
 | Filename                                                                                         | Description                                                                          |
-|:---                                                                                              |:---|
+|:--- |:---|
 | `anat/sub-{subid}_ses-{sesid}_desc-brain_mask.nii.gz`                                            | FSL BET brain mask                                                                   |
 | `anat/sub-{subid}_ses-{sesid}_desc-drawem87_dseg.nii.gz`                                         | Draw-EM regional segmentation (87 labels)                                            |
 | `anat/sub-{subid}_ses-{sesid}_desc-drawem9_dseg.nii.gz`                                          | Draw-EM tissue segmentation (9 labels)                                               |
@@ -150,7 +150,7 @@ on tongue)
 **Path:** `derivatives/dhcp_dmri_eddy_pipeline/sub-{subid}/ses-{sesid}`
 
 | Filename                                                                | Description                                                                                                                                              |
-|:------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------|
+|:---|:---|
 | `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.nii.gz`                   | Eddy current, susceptibility-by-motion and motion (within and between volumes) corrected super-resolved 4D volume with outlier rejection and replacement |
 | `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bval`                     | List of b-values                                                                                                                                         |
 | `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bvec`                     | List of post-EDDY rotated gradient directions                                                                                                            |
@@ -173,7 +173,7 @@ on tongue)
 **Path:** `derivatives/dhcp_dmri_shard_pipeline/sub-{subid}/ses-{sesid}`
 
 | Filename                                                                | Description                                                                  |
-|:------------------------------------------------------------------------|:-----------------------------------------------------------------------------|
+|:---|:---|
 | `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                          | Topup field map                                                              |
 | `dwi/sub-{subid}_ses-{sesid}_desc-brain_mask.nii.gz`                    | Brain mask derived from T2w, warped to preprocessed DWI                      |
 | `dwi/sub-{subid}_ses-{sesid}_desc-shard_mssh.nii.gz`                    | Motion corrected output (5D image of multi-shell SH coefficients, x,y,z,b,m) |
@@ -194,7 +194,7 @@ on tongue)
 **Path:** `derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}`
 
 | Filename                                                                      | Description                                                                    |
-|:------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
+|:---|:---|
 | `func/sub-{subid}_ses-{sesid}_task-rest_desc-mcdc_bold.nii.gz`                | Multi-band EPI, distortion corrected, motion corrected, 4D image               |
 | `func/sub-{subid}_ses-{sesid}_task-rest_desc-preproc_bold.nii.gz`             | Multi-band EPI, distortion corrected, motion corrected, FIX denoised, 4D image |
 | `func/sub-{subid}_ses-{sesid}_motion.tsv`                                     | Motion parameters                                                              |
