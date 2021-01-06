@@ -102,48 +102,48 @@ on tongue)
 
 ### Structural pipeline
 
-**Path:** `derivatives/dhcp_anat_pipeline/sub-{subid}/ses-{sesid}`
+**Path:** derivatives/dhcp_anat_pipeline/sub-{subid}/ses-{sesid}
 
-| Filename                                                                                         | Description                                                                          |
-|:--- |:---|
-| `anat/sub-{subid}_ses-{sesid}_desc-brain_mask.nii.gz`                                            | FSL BET brain mask                                                                   |
-| `anat/sub-{subid}_ses-{sesid}_desc-drawem87_dseg.nii.gz`                                         | Draw-EM regional segmentation (87 labels)                                            |
-| `anat/sub-{subid}_ses-{sesid}_desc-drawem9_dseg.nii.gz`                                          | Draw-EM tissue segmentation (9 labels)                                               |
-| `anat/sub-{subid}_ses-{sesid}_desc-ribbon_dseg.nii.gz`                                           | Cortical ribbon                                                                      |
-| `anat/sub-{subid}_ses-{sesid}_T1w.nii.gz`                                                        | T1 weighted image (in T2 space)                                                      |
-| `anat/sub-{subid}_ses-{sesid}_desc-biasfield_T1w.nii.gz`                                         | T1 bias field (in T2 space)                                                          |
-| `anat/sub-{subid}_ses-{sesid}_desc-restore_T1w.nii.gz`                                           | T1 weighted, bias corrected image (in T2 space)                                      |
-| `anat/sub-{subid}_ses-{sesid}_T2w.nii.gz`                                                        | T2 weighted image                                                                    |
-| `anat/sub-{subid}_ses-{sesid}_desc-biasfield_T2w.nii.gz`                                         | T2 bias field                                                                        |
-| `anat/sub-{subid}_ses-{sesid}_desc-restore_T2w.nii.gz`                                           | T2 weighted, bias corrected image                                                    |
-| `sub-{subid}_ses-{sesid}_qc.pdf`                                                                 | QC report                                                                            |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_wm.surf.gii`                                           | Left/Right white surface                                                             |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_pial.surf.gii`                                         | Left/Right pial surface                                                              |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_midthickness.surf.gii`                                 | Left/Right mid-thickness surface                                                     |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_inflated.surf.gii`                                     | Left/Right inflated surface                                                          |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_vinflated.surf.gii`                                    | Left/Right very inflated surface                                                     |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_sphere.surf.gii`                                       | Left/Right spherical surface                                                         |
-| `anat/sub-{subid}_ses-{sesid}_curv.dscalar.nii`                                                  | Cortical curvature                                                                   |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_curv.shape.gii`                                        | Left/Right cortical curvature                                                        |
-| `anat/sub-{subid}_ses-{sesid}_sulc.dscalar.nii`                                                  | Sulcal depth                                                                         |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_sulc.shape.gii`                                        | Left/Right sulcal depth                                                              |
-| `anat/sub-{subid}_ses-{sesid}_thickness.dscalar.nii`                                             | Cortical thickness                                                                   |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_thickness.shape.gii`                                   | Left/Right cortical thickness                                                        |
-| `anat/sub-{subid}_ses-{sesid}_desc-corr_thickness.dscalar.nii`                                   | Cortical thickness (curvature regressed out)                                         |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-corr_thickness.shape.gii`                         | Left/Right cortical thickness (curvature regressed out)                              |
-| `anat/sub-{subid}_ses-{sesid}_myelinmap.dscalar.nii`                                             | Cortical myelin                                                                      |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_myelinmap.shape.gii`                                   | Left/Right cortical myelin                                                           |
-| `anat/sub-{subid}_ses-{sesid}_desc-smoothed_myelinmap.dscalar.nii`                               | Smoothed cortical myelin                                                             |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-smoothed_myelinmap.shape.gii`                     | Left/Right smoothed cortical myelin                                                  |
-| `anat/sub-{subid}_ses-{sesid}_desc-drawem_dseg.dlabel.nii`                                       | Cortical regional labels projected from volume                                       |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-drawem_dseg.label.gii`                            | Left/Right cortical regional labels projected from volume                            |
-| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-medialwall_mask.shape.gii`                        | Left/Right Medial wall                                                               |
-| `anat/wb.spec`                                                                                   | Workbench file for loading surfaces                                                  |
-| `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-serag{age}wk_mode-image.nii.gz`                         | Warp from native structural space to the subject’s age respective template space     |
-| `xfm/sub-{subid}_ses-{sesid}_from-serag{age}wk_to-T2w_mode-image.nii.gz`                         | Warp from the subject’s age respective template space to the native structural space |
-| `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-serag40wk_mode-image.nii.gz`                            | Warp from native structural space to the 40-week Serag template space                |
-| `xfm/sub-{subid}_ses-{sesid}_from-serag40wk_to-T2w_mode-image.nii.gz`                            | Warp from the 40-week Serag template space to the native structural space            |
-| `xfm/sub-{subid}_ses-{sesid}_hemi-{hemi}_from-native_to-dhcpSym40_dens-32k_mode-sphere.surf.gii` | Transform from native surface to the dHCP Symmetric 40week surface template          |
+| Description                                                                          | Filename                                                                                         |
+|:-------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| FSL BET brain mask                                                                   | `anat/sub-{subid}_ses-{sesid}_desc-brain_mask.nii.gz`                                            |
+| Draw-EM regional segmentation (87 labels)                                            | `anat/sub-{subid}_ses-{sesid}_desc-drawem87_dseg.nii.gz`                                         |
+| Draw-EM tissue segmentation (9 labels)                                               | `anat/sub-{subid}_ses-{sesid}_desc-drawem9_dseg.nii.gz`                                          |
+| Cortical ribbon                                                                      | `anat/sub-{subid}_ses-{sesid}_desc-ribbon_dseg.nii.gz`                                           |
+| T1 weighted image (in T2 space)                                                      | `anat/sub-{subid}_ses-{sesid}_T1w.nii.gz`                                                        |
+| T1 bias field (in T2 space)                                                          | `anat/sub-{subid}_ses-{sesid}_desc-biasfield_T1w.nii.gz`                                         |
+| T1 weighted, bias corrected image (in T2 space)                                      | `anat/sub-{subid}_ses-{sesid}_desc-restore_T1w.nii.gz`                                           |
+| T2 weighted image                                                                    | `anat/sub-{subid}_ses-{sesid}_T2w.nii.gz`                                                        |
+| T2 bias field                                                                        | `anat/sub-{subid}_ses-{sesid}_desc-biasfield_T2w.nii.gz`                                         |
+| T2 weighted, bias corrected image                                                    | `anat/sub-{subid}_ses-{sesid}_desc-restore_T2w.nii.gz`                                           |
+| QC report                                                                            | `sub-{subid}_ses-{sesid}_qc.pdf`                                                                 |
+| Left/Right white surface                                                             | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_wm.surf.gii`                                           |
+| Left/Right pial surface                                                              | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_pial.surf.gii`                                         |
+| Left/Right mid-thickness surface                                                     | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_midthickness.surf.gii`                                 |
+| Left/Right inflated surface                                                          | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_inflated.surf.gii`                                     |
+| Left/Right very inflated surface                                                     | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_vinflated.surf.gii`                                    |
+| Left/Right spherical surface                                                         | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_sphere.surf.gii`                                       |
+| Cortical curvature                                                                   | `anat/sub-{subid}_ses-{sesid}_curv.dscalar.nii`                                                  |
+| Left/Right cortical curvature                                                        | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_curv.shape.gii`                                        |
+| Sulcal depth                                                                         | `anat/sub-{subid}_ses-{sesid}_sulc.dscalar.nii`                                                  |
+| Left/Right sulcal depth                                                              | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_sulc.shape.gii`                                        |
+| Cortical thickness                                                                   | `anat/sub-{subid}_ses-{sesid}_thickness.dscalar.nii`                                             |
+| Left/Right cortical thickness                                                        | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_thickness.shape.gii`                                   |
+| Cortical thickness (curvature regressed out)                                         | `anat/sub-{subid}_ses-{sesid}_desc-corr_thickness.dscalar.nii`                                   |
+| Left/Right cortical thickness (curvature regressed out)                              | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-corr_thickness.shape.gii`                         |
+| Cortical myelin                                                                      | `anat/sub-{subid}_ses-{sesid}_myelinmap.dscalar.nii`                                             |
+| Left/Right cortical myelin                                                           | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_myelinmap.shape.gii`                                   |
+| Smoothed cortical myelin                                                             | `anat/sub-{subid}_ses-{sesid}_desc-smoothed_myelinmap.dscalar.nii`                               |
+| Left/Right smoothed cortical myelin                                                  | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-smoothed_myelinmap.shape.gii`                     |
+| Cortical regional labels projected from volume                                       | `anat/sub-{subid}_ses-{sesid}_desc-drawem_dseg.dlabel.nii`                                       |
+| Left/Right cortical regional labels projected from volume                            | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-drawem_dseg.label.gii`                            |
+| Left/Right Medial wall                                                               | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-medialwall_mask.shape.gii`                        |
+| Workbench file for loading surfaces                                                  | `anat/wb.spec`                                                                                   |
+| Warp from native structural space to the subject’s age respective template space     | `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-serag{age}wk_mode-image.nii.gz`                         |
+| Warp from the subject’s age respective template space to the native structural space | `xfm/sub-{subid}_ses-{sesid}_from-serag{age}wk_to-T2w_mode-image.nii.gz`                         |
+| Warp from native structural space to the 40-week Serag template space                | `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-serag40wk_mode-image.nii.gz`                            |
+| Warp from the 40-week Serag template space to the native structural space            | `xfm/sub-{subid}_ses-{sesid}_from-serag40wk_to-T2w_mode-image.nii.gz`                            |
+| Transform from native surface to the dHCP Symmetric 40week surface template          | `xfm/sub-{subid}_ses-{sesid}_hemi-{hemi}_from-native_to-dhcpSym40_dens-32k_mode-sphere.surf.gii` |
 
 ### Diffusion EDDY pipeline
 
