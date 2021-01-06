@@ -105,7 +105,7 @@ on tongue)
 **Path:** `derivatives/dhcp_anat_pipeline/sub-{subid}/ses-{sesid}`
 
 | Filename                                                                                         | Description                                                                          |
-|:-------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|
+|:---                                                                                              |:---|
 | `anat/sub-{subid}_ses-{sesid}_desc-brain_mask.nii.gz`                                            | FSL BET brain mask                                                                   |
 | `anat/sub-{subid}_ses-{sesid}_desc-drawem87_dseg.nii.gz`                                         | Draw-EM regional segmentation (87 labels)                                            |
 | `anat/sub-{subid}_ses-{sesid}_desc-drawem9_dseg.nii.gz`                                          | Draw-EM tissue segmentation (9 labels)                                               |
