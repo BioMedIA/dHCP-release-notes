@@ -50,7 +50,7 @@ on tongue)
 
 ### Reconstruction Pipeline
 
-**Path:** rawdata/sub-{subid}/ses-{sesid}
+**Path:** `rawdata/sub-{subid}/ses-{sesid}`
 
 | Group   | Filename                                                                  | Description                                                                             |
 |:--------|:--------------------------------------------------------------------------|:----------------------------------------------------------------------------------------|
@@ -95,7 +95,7 @@ on tongue)
 | B1      | `B1/sub-{subid}_ses-{sesid}_run-{seqnum}_b1map.nii`                       | B1 field map (rel. nom. flip)                                                           |
 | recon03 | `dwi/sub-{subid}_ses-{sesid}_rec-release2_dwi.nii`                        | Multi-band dMRI EPI (Release 2 reconstruction)                                          |
 
-**Path:** sourcedata/sub-{subid}/ses-{sesid}
+**Path:** `sourcedata/sub-{subid}/ses-{sesid}`
 
 | Group   | Filename                                                         | Description                      |
 |:--------|:-----------------------------------------------------------------|:---------------------------------|
@@ -103,7 +103,7 @@ on tongue)
 
 ### Structural pipeline
 
-**Path:** derivatives/dhcp_anat_pipeline/sub-{subid}/ses-{sesid}
+**Path:** `derivatives/dhcp_anat_pipeline/sub-{subid}/ses-{sesid}`
 
 | Filename                                                                                         | Description                                                                          |
 |:-------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|
@@ -148,7 +148,7 @@ on tongue)
 
 ### Diffusion EDDY pipeline
 
-**Path:** derivatives/dhcp_dmri_eddy_pipeline/sub-{subid}/ses-{sesid}
+**Path:** `derivatives/dhcp_dmri_eddy_pipeline/sub-{subid}/ses-{sesid}`
 
 | Filename                                                                | Description                                                                                                                                              |
 |:------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -171,7 +171,7 @@ on tongue)
 
 ### Diffusion SHARD pipeline
 
-**Path:** derivatives/dhcp_dmri_shard_pipeline/sub-{subid}/ses-{sesid}
+**Path:** `derivatives/dhcp_dmri_shard_pipeline/sub-{subid}/ses-{sesid}`
 
 | Filename                                                                | Description                                                                  |
 |:------------------------------------------------------------------------|:-----------------------------------------------------------------------------|
@@ -192,7 +192,7 @@ on tongue)
 
 ### Functional pipeline
 
-**Path:** derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}
+**Path:** `derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}`
 
 | Filename                                                                      | Description                                                                    |
 |:------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
