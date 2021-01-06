@@ -4,8 +4,7 @@
 ## Data directory structure
 
 The structure of data directory and convention of files naming will follow
-the BIDS specification (v1.0.2) and the organization of previous data
-release of 40 subjects.
+the BIDS specification (v1.5.0-dev).
 
 The `participants.tsv` for each BIDS pipeline has a number of extra columns
 beyond `participant_id`. These have the following meaning:
@@ -15,7 +14,6 @@ Field          | Meaning
 `gender`       | Male / Female
 `birth_age`    | Gestational age at birth in weeks
 `birth_weight` | Birthweight (kg)
-`singleton`    | Singleton / multiple status of the pregnancy
 
 The `sessions.tsv` file has extra columns beyond `session_id`. These have
 the following meaning:
@@ -26,7 +24,6 @@ Field                     | Meaning
 `scan_head_circumference` | Head circumference (cm)
 `scan_number`             | 1 for the first scan, 2 for the second
 `radiology_score`         | Subject status, see below
-`sedation`                | 1 if the subject was sedated during the scan, 0 otherwise
 
 The MRI scans were reviewed by a specialist perinatal neuroradiologist who
 scored each subject using the following scale:
@@ -49,24 +46,9 @@ on tongue)
 
 6. `Q`, meaning poor quality anatomical data
 
-As a convenience, an extra top-level file called `combined.tsv` lists all
-these fields for all scans in a single large table.
-
 ## Data directory structure and naming convention
 
-The data directory structure and naming of files is organized as follows. 
-
-Abbreviation | Meaning
-:----------- | :------
-`<subid>`    | subject ID
-`<sesid>`    | refers to session ID
-`CSF`        | cerebrospinal fluid
-`WM`         | white matter
-`cGM`        | cortical grey matter
-`sGM`        | subcortical grey matter
-`EPI`        | echo-planar imaging
-
-## Reconstruction Pipeline
+### Reconstruction Pipeline
 
 **Path:** rawdata/sub-{subid}/ses-{sesid}
 
@@ -119,116 +101,113 @@ Abbreviation | Meaning
 |:--------|:-----------------------------------------------------------------|:---------------------------------|
 | fMRI    | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_physio.log` | Resting fMRI Physlog (uncropped) |
 
-## Structural pipeline
+### Structural pipeline
 
-### Inputs
+**Path:** derivatives/dhcp_anat_pipeline/sub-{subid}/ses-{sesid}
 
-Inputs             | Filename
-:----------------- | :-------
-Reconstructed data | `sourcedata/sub-<subid>/ses-<sesid>/anat`
-T1 weighted image  | `sub-<subid>_ses-<sesid>_T1w.nii.gz`
-T2 weighted image  | `sub-<subid>_ses-<sesid>_T2w.nii.gz`
+| Filename                                                                                         | Description                                                                          |
+|:-------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|
+| `anat/sub-{subid}_ses-{sesid}_desc-brain_mask.nii.gz`                                            | FSL BET brain mask                                                                   |
+| `anat/sub-{subid}_ses-{sesid}_desc-drawem87_dseg.nii.gz`                                         | Draw-EM regional segmentation (87 labels)                                            |
+| `anat/sub-{subid}_ses-{sesid}_desc-drawem9_dseg.nii.gz`                                          | Draw-EM tissue segmentation (9 labels)                                               |
+| `anat/sub-{subid}_ses-{sesid}_desc-ribbon_dseg.nii.gz`                                           | Cortical ribbon                                                                      |
+| `anat/sub-{subid}_ses-{sesid}_T1w.nii.gz`                                                        | T1 weighted image (in T2 space)                                                      |
+| `anat/sub-{subid}_ses-{sesid}_desc-biasfield_T1w.nii.gz`                                         | T1 bias field (in T2 space)                                                          |
+| `anat/sub-{subid}_ses-{sesid}_desc-restore_T1w.nii.gz`                                           | T1 weighted, bias corrected image (in T2 space)                                      |
+| `anat/sub-{subid}_ses-{sesid}_T2w.nii.gz`                                                        | T2 weighted image                                                                    |
+| `anat/sub-{subid}_ses-{sesid}_desc-biasfield_T2w.nii.gz`                                         | T2 bias field                                                                        |
+| `anat/sub-{subid}_ses-{sesid}_desc-restore_T2w.nii.gz`                                           | T2 weighted, bias corrected image                                                    |
+| `sub-{subid}_ses-{sesid}_qc.pdf`                                                                 | QC report                                                                            |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_wm.surf.gii`                                           | Left/Right white surface                                                             |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_pial.surf.gii`                                         | Left/Right pial surface                                                              |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_midthickness.surf.gii`                                 | Left/Right mid-thickness surface                                                     |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_inflated.surf.gii`                                     | Left/Right inflated surface                                                          |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_vinflated.surf.gii`                                    | Left/Right very inflated surface                                                     |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_sphere.surf.gii`                                       | Left/Right spherical surface                                                         |
+| `anat/sub-{subid}_ses-{sesid}_curv.dscalar.nii`                                                  | Cortical curvature                                                                   |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_curv.shape.gii`                                        | Left/Right cortical curvature                                                        |
+| `anat/sub-{subid}_ses-{sesid}_sulc.dscalar.nii`                                                  | Sulcal depth                                                                         |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_sulc.shape.gii`                                        | Left/Right sulcal depth                                                              |
+| `anat/sub-{subid}_ses-{sesid}_thickness.dscalar.nii`                                             | Cortical thickness                                                                   |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_thickness.shape.gii`                                   | Left/Right cortical thickness                                                        |
+| `anat/sub-{subid}_ses-{sesid}_desc-corr_thickness.dscalar.nii`                                   | Cortical thickness (curvature regressed out)                                         |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-corr_thickness.shape.gii`                         | Left/Right cortical thickness (curvature regressed out)                              |
+| `anat/sub-{subid}_ses-{sesid}_myelinmap.dscalar.nii`                                             | Cortical myelin                                                                      |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_myelinmap.shape.gii`                                   | Left/Right cortical myelin                                                           |
+| `anat/sub-{subid}_ses-{sesid}_desc-smoothed_myelinmap.dscalar.nii`                               | Smoothed cortical myelin                                                             |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-smoothed_myelinmap.shape.gii`                     | Left/Right smoothed cortical myelin                                                  |
+| `anat/sub-{subid}_ses-{sesid}_desc-drawem_dseg.dlabel.nii`                                       | Cortical regional labels projected from volume                                       |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-drawem_dseg.label.gii`                            | Left/Right cortical regional labels projected from volume                            |
+| `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-medialwall_mask.shape.gii`                        | Left/Right Medial wall                                                               |
+| `anat/wb.spec`                                                                                   | Workbench file for loading surfaces                                                  |
+| `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-serag{age}wk_mode-image.nii.gz`                         | Warp from native structural space to the subject’s age respective template space     |
+| `xfm/sub-{subid}_ses-{sesid}_from-serag{age}wk_to-T2w_mode-image.nii.gz`                         | Warp from the subject’s age respective template space to the native structural space |
+| `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-serag40wk_mode-image.nii.gz`                            | Warp from native structural space to the 40-week Serag template space                |
+| `xfm/sub-{subid}_ses-{sesid}_from-serag40wk_to-T2w_mode-image.nii.gz`                            | Warp from the 40-week Serag template space to the native structural space            |
+| `xfm/sub-{subid}_ses-{sesid}_hemi-{hemi}_from-native_to-dhcpSym40_dens-32k_mode-sphere.surf.gii` | Transform from native surface to the dHCP Symmetric 40week surface template          |
 
-### Outputs
+### Diffusion EDDY pipeline
 
-Outputs                            | Filename
-:--------------------------------- | :-------
-Derived data                       | `derivatives/dhcp_anat_pipeline/sub-<subid>/ses-<sesid>`
-FSL BET brain mask                 | `anat/sub-<subid>_ses-<sesid>_desc-bet_space-T2w_brainmask.nii.gz`
-Draw-EM brain mask                 | `anat/sub-<subid>_ses-<sesid>_desc-drawem_space-T2w_brainmask.nii.gz`
-Draw-EM regional segmentation (87 labels) | `anat/sub-<subid>_ses-<sesid>_desc-drawem87_space-T2w_dseg.nii.gz`
-Draw-EM tissue segmentation (9 labels)    | `anat/sub-<subid>_ses-<sesid>_desc-drawem9_space-T2w_dseg.nii.gz`
-Cortical ribbon                    | `anat/sub-<subid>_ses-<sesid>_desc-ribbon_space-T2w_dseg.nii.gz`
-T1 weighted image (in T2 space)    | `anat/sub-<subid>_ses-<sesid>_space-T2w_T1w.nii.gz`
-T1 weighted, bias corrected image (in T2 space) | `anat/sub-<subid>_ses-<sesid>_desc-restore_space-T2w_T1w.nii.gz`
-T2 weighted, bias corrected image  | `anat/sub-<subid>_ses-<sesid>_desc-restore_T2w.nii.gz`
-T1/T2 ratio                        | `anat/sub-<subid>_ses-<sesid>_space-T2w_myelinmap.nii.gz`
-T1/T2 ratio on the cortical ribbon | `anat/sub-<subid>_ses-<sesid>_space-T2w_desc-myelinmapribbon_dseg.nii.gz`
-QC report                          | `sub-<subid>_ses-<sesid>_qc.pdf`
-Left/Right white surface           | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_wm.surf.gii`
-Left/Right pial surface            | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_pial.surf.gii`
-Left/Right mid-thickness surface   | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_midthickness.surf.gii`
-Left/Right inflated surface        | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_inflated.surf.gii`
-Left/Right very inflated surface   | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_veryinflated.surf.gii`
-Left/Right spherical surface       | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_sphere.surf.gii`
-Cortical curvature                 | `anat/sub-<subid>_ses-<sesid>_space-T2w_curv.dscalar.nii`
-Left/Right cortical curvature      | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_curv.shape.gii`
-Sulcal depth                       | `anat/sub-<subid>_ses-<sesid>_space-T2w_sulc.dscalar.nii`
-Left/Right sulcal depth            | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_sulc.shape.gii`
-Cortical thickness                 | `anat/sub-<subid>_ses-<sesid>_space-T2w_thickness.dscalar.nii`
-Left/Right cortical thickness      | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_thickness.shape.gii`
-Cortical thickness (curvature regressed out) | `anat/sub-<subid>_ses-<sesid>_desc-corr_space-T2w_thickness.dscalar.nii`
-Left/Right cortical thickness (curvature regressed out) | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_desc-corr_space-T2w_thickness.shape.gii`
-Cortical myelin                    | `anat/sub-<subid>_ses-<sesid>_space-T2w_myelinmap.dscalar.nii`
-Left/Right cortical myelin         | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_space-T2w_myelinmap.shape.gii`
-Smoothed cortical myelin           | `anat/sub-<subid>_ses-<sesid>_desc-smoothed_space-T2w_myelinmap.dscalar.nii`
-Left/Right smoothed cortical myelin | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_desc-smoothed_space-T2w_myelinmap.shape.gii`
-Cortical regional labels projected from volume | `anat/sub-<subid>_ses-<sesid>_desc-drawem_space-T2w_dparc.dlabel.nii`
-Left/Right cortical regional labels projected from volume | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_desc-drawem_space-T2w_dparc.dlabel.gii`
-Left/Right Medial wall             | `anat/sub-<subid>_ses-<sesid>_hemi-{L|R}_desc-medialwall_mask.shape.gii`
-Workbench file for loading surfaces | `anat/wb.spec`
-Warp from structural space to the subject’s age respective template space | `xfm/sub-<subid>_ses-<sesid>_from-T2w_to-template{subage}wk_mode-image.nii.gz`
-Warp from the subject’s age respective template space to the structural space | `xfm/sub-<subid>_ses-<sesid>_from-template{subage}wk_to-T2w_mode-image.nii.gz`
-Warp from structural space to the 40 weeks template space | `xfm/sub-<subid>_ses-<sesid>_from-T2w_to-template40wk_mode-image.nii.gz`
-Warp from the 40 weeks template space to the structural space | `xfm/sub-<subid>_ses-<sesid>_from-template40wk_to-T2w_mode-image.nii.gz`
+**Path:** derivatives/dhcp_dmri_eddy_pipeline/sub-{subid}/ses-{sesid}
 
-## Diffusion pipeline
+| Filename                                                                | Description                                                                                                                                              |
+|:------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.nii.gz`                   | Eddy current, susceptibility-by-motion and motion (within and between volumes) corrected super-resolved 4D volume with outlier rejection and replacement |
+| `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bval`                     | List of b-values                                                                                                                                         |
+| `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bvec`                     | List of post-EDDY rotated gradient directions                                                                                                            |
+| `dwi/sub-{subid}_ses-{sesid}_desc-brain_mask.nii.gz`                    | Brain mask                                                                                                                                               |
+| `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                          | Estimated field map                                                                                                                                      |
+| `qc/sub-{subid}_ses-{sesid}_qc.json`                                    | QC report (JSON)                                                                                                                                         |
+| `qc/sub-{subid}_ses-{sesid}_qc.pdf`                                     | QC report (PDF)                                                                                                                                          |
+| `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-dwi_mode-image.mat`            | Rigid-body transform from structural to diffusion space                                                                                                  |
+| `xfm/sub-{subid}_ses-{sesid}_from-dwi_to-T2w_mode-image.mat`            | Rigid-body transform from diffusion to structural space                                                                                                  |
+| `xfm/sub-{subid}_ses-{sesid}_from-dwi_to-extdhcp40wk_mode-image.nii.gz` | Warp from diffusion space to the extended dHCP 40-week template space                                                                                    |
+| `xfm/sub-{subid}_ses-{sesid}_from-extdhcp40wk_to-dwi_mode-image.nii.gz` | Warp from the extended dHCP 40-week template space to diffusion space                                                                                    |
+| `dwi/sub-{subid}_ses-{sesid}_model-DTI_FA.nii.gz`                       | DTI FA map (based on b=1k shell)                                                                                                                         |
+| `dwi/sub-{subid}_ses-{sesid}_model-DTI_MD.nii.gz`                       | DTI MD map (based on b=1k shell)                                                                                                                         |
+| `dwi/sub-{subid}_ses-{sesid}_model-DTI_EVECS.nii.gz`                    | DTI V1 map (based on b=1k shell)                                                                                                                         |
+| `dwi/sub-{subid}_ses-{sesid}_model-DTI_diffmodel.nii.gz`                | DTI full tensor (based on b=1k shell)                                                                                                                    |
+| `dwi/sub-{subid}_ses-{sesid}_model-DKI_MK.nii.gz`                       | DKI mean kurtosis map 
 
-### Inputs
+### Diffusion SHARD pipeline
 
-Inputs                       | Filename
-:--------------------------- | :-------
-Multi-band dMRI EPI          | `sub-<subid>_ses-<sesid>_dwi.nii.gz`
-List of b-values             | `sub-<subid>_ses-<sesid>_dwi.bval`
-List of gradient directions  | `sub-<subid>_ses-<sesid>_dwi.bvec`
-T2 weighted, bias corrected and brain extracted image | `sub-<subid>_ses-<sesid>_T2w.nii.gz`
-Draw-EM tissue segmentation (9 labels) | `sub-<subid>_ses-<sesid>_space-T2w_desc-drawem_dseg.nii.gz`
-T2 brain mask                | `sub-<subid>_ses-<sesid>_space-T2w_brainmask.nii.gz`
- 
-### Outputs
+**Path:** derivatives/dhcp_dmri_shard_pipeline/sub-{subid}/ses-{sesid}
 
-Outputs                            | Filename
-:--------------------------------- | :-------
-Eddy current, susceptibility-by-motion and motion (within and between volumes) corrected super-resolved 4D volume with outlier rejection and replacement | `dwi/sub-<subid>_ses-<sesid>_desc-preproc_dwi.nii.gz`
-List of b-values                   | `dwi/sub-<subid>_ses-<sesid>_desc-preproc_dwi.bval`
-List of post-EDDY rotated gradient directions | `dwi/sub-<subid>_ses-<sesid>_desc-preproc_dwi.bvec`
-Brain mask                         | `dwi/sub-<subid>_ses-<sesid>_desc-preproc_space-dwi_brainmask.nii.gz`
-Estimated field map                | `fmap/sub-<subid>_ses-<sesid>_fieldmap.nii.gz`
-QC report                          | `sub-<subid>_ses-<sesid>_qc.pdf`
-Rigid-body transform from structural to diffusion space | `xfm/sub-<subid>_ses-<sesid>_from-T2w_to-dwi_mode-image.mat`
-Rigid-body transform from diffusion to structural space | `xfm/sub-<subid>_ses-<sesid>_from-dwi_to-T2w_mode-image.mat`
-Warp from diffusion space to 40 week template space (Schuh) | `xfm/sub-<subid>_ses-<sesid>_from-dwi_to-template40wk_mode-image.nii.gz`
-Warp from 40 week template space (Schuh) to diffusion space | `xfm/sub-<subid>_ses-<sesid>_from-template40wk_to-dwi_mode-image.nii.gz`
+| Filename                                                                | Description                                                                  |
+|:------------------------------------------------------------------------|:-----------------------------------------------------------------------------|
+| `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                          | Topup field map                                                              |
+| `dwi/sub-{subid}_ses-{sesid}_desc-brain_mask.nii.gz`                    | Brain mask derived from T2w, warped to preprocessed DWI                      |
+| `dwi/sub-{subid}_ses-{sesid}_desc-shard_mssh.nii.gz`                    | Motion corrected output (5D image of multi-shell SH coefficients, x,y,z,b,m) |
+| `dwi/sub-{subid}_ses-{sesid}_desc-shard_motion.txt`                     | Motion parameters                                                            |
+| `dwi/sub-{subid}_ses-{sesid}_desc-shard_sliceweights.txt`               | Slice weights                                                                |
+| `dwi/sub-{subid}_ses-{sesid}_desc-shard_voxelweights.nii.gz`            | Local weights for fat-shift suppression                                      |
+| `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.nii.gz`                   | Preprocessed DWI data (denoising, motion correction, and destriping)         |
+| `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bval`                     | List of b-values in FSL format                                               |
+| `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bvec`                     | List of gradient directions in FSL format                                    |
+| `qc/sub-{subid}_ses-{sesid}_qc.html`                                    | QC report                                                                    |
+| `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-dwi_mode-image.mat`            | Rigid-body transform from structural to diffusion space                      |
+| `xfm/sub-{subid}_ses-{sesid}_from-dwi_to-T2w_mode-image.mat`            | Rigid-body transform from diffusion to structural space                      |
+| `xfm/sub-{subid}_ses-{sesid}_from-dwi_to-extdhcp40wk_mode-image.nii.gz` | Warp from diffusion space to the extended dHCP 40-week template space        |
+| `xfm/sub-{subid}_ses-{sesid}_from-extdhcp40wk_to-dwi_mode-image.nii.gz` | Warp from the extended dHCP 40-week template space to diffusion space        |
 
-## Functional pipeline
+### Functional pipeline
 
-### Inputs
+**Path:** derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}
 
-Inputs                       | Filename
-:--------------------------- | :-------
-Resting fMRI                 | `func/sub-<subid>_ses-<sesid>_task-rest_bold.nii.gz`
-Single-band Ref              | `func/sub-<subid>_ses-<sesid>_task-rest_sbref.nii.gz`
-Spin Echo EPI with different phase encode directions (for topup fieldmap estimation)                         | `fmap/sub-<subid>_ses-<sesid>-{sesid}_dir-APPA_epi.nii.gz`
-Dual echo-time field-map, magnitude | `fmap/sub-<subid>_ses-<sesid>_magnitude.nii.gz`
-Dual echo-time field-map     | `fmap/sub-<subid>_ses-<sesid>_fieldmap.nii.gz`
- T2 weighted, bias corrected image (in T2 space) | `anat/sub-<subid>_ses-<sesid>_T2w.nii.gz`
-T2 brain mask                | `anat/sub-<subid>_ses-<sesid>_space-T2w_brainmask.nii.gz`
-Draw-EM tissue segmentation (9 labels) | `anat/sub-<subid>_ses-<sesid>_space-T2w_desc-drawem_dseg.nii.gz`
-T1 weighted, bias corrected image (in T2 space) | `anat/sub-<subid>_ses-<sesid>_space-T2w_T1w.nii.gz`
-
-### Outputs
-
-Outputs                            | Filename
-:--------------------------------- | :-------
-Multi-band EPI, distortion corrected, motion corrected, FIX denoised, 4D image | `func/sub-<subid>_ses-<sesid>_task-rest_desc-preproc_bold.nii.gz`
-Motion parameters                  | `func/sub-<subid>_ses-<sesid>_motion.tsv`
-Brain mask                         | `func/sub-<subid>_ses-<sesid>_task-rest_desc-preproc_space-bold_brainmask.nii.gz`
-Derived fieldmap, magnitude        | `fmap/sub-<subid>_ses-<sesid>_magnitude.nii.gz`
-Derived fieldmap (rad/s)           | `fmap/sub-<subid>_ses-<sesid>_fieldmap.nii.gz`
-QC report                          | `sub-<subid>_ses-<sesid>_funcqc.html`
-Rigid-body transform from functional (mcdc) to single-band Ref space | `xfm/sub-<subid>_ses-<sesid>_from-bold_to-sbref_mode-image.mat`
-Rigid-body transform from single-band Ref space to structural space | `xfm/sub-<subid>_ses-<sesid>_from-sbref_to-T2w_mode-image.mat`
-Rigid-body transform from functional (mcdc) to structural space | `xfm/sub-<subid>_ses-<sesid>_from-bold_to-T2w_mode-image.mat`
-Rigid-body transform from field-map to structural space | `xfm/sub-<subid>_ses-<sesid>_from-fieldmap_to-T2w_mode-image.mat`
-Warp from functional (mcdc) space to the 40 weeks template space | `xfm/sub-<subid>_ses-<sesid>_from-bold_to-template40wk_mode-image.nii.gz`
-Warp from the structural space to the 40wk template space | `xfm/sub-<subid>_ses-<sesid>_from-T2w_to-template40wk_mode-image.nii.gz`
+| Filename                                                                      | Description                                                                    |
+|:------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
+| `func/sub-{subid}_ses-{sesid}_task-rest_desc-mcdc_bold.nii.gz`                | Multi-band EPI, distortion corrected, motion corrected, 4D image               |
+| `func/sub-{subid}_ses-{sesid}_task-rest_desc-preproc_bold.nii.gz`             | Multi-band EPI, distortion corrected, motion corrected, FIX denoised, 4D image |
+| `func/sub-{subid}_ses-{sesid}_motion.tsv`                                     | Motion parameters                                                              |
+| `func/sub-{subid}_ses-{sesid}_task-rest_desc-brain_mask.nii.gz`               | Brain mask                                                                     |
+| `fmap/sub-{subid}_ses-{sesid}_magnitude.nii.gz`                               | Derived fieldmap, magnitude                                                    |
+| `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                                | Derived fieldmap (rad/s)                                                       |
+| `sub-{subid}_ses-{sesid}_funcqc.html`                                         | QC report                                                                      |
+| `xfm/sub-{subid}_ses-{sesid}_from-bold_to-sbref_mode-image.mat`               | Rigid-body transform from functional (mcdc) to single-band Ref space           |
+| `xfm/sub-{subid}_ses-{sesid}_from-sbref_to-T2w_mode-image.mat`                | Rigid-body transform from single-band Ref space to structural space            |
+| `xfm/sub-{subid}_ses-{sesid}_from-bold_to-T2w_mode-image.mat`                 | Rigid-body transform from functional (mcdc) to structural space                |
+| `xfm/sub-{subid}_ses-{sesid}_from-fieldmap_to-T2w_mode-image.mat`             | Rigid-body transform from field-map to structural space                        |
+| `xfm/sub-{subid}_ses-{sesid}_from-bold_to-extdhcp40wk_mode-image.nii.gz`      | Warp from functional (mcdc) space to the extended dHCP 40-week template space  |
+| `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-extdhcp40wk_mode-image.nii.gz`       | Warp from the structural space to the extended dHCP 40-week template space     |
+| `func/sub-{subid}_ses-{sesid}_task-rest_desc-fixregressors_timeseries.nii.gz` | ICA confound regressors                                                        |
+| `func/sub-{subid}_ses-{sesid}_task-rest_desc-fov4d_mask.nii.gz`               | FOV 4D volumetric mask                                                         |
