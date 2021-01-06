@@ -147,66 +147,66 @@ on tongue)
 
 ### Diffusion EDDY pipeline
 
-**Path:** `derivatives/dhcp_dmri_eddy_pipeline/sub-{subid}/ses-{sesid}`
+**Path:** derivatives/dhcp_dmri_eddy_pipeline/sub-{subid}/ses-{sesid}
 
-| Filename                                                                | Description                                                                                                                                              |
-|:---|:---|
-| `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.nii.gz`                   | Eddy current, susceptibility-by-motion and motion (within and between volumes) corrected super-resolved 4D volume with outlier rejection and replacement |
-| `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bval`                     | List of b-values                                                                                                                                         |
-| `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bvec`                     | List of post-EDDY rotated gradient directions                                                                                                            |
-| `dwi/sub-{subid}_ses-{sesid}_desc-brain_mask.nii.gz`                    | Brain mask                                                                                                                                               |
-| `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                          | Estimated field map                                                                                                                                      |
-| `qc/sub-{subid}_ses-{sesid}_qc.json`                                    | QC report (JSON)                                                                                                                                         |
-| `qc/sub-{subid}_ses-{sesid}_qc.pdf`                                     | QC report (PDF)                                                                                                                                          |
-| `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-dwi_mode-image.mat`            | Rigid-body transform from structural to diffusion space                                                                                                  |
-| `xfm/sub-{subid}_ses-{sesid}_from-dwi_to-T2w_mode-image.mat`            | Rigid-body transform from diffusion to structural space                                                                                                  |
-| `xfm/sub-{subid}_ses-{sesid}_from-dwi_to-extdhcp40wk_mode-image.nii.gz` | Warp from diffusion space to the extended dHCP 40-week template space                                                                                    |
-| `xfm/sub-{subid}_ses-{sesid}_from-extdhcp40wk_to-dwi_mode-image.nii.gz` | Warp from the extended dHCP 40-week template space to diffusion space                                                                                    |
-| `dwi/sub-{subid}_ses-{sesid}_model-DTI_FA.nii.gz`                       | DTI FA map (based on b=1k shell)                                                                                                                         |
-| `dwi/sub-{subid}_ses-{sesid}_model-DTI_MD.nii.gz`                       | DTI MD map (based on b=1k shell)                                                                                                                         |
-| `dwi/sub-{subid}_ses-{sesid}_model-DTI_EVECS.nii.gz`                    | DTI V1 map (based on b=1k shell)                                                                                                                         |
-| `dwi/sub-{subid}_ses-{sesid}_model-DTI_diffmodel.nii.gz`                | DTI full tensor (based on b=1k shell)                                                                                                                    |
-| `dwi/sub-{subid}_ses-{sesid}_model-DKI_MK.nii.gz`                       | DKI mean kurtosis map 
+| Description                                                                                                                                              | Filename                                                                |
+|:---------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
+| Eddy current, susceptibility-by-motion and motion (within and between volumes) corrected super-resolved 4D volume with outlier rejection and replacement | `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.nii.gz`                   |
+| List of b-values                                                                                                                                         | `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bval`                     |
+| List of post-EDDY rotated gradient directions                                                                                                            | `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bvec`                     |
+| Brain mask                                                                                                                                               | `dwi/sub-{subid}_ses-{sesid}_desc-brain_mask.nii.gz`                    |
+| Estimated field map                                                                                                                                      | `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                          |
+| QC report (JSON)                                                                                                                                         | `qc/sub-{subid}_ses-{sesid}_qc.json`                                    |
+| QC report (PDF)                                                                                                                                          | `qc/sub-{subid}_ses-{sesid}_qc.pdf`                                     |
+| Rigid-body transform from structural to diffusion space                                                                                                  | `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-dwi_mode-image.mat`            |
+| Rigid-body transform from diffusion to structural space                                                                                                  | `xfm/sub-{subid}_ses-{sesid}_from-dwi_to-T2w_mode-image.mat`            |
+| Warp from diffusion space to the extended dHCP 40-week template space                                                                                    | `xfm/sub-{subid}_ses-{sesid}_from-dwi_to-extdhcp40wk_mode-image.nii.gz` |
+| Warp from the extended dHCP 40-week template space to diffusion space                                                                                    | `xfm/sub-{subid}_ses-{sesid}_from-extdhcp40wk_to-dwi_mode-image.nii.gz` |
+| DTI FA map (based on b=1k shell)                                                                                                                         | `dwi/sub-{subid}_ses-{sesid}_model-DTI_FA.nii.gz`                       |
+| DTI MD map (based on b=1k shell)                                                                                                                         | `dwi/sub-{subid}_ses-{sesid}_model-DTI_MD.nii.gz`                       |
+| DTI V1 map (based on b=1k shell)                                                                                                                         | `dwi/sub-{subid}_ses-{sesid}_model-DTI_EVECS.nii.gz`                    |
+| DTI full tensor (based on b=1k shell)                                                                                                                    | `dwi/sub-{subid}_ses-{sesid}_model-DTI_diffmodel.nii.gz`                |
+| DKI mean kurtosis map                                                                                                                                    | `dwi/sub-{subid}_ses-{sesid}_model-DKI_MK.nii.gz`   
 
 ### Diffusion SHARD pipeline
 
-**Path:** `derivatives/dhcp_dmri_shard_pipeline/sub-{subid}/ses-{sesid}`
+**Path:** derivatives/dhcp_dmri_shard_pipeline/sub-{subid}/ses-{sesid}
 
-| Filename                                                                | Description                                                                  |
-|:---|:---|
-| `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                          | Topup field map                                                              |
-| `dwi/sub-{subid}_ses-{sesid}_desc-brain_mask.nii.gz`                    | Brain mask derived from T2w, warped to preprocessed DWI                      |
-| `dwi/sub-{subid}_ses-{sesid}_desc-shard_mssh.nii.gz`                    | Motion corrected output (5D image of multi-shell SH coefficients, x,y,z,b,m) |
-| `dwi/sub-{subid}_ses-{sesid}_desc-shard_motion.txt`                     | Motion parameters                                                            |
-| `dwi/sub-{subid}_ses-{sesid}_desc-shard_sliceweights.txt`               | Slice weights                                                                |
-| `dwi/sub-{subid}_ses-{sesid}_desc-shard_voxelweights.nii.gz`            | Local weights for fat-shift suppression                                      |
-| `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.nii.gz`                   | Preprocessed DWI data (denoising, motion correction, and destriping)         |
-| `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bval`                     | List of b-values in FSL format                                               |
-| `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bvec`                     | List of gradient directions in FSL format                                    |
-| `qc/sub-{subid}_ses-{sesid}_qc.html`                                    | QC report                                                                    |
-| `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-dwi_mode-image.mat`            | Rigid-body transform from structural to diffusion space                      |
-| `xfm/sub-{subid}_ses-{sesid}_from-dwi_to-T2w_mode-image.mat`            | Rigid-body transform from diffusion to structural space                      |
-| `xfm/sub-{subid}_ses-{sesid}_from-dwi_to-extdhcp40wk_mode-image.nii.gz` | Warp from diffusion space to the extended dHCP 40-week template space        |
-| `xfm/sub-{subid}_ses-{sesid}_from-extdhcp40wk_to-dwi_mode-image.nii.gz` | Warp from the extended dHCP 40-week template space to diffusion space        |
+| Description                                                                  | Filename                                                                |
+|------------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| Topup field map                                                              | `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                          |
+| Brain mask derived from T2w, warped to preprocessed DWI                      | `dwi/sub-{subid}_ses-{sesid}_desc-brain_mask.nii.gz`                    |
+| Motion corrected output (5D image of multi-shell SH coefficients, x,y,z,b,m) | `dwi/sub-{subid}_ses-{sesid}_desc-shard_mssh.nii.gz`                    |
+| Motion parameters                                                            | `dwi/sub-{subid}_ses-{sesid}_desc-shard_motion.txt`                     |
+| Slice weights                                                                | `dwi/sub-{subid}_ses-{sesid}_desc-shard_sliceweights.txt`               |
+| Local weights for fat-shift suppression                                      | `dwi/sub-{subid}_ses-{sesid}_desc-shard_voxelweights.nii.gz`            |
+| Preprocessed DWI data (denoising, motion correction, and destriping)         | `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.nii.gz`                   |
+| List of b-values in FSL format                                               | `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bval`                     |
+| List of gradient directions in FSL format                                    | `dwi/sub-{subid}_ses-{sesid}_desc-preproc_dwi.bvec`                     |
+| QC report                                                                    | `qc/sub-{subid}_ses-{sesid}_qc.html`                                    |
+| Rigid-body transform from structural to diffusion space                      | `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-dwi_mode-image.mat`            |
+| Rigid-body transform from diffusion to structural space                      | `xfm/sub-{subid}_ses-{sesid}_from-dwi_to-T2w_mode-image.mat`            |
+| Warp from diffusion space to the extended dHCP 40-week template space        | `xfm/sub-{subid}_ses-{sesid}_from-dwi_to-extdhcp40wk_mode-image.nii.gz` |
+| Warp from the extended dHCP 40-week template space to diffusion space        | `xfm/sub-{subid}_ses-{sesid}_from-extdhcp40wk_to-dwi_mode-image.nii.gz` |
 
 ### Functional pipeline
 
-**Path:** `derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}`
+**Path:** derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}
 
-| Filename                                                                      | Description                                                                    |
-|:---|:---|
-| `func/sub-{subid}_ses-{sesid}_task-rest_desc-mcdc_bold.nii.gz`                | Multi-band EPI, distortion corrected, motion corrected, 4D image               |
-| `func/sub-{subid}_ses-{sesid}_task-rest_desc-preproc_bold.nii.gz`             | Multi-band EPI, distortion corrected, motion corrected, FIX denoised, 4D image |
-| `func/sub-{subid}_ses-{sesid}_motion.tsv`                                     | Motion parameters                                                              |
-| `func/sub-{subid}_ses-{sesid}_task-rest_desc-brain_mask.nii.gz`               | Brain mask                                                                     |
-| `fmap/sub-{subid}_ses-{sesid}_magnitude.nii.gz`                               | Derived fieldmap, magnitude                                                    |
-| `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                                | Derived fieldmap (rad/s)                                                       |
-| `sub-{subid}_ses-{sesid}_funcqc.html`                                         | QC report                                                                      |
-| `xfm/sub-{subid}_ses-{sesid}_from-bold_to-sbref_mode-image.mat`               | Rigid-body transform from functional (mcdc) to single-band Ref space           |
-| `xfm/sub-{subid}_ses-{sesid}_from-sbref_to-T2w_mode-image.mat`                | Rigid-body transform from single-band Ref space to structural space            |
-| `xfm/sub-{subid}_ses-{sesid}_from-bold_to-T2w_mode-image.mat`                 | Rigid-body transform from functional (mcdc) to structural space                |
-| `xfm/sub-{subid}_ses-{sesid}_from-fieldmap_to-T2w_mode-image.mat`             | Rigid-body transform from field-map to structural space                        |
-| `xfm/sub-{subid}_ses-{sesid}_from-bold_to-extdhcp40wk_mode-image.nii.gz`      | Warp from functional (mcdc) space to the extended dHCP 40-week template space  |
-| `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-extdhcp40wk_mode-image.nii.gz`       | Warp from the structural space to the extended dHCP 40-week template space     |
-| `func/sub-{subid}_ses-{sesid}_task-rest_desc-fixregressors_timeseries.nii.gz` | ICA confound regressors                                                        |
-| `func/sub-{subid}_ses-{sesid}_task-rest_desc-fov4d_mask.nii.gz`               | FOV 4D volumetric mask                                                         |
+| Description                                                                    | Filename                                                                      |
+|:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
+| Multi-band EPI, distortion corrected, motion corrected, 4D image               | `func/sub-{subid}_ses-{sesid}_task-rest_desc-mcdc_bold.nii.gz`                |
+| Multi-band EPI, distortion corrected, motion corrected, FIX denoised, 4D image | `func/sub-{subid}_ses-{sesid}_task-rest_desc-preproc_bold.nii.gz`             |
+| Motion parameters                                                              | `func/sub-{subid}_ses-{sesid}_motion.tsv`                                     |
+| Brain mask                                                                     | `func/sub-{subid}_ses-{sesid}_task-rest_desc-brain_mask.nii.gz`               |
+| Derived fieldmap, magnitude                                                    | `fmap/sub-{subid}_ses-{sesid}_magnitude.nii.gz`                               |
+| Derived fieldmap (rad/s)                                                       | `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                                |
+| QC report                                                                      | `sub-{subid}_ses-{sesid}_funcqc.html`                                         |
+| Rigid-body transform from functional (mcdc) to single-band Ref space           | `xfm/sub-{subid}_ses-{sesid}_from-bold_to-sbref_mode-image.mat`               |
+| Rigid-body transform from single-band Ref space to structural space            | `xfm/sub-{subid}_ses-{sesid}_from-sbref_to-T2w_mode-image.mat`                |
+| Rigid-body transform from functional (mcdc) to structural space                | `xfm/sub-{subid}_ses-{sesid}_from-bold_to-T2w_mode-image.mat`                 |
+| Rigid-body transform from field-map to structural space                        | `xfm/sub-{subid}_ses-{sesid}_from-fieldmap_to-T2w_mode-image.mat`             |
+| Warp from functional (mcdc) space to the extended dHCP 40-week template space  | `xfm/sub-{subid}_ses-{sesid}_from-bold_to-extdhcp40wk_mode-image.nii.gz`      |
+| Warp from the structural space to the extended dHCP 40-week template space     | `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-extdhcp40wk_mode-image.nii.gz`       |
+| ICA confound regressors                                                        | `func/sub-{subid}_ses-{sesid}_task-rest_desc-fixregressors_timeseries.nii.gz` |
+| FOV 4D volumetric mask                                                         | `func/sub-{subid}_ses-{sesid}_task-rest_desc-fov4d_mask.nii.gz`               |
