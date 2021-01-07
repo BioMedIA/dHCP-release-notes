@@ -14,6 +14,7 @@ Field          | Meaning
 `sex`       | Male / Female
 `birth_age`    | Gestational age at birth in weeks
 `birth_weight` | Birthweight (kg)
+`singleton` | Singleton pregnancy (S) / Multiple pregnancy (M)
 
 The `sessions.tsv` file has extra columns beyond `session_id`. These have
 the following meaning:
@@ -23,6 +24,8 @@ Field                     | Meaning
 `scan_age`                | Gestational age at scan in weeks
 `scan_head_circumference` | Head circumference (cm)
 `radiology_score`         | Subject status, see below
+`scan_number` | 1 for the first scan, 2 for the second
+`sedation` | 1 if the subject was sedated during the scan, 0 otherwise
 
 The MRI scans were reviewed by a specialist perinatal neuroradiologist who
 scored each subject using the following scale:
