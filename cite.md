@@ -61,11 +61,12 @@ Bastiani, M., Sotiropoulos, S.N., Jbabdi, S., Andersson, J., Edwards, A.D.,
 HARDI diffusion** *Magnetic Resonance in Medicine (2018), 79 (3): 1276-1292.*
 [DOI: 10.1002/mrm.26765](https://doi.org/10.1002/mrm.26765)
 
-Tournier, J. D., Christiaens, D., Hutter, J., Price, A. N., Cordero-Grande, L., 
-Hughes, E., Bastiani, M., Sotiropoulos, S. N., Smith S. M., Rueckert, D., 
-Counsell, S. J., Edwards, A. D., Hajnal, J. V.
-**A data‐driven approach to optimising the encoding for multi‐shell diffusion MRI 
-with application to neonatal imaging.** NMR in Biomedicine. 2020; 33:e4348. [doi: 10.1002/nbm.4348](https://doi.org/10.1002/nbm.4348)
+Tournier, J. D., Christiaens, D., Hutter, J., Price, A. N., Cordero-Grande,
+L., Hughes, E., Bastiani, M., Sotiropoulos, S. N., Smith S. M., Rueckert,
+D., Counsell, S. J., Edwards, A. D., Hajnal, J. V.  **A data‐driven
+approach to optimising the encoding for multi‐shell diffusion MRI with
+application to neonatal imaging.** *NMR in Biomedicine. 2020; 33:e4348.*
+[doi: 10.1002/nbm.4348](https://doi.org/10.1002/nbm.4348)
 
 **Resting state functional MRI data acquisition:** All dHCP functional
 imaging acquisitions were obtained using an optimised multiband sequence
