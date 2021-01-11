@@ -66,7 +66,9 @@ were as follows:
 spoiled gradient echo sequence and localised image based shimming performed
 for use with all EPI sequences as described in<sup>2</sup>. B0 field maps
 using the optimised higher order shims were subsequently re-acquired between
-the fMRI and dMRI acquisitions. B1 mapping was performed using the dual refocusing echo acquisition mode (DREAM)<sup>3</sup> method, with STE first and STEAM flip angle of 60.
+the fMRI and dMRI acquisitions. B1 mapping was performed using the dual 
+refocusing echo acquisition mode (DREAM)<sup>3</sup> method, with STE first 
+and STEAM flip angle of 60.
 
 **Anatomical acquisition:** T2w and inversion recovery T1w multi-slice fast
 spin-echo images were each acquired in sagittal and axial slice stacks with
@@ -83,15 +85,27 @@ used multiband (MB) 9x accelerated echo-planar imaging and was collected for
 of 2.15mm isotropic. No in-plane acceleration or partial Fourier was
 used. Single-band reference scans were also acquired with bandwidth matched
 readout, along with additional spin-echo acquisitions with both AP/PA
-fold-over encoding directions.
+fold-over encoding directions. 
+
+Physiological recordings of VCG, PPU and respiratory traces are provided 
+unprocessed in the sourcedata folder. Alignment to rs-fMRI data can be achieved 
+by means of locating the 'end of scan' marker (the 'start of scan' marker 
+includes prescan calibrations and is not reliable to use). Existing readers are available 
+to aid loading and interpretation of the file<sup>5</sup>. The frequency of 
+the recordings in all subjects is 496Hz, using this with the known TR and number 
+of volumes acquired allows identification of the start of data acquisition. 
+Note, for improved accuracy on this cohort a small delay of ~85ms between the 
+true end of data acquisition and 'end of scan' marker has been identified, 
+after accounting for this the precision of identifying the start of scan 
+should be of the order +/- 50ms, for a complete scan of 15 minutes duration.
 
 **dMRI:** A spherically optimized set of directions on 4 shells (b0:
-20, b400: 64, b1000: 88, b2600: 128)<sup>5</sup> was split into 4 optimal
+20, b400: 64, b1000: 88, b2600: 128)<sup>6</sup> was split into 4 optimal
 subsets (one per Phase Encoding Direction). These directions were then spread
 temporally taking motion and duty cycle considerations into account. If the
 baby woke up during the diffusion scan, the acquisition could be halted
 and restarted (after resettling the subject) with a user defined overlap
-in acquired diffusion weightings<sup>6</sup>. Acceleration of MB 4, SENSE
+in acquired diffusion weightings<sup>7</sup>. Acceleration of MB 4, SENSE
 factor 1.2 and Partial Fourier 0.86 was used, acquired resolution 1.5x1.5mm,
 3mm slices with 1.5mm overlap, 3800/90ms TR/TE.
 
@@ -108,7 +122,8 @@ imaging system** *Magnetic Resonance in Medicine (2017), 78: 794-804.*
 image-based shimming**](https://repositorio.ul.pt/handle/10451/22886)
 *Master Thesis (2015), Universidade de Lisboa.*
 
-3. Nehrke, K. and Börnert, P. **DREAM—a novel approach for robust, ultrafast, multislice B1 mapping.** *Magnetic Resonance in Medicine (2012), 68: 1517-1526.* [DOI: 10.1002/mrm.24158](https://doi.org/10.1002/mrm.24158)
+3. Nehrke, K. and Börnert, P. **DREAM—a novel approach for robust, ultrafast, multislice B1 mapping.** 
+*Magnetic Resonance in Medicine (2012), 68: 1517-1526.* [DOI: 10.1002/mrm.24158](https://doi.org/10.1002/mrm.24158)
 
 4. Price, A.N., Cordero-Grande, L., Malik, S.J.,
 Abaei, M., Arichi, T., Hughes, E., Rueckert, D.,
@@ -116,17 +131,18 @@ Edwards, A.D., Hajnal, J.V. [**Accelerated neonatal fMRI using multiband
 EPI**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Accelerated-Neonatal-fMRI-using-Multiband-EPI.-ISMRM-2015.pdf)
 *ISMRM 2015: 3911.*
 
-5. Tournier, J.D., Hughes, E., Turso, N., Sotiropoulos,
+5. [**ReadPhilipsScanPhysLog.m** by Paul Groot (MathWorks File Exchange)](https://uk.mathworks.com/matlabcentral/fileexchange/42100-readphilipsscanphyslog-filename-channels-skipprep)
+
+6. Tournier, J.D., Hughes, E., Turso, N., Sotiropoulos,
 N. S., Jbadhi, S., Andersson, J., Reuckert, D., Edwards,
 A. D., Hajnal, J. V. [**Data-driven optimisation of multi-shell
 HARDI**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Data-driven-optimisation-of-multi-shell-HARDI.pdf)
 *ISMRM 2015: 2897.*
 
-6. Hutter, J., Tournier J. D., Price, A. N., Cordero-Grande, L., Hughes,
+7. Hutter, J., Tournier J. D., Price, A. N., Cordero-Grande, L., Hughes,
 E. J., Malik, S., Steinweg, J., Bastiani, M., Sotiropoulos, S. N., Jbabdi,
 S., Andersson, J., Edwards, A. D., and Hajnal, J. V. **Time-efficient
 and flexible design of optimised multi-shell HARDI diffusion** *Magnetic
 Resonance in Medicine (2018), 79: 1276-1292.* [DOI: 10.1002/mrm.26765
 ](https://doi.org/10.1002/mrm.26765)
-
 
