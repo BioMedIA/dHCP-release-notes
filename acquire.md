@@ -66,7 +66,7 @@ were as follows:
 spoiled gradient echo sequence and localised image based shimming performed
 for use with all EPI sequences as described in<sup>2</sup>. B0 field maps
 using the optimised higher order shims were subsequently re-acquired between
-the fMRI and dMRI acquisitions.
+the fMRI and dMRI acquisitions. B1 mapping was performed using the dual refocusing echo acquisition mode (DREAM)<sup>3</sup> method, with STE first and STEAM flip angle of 60.
 
 **Anatomical acquisition:** T2w and inversion recovery T1w multi-slice fast
 spin-echo images were each acquired in sagittal and axial slice stacks with
@@ -77,7 +77,7 @@ T2w: 12000/156ms TR/TE, SENSE factor 2.11 (axial) and 2.60 (sagittal); T1w:
 In addition, 3D MPRAGE was acquired with 0.8mm isotropic resolution and
 parameters: 11/4.6/1400ms TR/TE/TI, SENSE factor 1.2 (RL).
 
-**rs-fMRI:** High temporal resolution fMRI developed for neonates<sup>3</sup>
+**rs-fMRI:** High temporal resolution fMRI developed for neonates<sup>4</sup>
 used multiband (MB) 9x accelerated echo-planar imaging and was collected for
 15 minutes, TE/TR=38/392ms gave 2300 volumes, with an acquired resolution
 of 2.15mm isotropic. No in-plane acceleration or partial Fourier was
@@ -86,12 +86,12 @@ readout, along with additional spin-echo acquisitions with both AP/PA
 fold-over encoding directions.
 
 **dMRI:** A spherically optimized set of directions on 4 shells (b0:
-20, b400: 64, b1000: 88, b2600: 128)<sup>4</sup> was split into 4 optimal
+20, b400: 64, b1000: 88, b2600: 128)<sup>5</sup> was split into 4 optimal
 subsets (one per Phase Encoding Direction). These directions were then spread
 temporally taking motion and duty cycle considerations into account. If the
 baby woke up during the diffusion scan, the acquisition could be halted
 and restarted (after resettling the subject) with a user defined overlap
-in acquired diffusion weightings<sup>5</sup>. Acceleration of MB 4, SENSE
+in acquired diffusion weightings<sup>6</sup>. Acceleration of MB 4, SENSE
 factor 1.2 and Partial Fourier 0.86 was used, acquired resolution 1.5x1.5mm,
 3mm slices with 1.5mm overlap, 3800/90ms TR/TE.
 
@@ -108,19 +108,21 @@ imaging system** *Magnetic Resonance in Medicine (2017), 78: 794-804.*
 image-based shimming**](https://repositorio.ul.pt/handle/10451/22886)
 *Master Thesis (2015), Universidade de Lisboa.*
 
-3. Price, A.N., Cordero-Grande, L., Malik, S.J.,
+3. Nehrke, K. and Börnert, P. **DREAM—a novel approach for robust, ultrafast, multislice B1 mapping.** *Magnetic Resonance in Medicine (2012), 68: 1517-1526.* [DOI: 10.1002/mrm.24158](https://doi.org/10.1002/mrm.24158)
+
+4. Price, A.N., Cordero-Grande, L., Malik, S.J.,
 Abaei, M., Arichi, T., Hughes, E., Rueckert, D.,
 Edwards, A.D., Hajnal, J.V. [**Accelerated neonatal fMRI using multiband
 EPI**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Accelerated-Neonatal-fMRI-using-Multiband-EPI.-ISMRM-2015.pdf)
 *ISMRM 2015: 3911.*
 
-4. Tournier, J.D., Hughes, E., Turso, N., Sotiropoulos,
+5. Tournier, J.D., Hughes, E., Turso, N., Sotiropoulos,
 N. S., Jbadhi, S., Andersson, J., Reuckert, D., Edwards,
 A. D., Hajnal, J. V. [**Data-driven optimisation of multi-shell
 HARDI**](http://www.developingconnectome.org/wp-content/uploads/sites/70/2019/08/Data-driven-optimisation-of-multi-shell-HARDI.pdf)
 *ISMRM 2015: 2897.*
 
-5. Hutter, J., Tournier J. D., Price, A. N., Cordero-Grande, L., Hughes,
+6. Hutter, J., Tournier J. D., Price, A. N., Cordero-Grande, L., Hughes,
 E. J., Malik, S., Steinweg, J., Bastiani, M., Sotiropoulos, S. N., Jbabdi,
 S., Andersson, J., Edwards, A. D., and Hajnal, J. V. **Time-efficient
 and flexible design of optimised multi-shell HARDI diffusion** *Magnetic
