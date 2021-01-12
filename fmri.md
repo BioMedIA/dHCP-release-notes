@@ -95,7 +95,7 @@ distribution to flag outliers for manual inspection and potential exclusion:
 2. All QA measures were converted to Z-scores and flipped as necessary so
 that positive z-scores are good and negative bad.  Subject/sessions with
 a z-score < -2.5 on any QC metric were flagged for further inspection.
-3. All QA measures are available in the `combined.tsv` spreadsheet [here](supplementary_files/combined.tsv).
+3. All QC metrics are available in the `combined.tsv` spreadsheet in the [supplementary](supplementary_files).
 
 &gt; 28 subject/sessions were flagged for futher inspection (see figure).
 All flagged subject/sessions are included in the release.
