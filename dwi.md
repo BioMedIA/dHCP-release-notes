@@ -52,7 +52,7 @@ potential exclusion:
 2. All QC metrics are then converted to Z-scores and averaged, to generate
 a summary QC metric. 
 
-3. All QC metrics are available in the `combined.tsv` spreadsheet in the [supplementary](supplementary_files).
+3. All QC metrics are available in the `combined.tsv` spreadsheet in the [supplementary](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files).
 
 ## References
 
