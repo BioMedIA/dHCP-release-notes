@@ -15,7 +15,7 @@ inspected and each of them was flagged as PASS/FAIL.
    2. [Diffusion EDDY Pipeline](dwi.md#diffusion-mri-qc)
    3. [Diffusion SHARD Pipeline](dwi-shard.md#diffusion-mri-qc)
    
-3. All QC metrics are available in the `combined.tsv` spreadsheet in the [supplementary](supplementary_files).
+3. All QC metrics are available in the `combined.tsv` spreadsheet in the [supplementary](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files).
 
 ## Selection Criteria
 
