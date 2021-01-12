@@ -85,6 +85,8 @@ In addition, overview screenshots of the motion traces and destriped output
 data are generated. Based on these screenshots, visual pass/fail Quality
 Control identified a small subset of cases to be discarded from analysis.
 
+All QC metrics are available in the `combined.tsv` spreadsheet in the [supplementary](supplementary_files).
+
 
 ## References
 
