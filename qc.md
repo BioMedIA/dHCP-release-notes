@@ -19,21 +19,21 @@ inspected and scored as PASS/FAIL.
 
 ## Selection Criteria
 
-The inclusion criteria for reconstructed raw data is:
+The inclusion criteria for **reconstructed/raw data** is:
 1. Scans that scored PASS on the visual recon QC are released, and also subsequently processed by the sMRI, fMRI, and dMRI pipeline. 
 
-The inclusion criteria for the sMRI pipeline outputs is:
+The inclusion criteria for the **sMRI pipeline outputs** is:
 1. Raw T2w must pass the recon QC.
 2. All completed segmentations from the structural pipeline are released.
 3. Extracted surfaces were visually inspected and only successful extractions are released.
 4. Myelin maps are only released if the surface extraction was successful.
 
-The inclusion criteria for fMRI pipeline outputs is:
+The inclusion criteria for **fMRI pipeline outputs** is:
 1. Raw fMRI & T2w must pass the recon QC.
 2. Preprocessed fMRI must pass the fMRI pipeline QC.
 3. Transforms to standard space are dependent upon availability of extracted (white and pial) surfaces from sMRI pipeline.
 
-The inclusion criteria for dMRI pipeline outputs is:
+The inclusion criteria for **dMRI pipeline outputs** is:
 1. Raw dMRI & T2w must pass the recon QC.
 2. Preprocessed dMRI must pass the dMRI pipeline QC.
 3. Transforms to standard space are dependent upon availability of extracted (white and pial) surfaces from sMRI pipeline.
