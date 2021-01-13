@@ -1,5 +1,5 @@
 theme: jekyll-theme-cayman
 title: dHCP Release Notes
-description: Notes for the 2020 dHCP data release
+description: Notes for the 2021 dHCP data release
 plugins:
   - jekyll-feed
