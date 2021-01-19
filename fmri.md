@@ -162,7 +162,7 @@ overview](assets/images/fmri_qc_z_distns.png)](assets/images/fmri_qc_z_distns.pn
 
 Detailed instructions on how to cite can be found here: http://www.developingconnectome.org/how-to-cite/
 
-**Primary citation:**
+**Primary citation for the fMRI pipeline:**
 
 Fitzgibbon, SP, Harrison, SJ, Jenkinson, M, Baxter, L, Robinson, EC, Bastiani, M, Bozek, J, Karolis, V, Cordero Grande, L, Price, AN, Hughes, E, Makropoulos, A, Passerat-Palmbach, J, Schuh, A, Gao, J, Farahibozorg, S, O'Muircheartaigh, J, Ciarrusta, J, O'Keeffe, C, Brandon, J, Arichi, T, Rueckert, D, Hajnal, JV, Edwards, AD, Smith, SM, \*Duff, E, \*Andersson, J  **The developing Human Connectome Project automated functional processing framework for neonates.**, *NeuroImage (2020), 223: 117303*, 2020. **doi:** https://doi.org/10.1016/j.neuroimage.2020.117303 _\*Authors contributed equally._
 
