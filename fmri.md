@@ -3,6 +3,57 @@
 
 ## Functional (fMRI) Pipeline
 
+### Inputs
+
+**From reconstruction pipeline:** `rawdata/sub-{subid}/ses-{sesid}`
+
+Description                                                                             | Filename                                                                  |
+|:----------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|
+| 4D Spin Echo EPI with different phase encode directions (for topup fieldmap estimation) | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_epi.nii`                       |
+| Single-band Ref                                                                         | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_sbref.nii`           |
+| Resting fMRI                                                                            | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_bold.nii`            |
+| Dual echo-time (magnitude)                                                              | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_magnitude.nii`                 |
+| Dual echo-time field-map in (Hz) - filtered and smoothed                                | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-filtered_fieldmap.nii`     |
+
+**From structural pipeline:** `derivatives/dhcp_anat_pipeline/sub-{subid}/ses-{sesid}`
+
+| Description                                                                          | Filename                                                                                         |
+|:-------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| Draw-EM tissue segmentation (9 labels)                                               | `anat/sub-{subid}_ses-{sesid}_desc-drawem9_dseg.nii.gz`                                          |
+| T2 weighted, bias corrected image                                                    | `anat/sub-{subid}_ses-{sesid}_desc-restore_T2w.nii.gz`                                           |
+| Left/Right white surface                                                             | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_wm.surf.gii`                                           |
+| Left/Right pial surface                                                              | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_pial.surf.gii`                                         |
+| Left/Right mid-thickness surface                                                     | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_midthickness.surf.gii`                                 |
+| Left/Right inflated surface                                                          | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_inflated.surf.gii`                                     |
+| Left/Right very inflated surface                                                     | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_vinflated.surf.gii`                                    |
+| Left/Right spherical surface                                                         | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_sphere.surf.gii`                                       |
+| Left/Right Medial wall                                                               | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-medialwall_mask.shape.gii`                        |
+
+
+### Outputs
+
+**Path:** derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}
+
+| Description                                                                    | Filename                                                                      |
+|:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
+| Multi-band EPI, distortion corrected, motion corrected, 4D image               | `func/sub-{subid}_ses-{sesid}_task-rest_desc-mcdc_bold.nii.gz`                |
+| Multi-band EPI, distortion corrected, motion corrected, FIX denoised, 4D image | `func/sub-{subid}_ses-{sesid}_task-rest_desc-preproc_bold.nii.gz`             |
+| Motion parameters                                                              | `func/sub-{subid}_ses-{sesid}_motion.tsv`                                     |
+| Brain mask                                                                     | `func/sub-{subid}_ses-{sesid}_task-rest_desc-brain_mask.nii.gz`               |
+| Derived fieldmap, magnitude                                                    | `fmap/sub-{subid}_ses-{sesid}_magnitude.nii.gz`                               |
+| Derived fieldmap (rad/s)                                                       | `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                                |
+| QC report                                                                      | `sub-{subid}_ses-{sesid}_funcqc.html`                                         |
+| Rigid-body transform from functional (mcdc) to single-band Ref space           | `xfm/sub-{subid}_ses-{sesid}_from-bold_to-sbref_mode-image.mat`               |
+| Rigid-body transform from single-band Ref space to structural space            | `xfm/sub-{subid}_ses-{sesid}_from-sbref_to-T2w_mode-image.mat`                |
+| Rigid-body transform from functional (mcdc) to structural space                | `xfm/sub-{subid}_ses-{sesid}_from-bold_to-T2w_mode-image.mat`                 |
+| Rigid-body transform from field-map to structural space                        | `xfm/sub-{subid}_ses-{sesid}_from-fieldmap_to-T2w_mode-image.mat`             |
+| Warp from functional (mcdc) space to the extended dHCP 40-week template space  | `xfm/sub-{subid}_ses-{sesid}_from-bold_to-extdhcp40wk_mode-image.nii.gz`      |
+| Warp from the structural space to the extended dHCP 40-week template space     | `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-extdhcp40wk_mode-image.nii.gz`       |
+| ICA confound regressors                                                        | `func/sub-{subid}_ses-{sesid}_task-rest_desc-fixregressors_timeseries.nii.gz` |
+| FOV 4D volumetric mask                                                         | `func/sub-{subid}_ses-{sesid}_task-rest_desc-fov4d_mask.nii.gz`               |
+
+### Pipeline
+
 1. Prepare fieldmaps for correction of susceptibility distortions
 
     1. Estimate field map from the two “best” spin-echo volumes (1 per
@@ -65,8 +116,12 @@
 
     2. Noise ICs and motion parameters regressed from motion and distortion
     corrected functional multiband EPI.
+    
+> **Schematic of the dHCP fMRI neonatal pre-processing pipeline:** The schematic is segregated into the 4 main conceptual processing stages by coloured background; fieldmap pre-processing (red), susceptibility and motion correction (orange), registration (green), and denoising (purple). Inputs to the pipeline are grouped in the top row, and the main pipeline outputs are grouped in the lower right. Blue filled rectangles with rounded corners indicate processing steps, whilst black rectangles (with no fill) represent data. The critical path is denoted by magenta connector arrows. (dc) = distortion corrected; (mcdc) = motion and distortion corrected. 
 
-## fMRI QC
+[![Pipeline schematic](assets/images/pipeline_schematic.png)](assets/images/pipeline_schematic.png)
+
+### Quality Control/Assurance
 
 1. Numerous quality assurance metrics are calculated during the
 pre-processing. Six of these are specifically compared against the population
@@ -97,13 +152,36 @@ that positive z-scores are good and negative bad.  Subject/sessions with
 a z-score < -2.5 on any QC metric were flagged for further inspection.
 3. All QC metrics are available in the `combined.tsv` spreadsheet in the [supplementary](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files).
 
-&gt; 28 subject/sessions were flagged for futher inspection (see figure).
+> **QC Scores:** 28 subject/sessions were flagged for futher inspection (see figure).
 All flagged subject/sessions are included in the release.
 
 [![QC
 overview](assets/images/fmri_qc_z_distns.png)](assets/images/fmri_qc_z_distns.png)
 
-## References
+### How to cite
+
+Detailed instructions on how to cite can be found here: http://www.developingconnectome.org/how-to-cite/
+
+**Primary citation for the fMRI pipeline:**
+
+Fitzgibbon, SP, Harrison, SJ, Jenkinson, M, Baxter, L, Robinson, EC, Bastiani, M, Bozek, J, Karolis, V, Cordero Grande, L, Price, AN, Hughes, E, Makropoulos, A, Passerat-Palmbach, J, Schuh, A, Gao, J, Farahibozorg, S, O'Muircheartaigh, J, Ciarrusta, J, O'Keeffe, C, Brandon, J, Arichi, T, Rueckert, D, Hajnal, JV, Edwards, AD, Smith, SM, \*Duff, E, \*Andersson, J  **The developing Human Connectome Project automated functional processing framework for neonates.**, *NeuroImage (2020), 223: 117303*, 2020. **doi:** https://doi.org/10.1016/j.neuroimage.2020.117303 _\*Authors contributed equally._
+
+```
+@article {Fitzgibbon766030,
+	author = {Fitzgibbon, Sean P. and Harrison, Samuel J. and Jenkinson, Mark and Baxter, Luke and Robinson, Emma C. and Bastiani, Matteo and Bozek, Jelena and Karolis, Vyacheslav and Grande, Lucilio Cordero and Price, Anthony N. and Hughes, Emer and Makropoulos, Antonios and Passerat-Palmbach, Jonathan and Schuh, Andreas and Gao, Jianliang and Farahibozorg, Seyedeh-Rezvan and O{\textquoteright}Muircheartaigh, Jonathan and Ciarrusta, Judit and O{\textquoteright}Keeffe, Camilla and Brandon, Jakki and Arichi, Tomoki and Rueckert, Daniel and Hajnal, Joseph V. and Edwards, A. David and Smith, Stephen M. and Duff, Eugene and Andersson, Jesper},
+	title = {The developing Human Connectome Project (dHCP) automated resting-state functional processing framework for newborn infants},
+	elocation-id = {117303},
+	year = {2020},
+	doi = {10.1016/j.neuroimage.2020.117303},
+	publisher = {Elsevier},
+	URL = {https://doi.org/10.1016/j.neuroimage.2020.117303},
+	eprint = {https://www.sciencedirect.com/science/article/pii/S1053811920307898/pdfft?md5=18806cf190a26f783de4bef456fe28b6&pid=1-s2.0-S1053811920307898-main.pdf},
+	journal = {NeuroImage}
+}
+```
+
+
+### References
 
 1. Andersson, J. L., Skare, S. and Ashburner, J. **How to correct
 susceptibility distortions in spin-echo echo-planar images: application
