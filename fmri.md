@@ -54,10 +54,6 @@ Description                                                                     
 
 ### Pipeline
 
-> **Schematic of the dHCP fMRI neonatal pre-processing pipeline:** The schematic is segregated into the 4 main conceptual processing stages by coloured background; fieldmap pre-processing (red), susceptibility and motion correction (orange), registration (green), and denoising (purple). Inputs to the pipeline are grouped in the top row, and the main pipeline outputs are grouped in the lower right. Blue filled rectangles with rounded corners indicate processing steps, whilst black rectangles (with no fill) represent data. The critical path is denoted by magenta connector arrows. (dc) = distortion corrected; (mcdc) = motion and distortion corrected. 
-
-[![Pipeline schematic](assets/images/pipeline_schematic.png)](assets/images/pipeline_schematic.png)
-
 1. Prepare fieldmaps for correction of susceptibility distortions
 
     1. Estimate field map from the two “best” spin-echo volumes (1 per
@@ -120,6 +116,10 @@ Description                                                                     
 
     2. Noise ICs and motion parameters regressed from motion and distortion
     corrected functional multiband EPI.
+    
+> **Schematic of the dHCP fMRI neonatal pre-processing pipeline:** The schematic is segregated into the 4 main conceptual processing stages by coloured background; fieldmap pre-processing (red), susceptibility and motion correction (orange), registration (green), and denoising (purple). Inputs to the pipeline are grouped in the top row, and the main pipeline outputs are grouped in the lower right. Blue filled rectangles with rounded corners indicate processing steps, whilst black rectangles (with no fill) represent data. The critical path is denoted by magenta connector arrows. (dc) = distortion corrected; (mcdc) = motion and distortion corrected. 
+
+[![Pipeline schematic](assets/images/pipeline_schematic.png)](assets/images/pipeline_schematic.png)
 
 ### Quality Control/Assurance
 
