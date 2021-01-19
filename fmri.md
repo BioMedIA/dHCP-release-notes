@@ -3,6 +3,54 @@
 
 ## Functional (fMRI) Pipeline
 
+### Inputs
+
+
+| Group   | Description                                                                             | Filename                                                                  |
+|:--------|:----------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|
+| fMRI    | 4D Spin Echo EPI with different phase encode directions (for topup fieldmap estimation) | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_epi.nii`                       |
+| fMRI    | Single-band Ref                                                                         | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_sbref.nii`           |
+| fMRI    | Resting fMRI                                                                            | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_bold.nii`            |
+| B0      | Dual echo-time (magnitude)                                                              | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_magnitude.nii`                 |
+| B0      | Dual echo-time field-map in (Hz) - filtered and smoothed                                | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-filtered_fieldmap.nii`     |
+
+| Description                                                                          | Filename                                                                                         |
+|:-------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| Draw-EM tissue segmentation (9 labels)                                               | `anat/sub-{subid}_ses-{sesid}_desc-drawem9_dseg.nii.gz`                                          |
+| T2 weighted, bias corrected image                                                    | `anat/sub-{subid}_ses-{sesid}_desc-restore_T2w.nii.gz`                                           |
+| Left/Right white surface                                                             | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_wm.surf.gii`                                           |
+| Left/Right pial surface                                                              | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_pial.surf.gii`                                         |
+| Left/Right mid-thickness surface                                                     | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_midthickness.surf.gii`                                 |
+| Left/Right inflated surface                                                          | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_inflated.surf.gii`                                     |
+| Left/Right very inflated surface                                                     | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_vinflated.surf.gii`                                    |
+| Left/Right spherical surface                                                         | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_sphere.surf.gii`                                       |
+| Left/Right Medial wall                                                               | `anat/sub-{subid}_ses-{sesid}_hemi-{hemi}_desc-medialwall_mask.shape.gii`                        |
+
+
+### Outputs
+
+| Description                                                                    | Filename                                                                      |
+|:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
+| Multi-band EPI, distortion corrected, motion corrected, 4D image               | `func/sub-{subid}_ses-{sesid}_task-rest_desc-mcdc_bold.nii.gz`                |
+| Multi-band EPI, distortion corrected, motion corrected, FIX denoised, 4D image | `func/sub-{subid}_ses-{sesid}_task-rest_desc-preproc_bold.nii.gz`             |
+| Motion parameters                                                              | `func/sub-{subid}_ses-{sesid}_motion.tsv`                                     |
+| Brain mask                                                                     | `func/sub-{subid}_ses-{sesid}_task-rest_desc-brain_mask.nii.gz`               |
+| Derived fieldmap, magnitude                                                    | `fmap/sub-{subid}_ses-{sesid}_magnitude.nii.gz`                               |
+| Derived fieldmap (rad/s)                                                       | `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                                |
+| QC report                                                                      | `sub-{subid}_ses-{sesid}_funcqc.html`                                         |
+| Rigid-body transform from functional (mcdc) to single-band Ref space           | `xfm/sub-{subid}_ses-{sesid}_from-bold_to-sbref_mode-image.mat`               |
+| Rigid-body transform from single-band Ref space to structural space            | `xfm/sub-{subid}_ses-{sesid}_from-sbref_to-T2w_mode-image.mat`                |
+| Rigid-body transform from functional (mcdc) to structural space                | `xfm/sub-{subid}_ses-{sesid}_from-bold_to-T2w_mode-image.mat`                 |
+| Rigid-body transform from field-map to structural space                        | `xfm/sub-{subid}_ses-{sesid}_from-fieldmap_to-T2w_mode-image.mat`             |
+| Warp from functional (mcdc) space to the extended dHCP 40-week template space  | `xfm/sub-{subid}_ses-{sesid}_from-bold_to-extdhcp40wk_mode-image.nii.gz`      |
+| Warp from the structural space to the extended dHCP 40-week template space     | `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-extdhcp40wk_mode-image.nii.gz`       |
+| ICA confound regressors                                                        | `func/sub-{subid}_ses-{sesid}_task-rest_desc-fixregressors_timeseries.nii.gz` |
+| FOV 4D volumetric mask                                                         | `func/sub-{subid}_ses-{sesid}_task-rest_desc-fov4d_mask.nii.gz`               |
+
+### Pipeline
+
+[![Pipeline schematic](assets/images/pipeline_schematic.png)](assets/images/pipeline_schematic.png)
+
 1. Prepare fieldmaps for correction of susceptibility distortions
 
     1. Estimate field map from the two “best” spin-echo volumes (1 per
@@ -66,7 +114,7 @@
     2. Noise ICs and motion parameters regressed from motion and distortion
     corrected functional multiband EPI.
 
-## fMRI QC
+### Quality Control/Assurance
 
 1. Numerous quality assurance metrics are calculated during the
 pre-processing. Six of these are specifically compared against the population
@@ -103,7 +151,7 @@ All flagged subject/sessions are included in the release.
 [![QC
 overview](assets/images/fmri_qc_z_distns.png)](assets/images/fmri_qc_z_distns.png)
 
-## References
+### References
 
 1. Andersson, J. L., Skare, S. and Ashburner, J. **How to correct
 susceptibility distortions in spin-echo echo-planar images: application
