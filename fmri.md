@@ -7,7 +7,7 @@
 
 **From reconstruction pipeline:** `rawdata/sub-{subid}/ses-{sesid}`
 
-Description                                                                             | Filename                                                                  |
+| Description                                                                             | Filename                                                                  |
 |:----------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|
 | 4D Spin Echo EPI with different phase encode directions (for topup fieldmap estimation) | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_epi.nii`                       |
 | Single-band Ref                                                                         | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_sbref.nii`           |
