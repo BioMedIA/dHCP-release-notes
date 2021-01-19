@@ -5,14 +5,17 @@
 
 ### Inputs
 
+**From reconstruction pipeline:** `rawdata/sub-{subid}/ses-{sesid}`
 
-| Group   | Description                                                                             | Filename                                                                  |
-|:--------|:----------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|
-| fMRI    | 4D Spin Echo EPI with different phase encode directions (for topup fieldmap estimation) | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_epi.nii`                       |
-| fMRI    | Single-band Ref                                                                         | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_sbref.nii`           |
-| fMRI    | Resting fMRI                                                                            | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_bold.nii`            |
-| B0      | Dual echo-time (magnitude)                                                              | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_magnitude.nii`                 |
-| B0      | Dual echo-time field-map in (Hz) - filtered and smoothed                                | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-filtered_fieldmap.nii`     |
+Description                                                                             | Filename                                                                  |
+|:----------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|
+| 4D Spin Echo EPI with different phase encode directions (for topup fieldmap estimation) | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_epi.nii`                       |
+| Single-band Ref                                                                         | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_sbref.nii`           |
+| Resting fMRI                                                                            | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_bold.nii`            |
+| Dual echo-time (magnitude)                                                              | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_magnitude.nii`                 |
+| Dual echo-time field-map in (Hz) - filtered and smoothed                                | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-filtered_fieldmap.nii`     |
+
+**From structural pipeline:** `derivatives/dhcp_anat_pipeline/sub-{subid}/ses-{sesid}`
 
 | Description                                                                          | Filename                                                                                         |
 |:-------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
@@ -28,6 +31,8 @@
 
 
 ### Outputs
+
+**Path:** derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}
 
 | Description                                                                    | Filename                                                                      |
 |:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
@@ -48,6 +53,8 @@
 | FOV 4D volumetric mask                                                         | `func/sub-{subid}_ses-{sesid}_task-rest_desc-fov4d_mask.nii.gz`               |
 
 ### Pipeline
+
+> **Schematic of the dHCP fMRI neonatal pre-processing pipeline:** The schematic is segregated into the 4 main conceptual processing stages by coloured background; fieldmap pre-processing (red), susceptibility and motion correction (orange), registration (green), and denoising (purple). Inputs to the pipeline are grouped in the top row, and the main pipeline outputs are grouped in the lower right. Blue filled rectangles with rounded corners indicate processing steps, whilst black rectangles (with no fill) represent data. The critical path is denoted by magenta connector arrows. (dc) = distortion corrected; (mcdc) = motion and distortion corrected. 
 
 [![Pipeline schematic](assets/images/pipeline_schematic.png)](assets/images/pipeline_schematic.png)
 
@@ -145,11 +152,34 @@ that positive z-scores are good and negative bad.  Subject/sessions with
 a z-score < -2.5 on any QC metric were flagged for further inspection.
 3. All QC metrics are available in the `combined.tsv` spreadsheet in the [supplementary](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files).
 
-&gt; 28 subject/sessions were flagged for futher inspection (see figure).
+> **QC Scores:** 28 subject/sessions were flagged for futher inspection (see figure).
 All flagged subject/sessions are included in the release.
 
 [![QC
 overview](assets/images/fmri_qc_z_distns.png)](assets/images/fmri_qc_z_distns.png)
+
+### How to cite
+
+Detailed instructions on how to cite can be found here: http://www.developingconnectome.org/how-to-cite/
+
+**Primary citation:**
+
+Fitzgibbon, SP, Harrison, SJ, Jenkinson, M, Baxter, L, Robinson, EC, Bastiani, M, Bozek, J, Karolis, V, Cordero Grande, L, Price, AN, Hughes, E, Makropoulos, A, Passerat-Palmbach, J, Schuh, A, Gao, J, Farahibozorg, S, O'Muircheartaigh, J, Ciarrusta, J, O'Keeffe, C, Brandon, J, Arichi, T, Rueckert, D, Hajnal, JV, Edwards, AD, Smith, SM, \*Duff, E, \*Andersson, J  **The developing Human Connectome Project automated functional processing framework for neonates.**, *NeuroImage (2020), 223: 117303*, 2020. **doi:** https://doi.org/10.1016/j.neuroimage.2020.117303 _\*Authors contributed equally._
+
+```
+@article {Fitzgibbon766030,
+	author = {Fitzgibbon, Sean P. and Harrison, Samuel J. and Jenkinson, Mark and Baxter, Luke and Robinson, Emma C. and Bastiani, Matteo and Bozek, Jelena and Karolis, Vyacheslav and Grande, Lucilio Cordero and Price, Anthony N. and Hughes, Emer and Makropoulos, Antonios and Passerat-Palmbach, Jonathan and Schuh, Andreas and Gao, Jianliang and Farahibozorg, Seyedeh-Rezvan and O{\textquoteright}Muircheartaigh, Jonathan and Ciarrusta, Judit and O{\textquoteright}Keeffe, Camilla and Brandon, Jakki and Arichi, Tomoki and Rueckert, Daniel and Hajnal, Joseph V. and Edwards, A. David and Smith, Stephen M. and Duff, Eugene and Andersson, Jesper},
+	title = {The developing Human Connectome Project (dHCP) automated resting-state functional processing framework for newborn infants},
+	elocation-id = {117303},
+	year = {2020},
+	doi = {10.1016/j.neuroimage.2020.117303},
+	publisher = {Elsevier},
+	URL = {https://doi.org/10.1016/j.neuroimage.2020.117303},
+	eprint = {https://www.sciencedirect.com/science/article/pii/S1053811920307898/pdfft?md5=18806cf190a26f783de4bef456fe28b6&pid=1-s2.0-S1053811920307898-main.pdf},
+	journal = {NeuroImage}
+}
+```
+
 
 ### References
 
