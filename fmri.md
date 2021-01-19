@@ -160,7 +160,7 @@ overview](assets/images/fmri_qc_z_distns.png)](assets/images/fmri_qc_z_distns.pn
 
 ### How to cite
 
-Detailed instructions on how to cite can be found here: http://www.developingconnectome.org/how-to-cite/
+Detailed instructions on how to cite can be found here: [http://www.developingconnectome.org/how-to-cite/](http://www.developingconnectome.org/how-to-cite/)
 
 **Primary citation for the fMRI pipeline:**
 
