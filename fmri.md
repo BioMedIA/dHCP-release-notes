@@ -32,25 +32,7 @@
 
 ### Outputs
 
-**Path:** `derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}`
-
-| Description                                                                    | Filename                                                                      |
-|:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
-| Multi-band EPI, distortion corrected, motion corrected, 4D image               | `func/sub-{subid}_ses-{sesid}_task-rest_desc-mcdc_bold.nii.gz`                |
-| Multi-band EPI, distortion corrected, motion corrected, FIX denoised, 4D image | `func/sub-{subid}_ses-{sesid}_task-rest_desc-preproc_bold.nii.gz`             |
-| Motion parameters                                                              | `func/sub-{subid}_ses-{sesid}_motion.tsv`                                     |
-| Brain mask                                                                     | `func/sub-{subid}_ses-{sesid}_task-rest_desc-brain_mask.nii.gz`               |
-| Derived fieldmap, magnitude                                                    | `fmap/sub-{subid}_ses-{sesid}_magnitude.nii.gz`                               |
-| Derived fieldmap (rad/s)                                                       | `fmap/sub-{subid}_ses-{sesid}_fieldmap.nii.gz`                                |
-| QC report                                                                      | `sub-{subid}_ses-{sesid}_funcqc.html`                                         |
-| Rigid-body transform from functional (mcdc) to single-band Ref space           | `xfm/sub-{subid}_ses-{sesid}_from-bold_to-sbref_mode-image.mat`               |
-| Rigid-body transform from single-band Ref space to structural space            | `xfm/sub-{subid}_ses-{sesid}_from-sbref_to-T2w_mode-image.mat`                |
-| Rigid-body transform from functional (mcdc) to structural space                | `xfm/sub-{subid}_ses-{sesid}_from-bold_to-T2w_mode-image.mat`                 |
-| Rigid-body transform from field-map to structural space                        | `xfm/sub-{subid}_ses-{sesid}_from-fieldmap_to-T2w_mode-image.mat`             |
-| Warp from functional (mcdc) space to the extended dHCP 40-week template space  | `xfm/sub-{subid}_ses-{sesid}_from-bold_to-extdhcp40wk_mode-image.nii.gz`      |
-| Warp from the structural space to the extended dHCP 40-week template space     | `xfm/sub-{subid}_ses-{sesid}_from-T2w_to-extdhcp40wk_mode-image.nii.gz`       |
-| ICA confound regressors                                                        | `func/sub-{subid}_ses-{sesid}_task-rest_desc-fixregressors_timeseries.nii.gz` |
-| FOV 4D volumetric mask                                                         | `func/sub-{subid}_ses-{sesid}_task-rest_desc-fov4d_mask.nii.gz`               |
+The outputs genereated by the functional pipeline are listed in the [Functional pipeline](structure.html#functional-pipeline) section of the directory structure summary.
 
 ### Pipeline
 
