@@ -19,7 +19,7 @@ platform on a local cluster.
 
 The structural pipline generates the files listed in the [Structural pipeline](structure.html#structural-pipeline) section of the directory structure summary.
 
-## Operation
+### Operation
 
 1. Registration
 
@@ -106,7 +106,7 @@ The structural pipline generates the files listed in the [Structural pipeline](s
 
 The structural pipeline is described in detail elsewhere<sup>9</sup>.
 
-## References
+### References
 
 1. Tustison, N. J., Avants, B. B., Cook, P. A., Zheng, Y., Egan, A.,
 Yushkevich, P. A. and Gee, J. C.  **N4ITK: improved N3 bias correction. IEEE

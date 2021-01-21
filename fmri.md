@@ -199,7 +199,6 @@ _\*Authors contributed equally._
 }
 ```
 
-
 ### References
 
 1. Andersson, J. L., Skare, S. and Ashburner, J. **How to correct
