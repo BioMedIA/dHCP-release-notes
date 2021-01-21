@@ -58,9 +58,9 @@ Images are released in their own native image space with no correspondence to ot
 
 Transform filenames contain a `from` key and a `to` key to indicate the direction of the transform. The `from` value is the space-label for the *origin/source/moving* image, and the `to` value is the space-label for the *reference/target* image.
 
-Volumetric transforms have the key-value `mode-image`, whereas surface transforms have the key-value `mode-surface`.
+Volumetric transforms have the key-value `mode-image`, whereas surface transforms have the key-value `mode-sphere`.
 
-Non-linear transforms are FSL format with the extension `.nii.gz`, and affine transforms have the extension `.mat`.
+Non-linear volumetric transforms are FSL format with the extension `.nii.gz`, rigid/affine volumetric transforms have the extension `.mat`, and surface transforms have the extension `.surf.gii`.
 
 **Examples:**
 ```
