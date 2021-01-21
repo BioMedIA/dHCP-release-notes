@@ -11,10 +11,10 @@ beyond `participant_id`. These have the following meaning:
 
 Field          | Meaning
 :------------- | :------
-`sex`       | Male / Female
+`sex`          | Male / Female
 `birth_age`    | Gestational age at birth in weeks
 `birth_weight` | Birthweight (kg)
-`singleton` | Singleton pregnancy (S) / Multiple pregnancy (M)
+`singleton`    | Singleton pregnancy (S) / Multiple pregnancy (M)
 
 The `sessions.tsv` file has extra columns beyond `session_id`. These have
 the following meaning:
@@ -24,8 +24,8 @@ Field                     | Meaning
 `scan_age`                | Gestational age at scan in weeks
 `scan_head_circumference` | Head circumference (cm)
 `radiology_score`         | Subject status, see below
-`scan_number` | 1 for the first scan, 2 for the second
-`sedation` | 1 if the subject was sedated during the scan, 0 otherwise
+`scan_number`             | 1 for the first scan, 2 for the second
+`sedation`                | 1 if the subject was sedated during the scan, 0 otherwise
 
 The MRI scans were reviewed by a specialist perinatal neuroradiologist who
 scored each subject using the following scale:
@@ -97,7 +97,7 @@ on tongue)
 | B1      | B1 field map (rel. nom. flip)                                                           | `B1/sub-{subid}_ses-{sesid}_run-{seqnum}_b1map.nii`                       |
 | recon03 | Multi-band dMRI EPI (Release 2 reconstruction)                                          | `dwi/sub-{subid}_ses-{sesid}_rec-release2_dwi.nii`                        |
 
-**Path:** sourcedata/sub-{subid}/ses-{sesid}
+**Path:** `sourcedata/sub-{subid}/ses-{sesid}`
 
 | Group   | Description                      | Filename                                                         |
 |:--------|:---------------------------------|:-----------------------------------------------------------------|
@@ -105,7 +105,7 @@ on tongue)
 
 ### Structural pipeline
 
-**Path:** derivatives/dhcp_anat_pipeline/sub-{subid}/ses-{sesid}
+**Path:** `derivatives/dhcp_anat_pipeline/sub-{subid}/ses-{sesid}`
 
 | Description                                                                          | Filename                                                                                         |
 |:-------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
@@ -150,7 +150,7 @@ on tongue)
 
 ### Diffusion EDDY pipeline
 
-**Path:** derivatives/dhcp_dmri_eddy_pipeline/sub-{subid}/ses-{sesid}
+**Path:** `derivatives/dhcp_dmri_eddy_pipeline/sub-{subid}/ses-{sesid}`
 
 | Description                                                                                                                                              | Filename                                                                |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
@@ -173,7 +173,7 @@ on tongue)
 
 ### Diffusion SHARD pipeline
 
-**Path:** derivatives/dhcp_dmri_shard_pipeline/sub-{subid}/ses-{sesid}
+**Path:** `derivatives/dhcp_dmri_shard_pipeline/sub-{subid}/ses-{sesid}`
 
 | Description                                                                  | Filename                                                                |
 |------------------------------------------------------------------------------|-------------------------------------------------------------------------|
@@ -194,7 +194,7 @@ on tongue)
 
 ### Functional pipeline
 
-**Path:** derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}
+**Path:** `derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}`
 
 | Description                                                                    | Filename                                                                      |
 |:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
