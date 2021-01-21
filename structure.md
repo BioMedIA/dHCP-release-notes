@@ -6,7 +6,7 @@
 The structure of data directory and convention of files naming will follow
 the BIDS specification (v1.5.0-dev).
 
-<div id="toc"></div>
+<div id="toc"/>
 
 ### Participants and sessions
 
