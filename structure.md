@@ -78,10 +78,10 @@ xfm/sub-{subid}_ses-{sesid}_hemi-{hemi}_from-{space-label}_to-{space-label}_dens
 
 | Label | Description |
 | --- | --- |
-| `dhcp{age}wk` | dHCP atlas week-`{age}` volumetric template space |
-| `dhcpSym{age}` | dHCP symmetric surface atlas week-`{age}` |
-| `extdhcp{age}wk` | dHCP **extended** atlas week-`{age}` volumetric template space |
-| `serag{age}wk` | Serag atlas week-`{age}` volumetric template space |
+| `dhcp{age}wk` | [Schuh et al. 2018](https://gin.g-node.org/BioMedIA/dhcp-volumetric-atlas-groupwise) dHCP atlas week-`{age}` volumetric template space |
+| `dhcpSym{age}` | [Bozek et al. 2018](https://brain-development.org/brain-atlases/atlases-from-the-dhcp-project/cortical-surface-atlas-bozek/) dHCP symmetric surface atlas week-`{age}` |
+| `extdhcp{age}wk` | [Schuh et al. 2018](https://git.fmrib.ox.ac.uk/seanf/dhcp-resources/-/blob/master/docs/dhcp-augmented-volumetric-atlas-extended.md) dHCP **extended** atlas week-`{age}` volumetric template space |
+| `serag{age}wk` | [Serag et al. 2012](https://brain-development.org/brain-atlases/neonatal-brain-atlases/neonatal-brain-atlas-serag/) atlas week-`{age}` volumetric template space |
 | `T2w` | native structural T2w space |
 | `bold` | motion and distortion corrected functional space |
 | `dwi` | motion and distortion corrected diffusion space |
