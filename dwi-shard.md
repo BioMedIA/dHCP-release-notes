@@ -85,11 +85,10 @@ In addition, overview screenshots of the motion traces and destriped output
 data are generated. Based on these screenshots, visual pass/fail Quality
 Control identified a small subset of cases to be discarded from analysis.
 
-All QC metrics are available in the `combined.tsv` spreadsheet in the [supplementary](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files).
-
+All QC metrics are available in the `combined.tsv` spreadsheet in the
+[supplementary](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files).
 
 ## References
-
 
 <a name="ref1"/>1. Cordero-Grande, L., Christiaens, D., Hutter, J., Price,
 A.N., Hajnal, J.V.  **Complex diffusion-weighted image estimation via matrix

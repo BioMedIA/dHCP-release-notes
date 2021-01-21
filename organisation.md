@@ -5,19 +5,19 @@
 
 ### [Data acquistion](acquire.md)
 
-### [Quality Control/Assurance (QC)](qc.md)
+### [Quality control/assurance (QC)](qc.md)
 
 ## Pipelines
 
-### [Reconstruction Pipeline](recon.md)
+### [Reconstruction pipeline](recon.md)
 
-### [Structural Pipeline](struct.md)
+### [Structural pipeline](struct.md)
 
-### [Diffusion EDDY Pipeline](dwi.md)
+### [Diffusion EDDY pipeline](dwi.md)
 
-### [Diffusion SHARD Pipeline](dwi-shard.md)
+### [Diffusion SHARD pipeline](dwi-shard.md)
 
-### [Functional Pipeline](fmri.md)
+### [Functional pipeline](fmri.md)
 
 ### [Directory structure and file naming conventions](structure.md)
 
