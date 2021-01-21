@@ -52,6 +52,43 @@ on tongue)
 
 6. `Q`, meaning poor quality anatomical data
 
+## Data directory structure and naming convention
+
+### Image Spaces
+
+Images are released in their own native image space with no correspondence to other images (within or across subjects).  Transforms (affine and warps) are provided to align images within subjects and to a common space.
+
+Transform filenames contain a `from` key and a `to` key to indicate the direction of the transform. The `from` value is the space-label for the *origin/source/moving* image, and the `to` value is the space-label for the *reference/target* image.
+
+Volumetric transforms have the key-value `mode-image`, whereas surface transforms have the key-value `mode-surface`.
+
+Non-linear transforms are FSL format with the extension `.nii.gz`, and affine transforms have the extension `.mat`.
+
+**Examples:**
+```
+# volumetric affine transform
+xfm/sub-{subid}_ses-{sesid}_from-{space-label}_to-{space-label}_mode-image.mat
+
+# volumetric nonlinear transform
+xfm/sub-{subid}_ses-{sesid}_from-{space-label}_to-{space-label}_mode-image.nii.gz 
+
+# surface transform
+xfm/sub-{subid}_ses-{sesid}_hemi-{hemi}_from-{space-label}_to-{space-label}_dens-32k_mode-sphere.surf.gii 
+```
+
+**Space labels:**
+
+| Label | Description |
+| --- | --- |
+| `dhcp{age}wk` | dHCP atlas week-`{age}` volumetric template space |
+| `dhcpSym{age}` | dHCP symmetric surface atlas week-`{age}` |
+| `extdhcp{age}wk` | dHCP **extended** atlas week-`{age}` volumetric template space |
+| `serag{age}wk` | Serag atlas week-`{age}` volumetric template space |
+| `T2w` | native structural T2w space |
+| `bold` | motion and distortion corrected functional space |
+| `dwi` | motion and distortion corrected diffusion space |
+
+
 ### Reconstruction Pipeline
 
 **Path:** `rawdata/sub-{subid}/ses-{sesid}`
