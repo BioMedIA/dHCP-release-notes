@@ -32,6 +32,8 @@
 
 ### Outputs
 
+The outputs genereated by the functional pipeline are listed in the [Functional pipeline](structure.html#functional-pipeline) section of the directory structure summary.
+
 **Path:** `derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}`
 
 | Description                                                                    | Filename                                                                      |
