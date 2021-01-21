@@ -14,7 +14,7 @@ This page provides guidance on both fronts.
 
 <div id="toc"></div>
 
-### Acknowledge the Funding Source
+## Acknowledge the Funding Source
 
 Papers, book chapters, books, posters, oral presentations, and all other
 printed and digital presentations of results derived from dHCP data should
@@ -26,7 +26,7 @@ contain the following wording in the acknowledgments section:
 > Grant Agreement no. [319456]. We are grateful to the families who generously
 > supported this trial.
 
-### Cite Relevant Publications
+## Cite Relevant Publications
 
 The specific publications that are appropriate to cite will depend on what
 dHCP data you used in your study and the purposes for which you used the data.
@@ -36,7 +36,7 @@ aspects of data acquisition, pre-processing, and analysis. As additional
 publications become available, this list will be updated to include those
 that it may be relevant to cite.
 
-#### I. Publications relevant to dHCP primary datasets
+### Publications relevant to dHCP primary datasets
 
 The publications in this section describe dHCP data acquisition methods
 that have been used to generate both the ‘raw’ NIFTI format and the

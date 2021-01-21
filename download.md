@@ -18,7 +18,7 @@ here](https://neurostars.org/t/dhcp-infant-data-downloading-issue/2500).
 
 <div id="toc"></div>
 
-### Data review and download
+## Data review and download
 
 In order to unlock download options for available Projects (data sets),
 you will have to sign user terms. Open any Project and hit 'Sign user
@@ -81,7 +81,7 @@ Directory   | Type  | Notes
 `<sesid>_6` |  func |  Single-band reference spin echo EPI image
 `<sesid>_7` |  func |  Single band reference spin echo EPI with different phase encode directions.
 
-###  Downloading non-imaging data
+##  Downloading non-imaging data
 
 ### List of Subjects, Gender, GA
 
