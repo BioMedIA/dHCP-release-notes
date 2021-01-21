@@ -6,6 +6,10 @@
 The structure of data directory and convention of files naming will follow
 the BIDS specification (v1.5.0-dev).
 
+<div id="toc"></div>
+
+### Participants and sessions
+
 The `participants.tsv` for each BIDS pipeline has a number of extra columns
 beyond `participant_id`. These have the following meaning:
 
@@ -47,8 +51,6 @@ on tongue)
 5. Incidental finding with possible / likely significance for both clinical and imaging analysis (e.g. Major lesions within white matter cortex, cerebellum and or basal ganglia; small head / brain < 1st centile)
 
 6. `Q`, meaning poor quality anatomical data
-
-## Data directory structure and naming convention
 
 ### Reconstruction Pipeline
 

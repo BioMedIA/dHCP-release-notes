@@ -10,6 +10,8 @@
     <link href='https://fonts.googleapis.com/css?family=Cabin:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- used by the toc generator -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     {% feed_meta %}
   </head>
   <body>
@@ -48,5 +50,12 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+
+    <!-- generate the toc, if necessary -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#toc').toc();
+      });
+    </script>
   </body>
 </html>
