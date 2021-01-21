@@ -32,7 +32,7 @@
 
 ### Outputs
 
-**Path:** derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}
+**Path:** `derivatives/dhcp_fmri_pipeline/sub-{subid}/ses-{sesid}`
 
 | Description                                                                    | Filename                                                                      |
 |:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
@@ -117,7 +117,15 @@
     2. Noise ICs and motion parameters regressed from motion and distortion
     corrected functional multiband EPI.
     
-> **Schematic of the dHCP fMRI neonatal pre-processing pipeline:** The schematic is segregated into the 4 main conceptual processing stages by coloured background; fieldmap pre-processing (red), susceptibility and motion correction (orange), registration (green), and denoising (purple). Inputs to the pipeline are grouped in the top row, and the main pipeline outputs are grouped in the lower right. Blue filled rectangles with rounded corners indicate processing steps, whilst black rectangles (with no fill) represent data. The critical path is denoted by magenta connector arrows. (dc) = distortion corrected; (mcdc) = motion and distortion corrected. 
+> **Schematic of the dHCP fMRI neonatal pre-processing pipeline:** The
+> schematic is segregated into the 4 main conceptual processing stages by
+> coloured background; fieldmap pre-processing (red), susceptibility and motion
+> correction (orange), registration (green), and denoising (purple). Inputs
+> to the pipeline are grouped in the top row, and the main pipeline outputs
+> are grouped in the lower right. Blue filled rectangles with rounded corners
+> indicate processing steps, whilst black rectangles (with no fill) represent
+> data. The critical path is denoted by magenta connector arrows. (dc) =
+> distortion corrected; (mcdc) = motion and distortion corrected.
 
 [![Pipeline schematic](assets/images/pipeline_schematic.png)](assets/images/pipeline_schematic.png)
 
@@ -150,21 +158,32 @@ distribution to flag outliers for manual inspection and potential exclusion:
 2. All QA measures were converted to Z-scores and flipped as necessary so
 that positive z-scores are good and negative bad.  Subject/sessions with
 a z-score < -2.5 on any QC metric were flagged for further inspection.
-3. All QC metrics are available in the `combined.tsv` spreadsheet in the [supplementary](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files).
 
-> **QC Scores:** 28 subject/sessions were flagged for futher inspection (see figure).
-All flagged subject/sessions are included in the release.
+3. All QC metrics are available in the `combined.tsv` spreadsheet in the
+[supplementary](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files).
+
+> **QC Scores:** 28 subject/sessions were flagged for futher inspection
+> (see figure). All flagged subject/sessions are included in the release.
 
 [![QC
 overview](assets/images/fmri_qc_z_distns.png)](assets/images/fmri_qc_z_distns.png)
 
 ### How to cite
 
-Detailed instructions on how to cite can be found here: [http://www.developingconnectome.org/how-to-cite/](http://www.developingconnectome.org/how-to-cite/)
+Detailed instructions on how to cite can be found here:
+[http://www.developingconnectome.org/how-to-cite/](http://www.developingconnectome.org/how-to-cite/)
 
 **Primary citation for the fMRI pipeline:**
 
-Fitzgibbon, SP, Harrison, SJ, Jenkinson, M, Baxter, L, Robinson, EC, Bastiani, M, Bozek, J, Karolis, V, Cordero Grande, L, Price, AN, Hughes, E, Makropoulos, A, Passerat-Palmbach, J, Schuh, A, Gao, J, Farahibozorg, S, O'Muircheartaigh, J, Ciarrusta, J, O'Keeffe, C, Brandon, J, Arichi, T, Rueckert, D, Hajnal, JV, Edwards, AD, Smith, SM, \*Duff, E, \*Andersson, J  **The developing Human Connectome Project automated functional processing framework for neonates.**, *NeuroImage (2020), 223: 117303*, 2020. **doi:** https://doi.org/10.1016/j.neuroimage.2020.117303 _\*Authors contributed equally._
+Fitzgibbon, SP, Harrison, SJ, Jenkinson, M, Baxter, L, Robinson, EC,
+Bastiani, M, Bozek, J, Karolis, V, Cordero Grande, L, Price, AN, Hughes,
+E, Makropoulos, A, Passerat-Palmbach, J, Schuh, A, Gao, J, Farahibozorg,
+S, O'Muircheartaigh, J, Ciarrusta, J, O'Keeffe, C, Brandon, J, Arichi, T,
+Rueckert, D, Hajnal, JV, Edwards, AD, Smith, SM, \*Duff, E, \*Andersson, J
+**The developing Human Connectome Project automated functional processing
+framework for neonates.**, *NeuroImage (2020), 223: 117303*, 2020. [DOI:
+10.1016/j.neuroimage.2020.117303](https://doi.org/10.1016/j.neuroimage.2020.117303)
+_\*Authors contributed equally._
 
 ```
 @article {Fitzgibbon766030,
