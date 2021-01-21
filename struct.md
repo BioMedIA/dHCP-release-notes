@@ -8,7 +8,7 @@ pipeline](https://github.com/BioMedIA/dhcp-structural-pipeline) was
 encapsulated as a Docker container image and run via the OpenMOLE<sup>10</sup>
 platform on a local cluster.
 
-### Inputs and oputputs
+### Inputs and outputs
 
 **From reconstruction pipeline:** `rawdata/sub-{subid}/ses-{sesid}`
 
@@ -17,7 +17,7 @@ platform on a local cluster.
 | T1w image (combined Slice-to-Volume reconstruction)     | `anat/sub-{subid}_ses-{sesid}_rec-SVR_T1w.nii`  |
 | T2w image (combined Slice-to-Volume reconstruction)     | `anat/sub-{subid}_ses-{sesid}_rec-SVR_T2w.nii`  |
 
-The structural pipline generates the files listed in the [Structural Pipeline](structure.html#structural-pipeline) section of the directory structure summary.
+The structural pipline generates the files listed in the [Structural pipeline](structure.html#structural-pipeline) section of the directory structure summary.
 
 ## Operation
 
