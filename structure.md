@@ -52,7 +52,7 @@ on tongue)
 
 ### Reconstruction Pipeline
 
-**Path:** rawdata/sub-{subid}/ses-{sesid}
+**Path:** `rawdata/sub-{subid}/ses-{sesid}`
 
 | Group   | Description                                                                             | Filename                                                                  |
 |:--------|:----------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|
