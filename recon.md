@@ -20,7 +20,7 @@ https://github.com/mriphysics/multiSliceAlignedSENSE/releases/tag/1.0.1.
 
 **Path:** `rawdata/sub-{subid}/ses-{sesid}`
 
-The reconstruction pipline generates the files listed in the [Reconstruction pipeline](structure.html#reconstruction-pipeline) 
+The reconstruction pipeline generates the files listed in the [Reconstruction pipeline](structure.html#reconstruction-pipeline) 
 section of the directory structure summary.
 
 Standard magnitude and phase reconstructions are provided for all native 
@@ -34,7 +34,7 @@ acquisitions labelled by sequence run number as follows:
 | T2w image (native acquired stack)                    | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_T2w.nii`  |
 | T2w phase (native acquired stack)                    | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_T2w.nii`  |
 
-Motion corrected and super resolved reconstructions, and phase images, are included for every acquired multislice stack:
+Motion corrected and super-resolved reconstructions, and phase images, are included for every acquired multislice stack:
 
 | Description                      | Filename                                        |
 |:---------------------------------|:------------------------------------------------|
@@ -43,22 +43,21 @@ Motion corrected and super resolved reconstructions, and phase images, are inclu
 | T1w image (motion corrected and super resolved)     | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsr_T1w.nii`  |
 | T2w image (motion corrected and super resolved)     | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsr_T2w.nii`  |
 
-The final motion corrected slice-to-volume reconstructed T1w and T2w volumes as used by the structural pipeline are: 
+### Primary anatomical outputs
+The final motion corrected slice-to-volume reconstructed T1w and T2w volumes are: 
 
 | Description                                             | Filename                                        |
 |:--------------------------------------------------------|:------------------------------------------------|
 | T1w image (combined Slice-to-Volume reconstruction)     | `anat/sub-{subid}_ses-{sesid}_rec-SVR_T1w.nii`  |
 | T2w image (combined Slice-to-Volume reconstruction)     | `anat/sub-{subid}_ses-{sesid}_rec-SVR_T2w.nii`  |
 
-An additional T1 3D MPRAGE volume is also provided, but currently not used in further pipelines:
+An additional T1 3D MPRAGE volume is also provided, but currently not used in processing pipelines:
 
 | Description                                             | Filename                                        |
 |:--------------------------------------------------------|:------------------------------------------------|
 | T1w image (3D MPRAGE)     | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_acq-MPRAGE_T1w.nii`  |
-| T1w phase (3D MPRAGE)     | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_acq-MPRAGE_rec-phase_T1w.nii`  |
 
-
-fMRI and dMRI simultaneous multi-slice (SMS) echo planar
+For fMRI and dMRI, simultaneous multi-slice (SMS) echo planar
 imaging (EPI) is reconstructed using the extended SENSE technique<sup>4</sup>,
 with details described elsewhere<sup>5,6,7</sup>; sensitivity estimates
 from a conventional reference scan are refined with the information from
@@ -68,6 +67,40 @@ performed by the generalized singular value shrinkage (GSVS) denoising
 technique using noise measures performed during the acquisition<sup>8</sup>. 
 Methods and example data for the GSVS method are available at 
 https://github.com/mriphysics/complexSVDShrinkageDWI/releases/tag/1.1.0.
+
+
+### Primary dMRI outputs
+dMRI reconstructions are provided with and without denoising, along with phase images, and additional chi^2 
+maps from the reconstruction required for the dMRI (SHARD) pipeline. 
+A third reconstruction used by the dMRI (EDDY) pipeline is included, this matches the version from the 2nd data 
+release, the main difference being that residual fat artefacts are suppressed in the reconstruction pipeline:
+| Description                                             | Filename                                        |
+|:--------------------------------------------------------|:------------------------------------------------|
+| Multi-band dMRI EPI     | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_dwi.nii`  |
+| Multi-band dMRI EPI (denoised reconstruction)    | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-denoised_dwi.nii`  |
+| Multi-band dMRI EPI (Release 2 reconstruction)    | `dwi/sub-{subid}_ses-{sesid}_rec-release2_dwi.nii`  |
+
+### Primary outputs for fMRI
+There is one primary reconstruction for the resting state fMRI data, along with single-band reference scans (typically one before and 
+one after resting state run), and a spin-echo EPI with matched readout for field estimation. In addition, all phase images are provided.
+
+| Description                                             | Filename                                        |
+|:--------------------------------------------------------|:------------------------------------------------|
+| Single-band Ref   | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_sbref.nii`  |
+| Resting fMRI   | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_bold.nii`  |
+| 4D Spin Echo EPI with different phase encode directions (for topup fieldmap estimation) | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_epi.nii`  |
+
+### Primary outputs for field mapping
+Data from calibration scans provide additional outputs for both B1 and B0 field estimates; reconstructed magnitude, phase and calculated field maps are provided:
+| Description                                             | Filename                                        |
+|:--------------------------------------------------------|:------------------------------------------------|
+| Dual echo-time B0 field-map in (Hz) - raw  | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-raw_fieldmap.nii`  |
+| B1 field map (rel. nom. flip)  | `B1/sub-{subid}_ses-{sesid}_run-{seqnum}_b1map.nii`  |
+
+
+The full output list can be found in the [Reconstruction pipeline](structure.html#reconstruction-pipeline) 
+section of the directory structure summary.
+
 
 ## References
 
