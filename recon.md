@@ -74,6 +74,7 @@ dMRI reconstructions are provided with and without denoising, along with phase i
 maps from the reconstruction required for the dMRI (SHARD) pipeline. 
 A third reconstruction used by the dMRI (EDDY) pipeline is included, this matches the version from the 2nd data 
 release, the main difference being that residual fat artefacts are suppressed in the reconstruction pipeline:
+
 | Description                                             | Filename                                        |
 |:--------------------------------------------------------|:------------------------------------------------|
 | Multi-band dMRI EPI     | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_dwi.nii`  |
@@ -92,6 +93,7 @@ one after resting state run), and a spin-echo EPI with matched readout for field
 
 ### Primary outputs for field mapping
 Data from calibration scans provide additional outputs for both B1 and B0 field estimates; reconstructed magnitude, phase and calculated field maps are provided:
+
 | Description                                             | Filename                                        |
 |:--------------------------------------------------------|:------------------------------------------------|
 | Dual echo-time B0 field-map in (Hz) - raw  | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-raw_fieldmap.nii`  |
