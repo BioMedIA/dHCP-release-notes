@@ -16,6 +16,48 @@ integrated by a super-resolution scheme<sup>3</sup>. Methods and example
 data for the aligned SENSE method are available at 
 https://github.com/mriphysics/multiSliceAlignedSENSE/releases/tag/1.0.1.
 
+### Inputs and outputs
+
+**Path:** `rawdata/sub-{subid}/ses-{sesid}`
+
+The reconstruction pipline generates the files listed in the [Reconstruction pipeline](structure.html#reconstruction-pipeline) 
+section of the directory structure summary.
+
+Standard magnitude and phase reconstructions are provided for all native 
+acquired anatomical image stacks, with the different orientations and repeat 
+acquisitions labelled by sequence run number as follows:
+
+| Description                                          | Filename                                             |
+|:-----------------------------------------------------|:-----------------------------------------------------|
+| T1w image (native acquired stack)                    | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_T1w.nii`  |
+| T1w phase (native acquired stack)                    | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_T1w.nii`  |
+| T2w image (native acquired stack)                    | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_T2w.nii`  |
+| T2w phase (native acquired stack)                    | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_T2w.nii`  |
+
+Motion corrected and super resolved reconstructions, and phase images, are included for every acquired multislice stack:
+
+| Description                      | Filename                                        |
+|:---------------------------------|:------------------------------------------------|
+| T1w image (motion corrected)     | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mc_T1w.nii`  |
+| T2w image (motion corrected)     | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mc_T2w.nii`  |
+| T1w image (motion corrected and super resolved)     | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsr_T1w.nii`  |
+| T2w image (motion corrected and super resolved)     | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsr_T2w.nii`  |
+
+The final motion corrected slice-to-volume reconstructed T1w and T2w volumes as used by the structural pipeline are: 
+
+| Description                                             | Filename                                        |
+|:--------------------------------------------------------|:------------------------------------------------|
+| T1w image (combined Slice-to-Volume reconstruction)     | `anat/sub-{subid}_ses-{sesid}_rec-SVR_T1w.nii`  |
+| T2w image (combined Slice-to-Volume reconstruction)     | `anat/sub-{subid}_ses-{sesid}_rec-SVR_T2w.nii`  |
+
+An additional T1 3D MPRAGE volume is also provided, but currently not used in further pipelines:
+
+| Description                                             | Filename                                        |
+|:--------------------------------------------------------|:------------------------------------------------|
+| T1w image (3D MPRAGE)     | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_acq-MPRAGE_T1w.nii`  |
+| T1w phase (3D MPRAGE)     | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_acq-MPRAGE_rec-phase_T1w.nii`  |
+
+
 fMRI and dMRI simultaneous multi-slice (SMS) echo planar
 imaging (EPI) is reconstructed using the extended SENSE technique<sup>4</sup>,
 with details described elsewhere<sup>5,6,7</sup>; sensitivity estimates
