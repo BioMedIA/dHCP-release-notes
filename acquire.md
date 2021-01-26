@@ -21,8 +21,8 @@ The data release contains structural (T1w and T2w) resting state functional
 and diffusion images supplied as original image data and after preprocessing
 pipelines as described below have been applied. The neonatal brain has
 different tissue properties to adult brain, most strikingly it has a
-higher water content and myelination of white matter is incomplete. In
-consequences the relaxation times T1 and T2 are longer than in adult brain
+higher water content and myelination of white matter is incomplete. 
+Consequently, the relaxation times T1 and T2 are longer than in adult brain
 and white matter has longer T1 and T2 than grey matter. In neonates, brain
 anatomy is revealed more clearly in T2w than T1w images and thus the former
 are treated as the primary data for anatomical segmentation and to provide
@@ -44,7 +44,7 @@ T1w images were placed at the end of the protocol and are of more variable
 quality than the T2w data.  The release contains 711 sessions with T1w
 multi-slice fast spin-echo images and 734 sessions with T1 MPRAGE images.
 
-There is a spread of gestational ages with 579 subjects in the term equivalent
+There is a spread of gestational ages with 578 subjects in the term equivalent
 age range, which we defined as 37 to 44 gestational weeks. Also although
 these subjects were recruited as "normal subjects" (with clearly specified
 inclusion and exclusion criteria), there were inevitably incidental findings
@@ -89,15 +89,14 @@ fold-over encoding directions.
 
 Physiological recordings of VCG, PPU and respiratory traces are provided 
 unprocessed in the sourcedata folder. Alignment to rs-fMRI data can be achieved 
-by means of locating the 'end of scan' marker (the 'start of scan' marker 
-includes prescan calibrations and is not reliable to use). Existing readers are available 
-to aid loading and interpretation of the file<sup>5</sup>. The frequency of 
-the recordings in all subjects is 496Hz, using this with the known TR and number 
-of volumes acquired allows identification of the start of data acquisition. 
+by means of locating the 'end of scan' marker (scripts are available 
+to aid loading and interpretation of this file<sup>5</sup>), and knowing the 
+frequency of the recordings (496Hz) and TR x number of volumes acquired 
+(0.392 x 2300) in order to identify the start of scan point. 
 Note, for improved accuracy on this cohort a small delay of ~85ms between the 
 true end of data acquisition and 'end of scan' marker has been identified, 
-after accounting for this the precision of identifying the start of scan 
-should be of the order +/- 50ms, for a complete scan of 15 minutes duration.
+after accounting for this the precision of identifying the true start of scan 
+in the physlog should be of the order +/- 50ms, for a complete scan of 15 minutes duration.
 
 **dMRI:** A spherically optimized set of directions on 4 shells (b0:
 20, b400: 64, b1000: 88, b2600: 128)<sup>6</sup> was split into 4 optimal
