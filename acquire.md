@@ -45,11 +45,11 @@ quality than the T2w data.  The release contains 711 sessions with T1w
 multi-slice fast spin-echo images and 734 sessions with T1 MPRAGE images.
 
 There is a spread of gestational ages with 578 subjects in the term equivalent
-age range, which we defined as 37 to 44 gestational weeks. Also although
+age range, which we defined as 37 to 44 gestational weeks. Also, although
 these subjects were recruited as "normal subjects" (with clearly specified
 inclusion and exclusion criteria), there were inevitably incidental findings
 on the images obtained. All the anatomical images were reviewed by an expert
-perinatal neuroradiologist who scored the subjects using a 5 point scale
+perinatal neuroradiologist who scored the subjects using a 5-point scale
 (see below) -- this information is provided
 
 ## Acquisition details
@@ -63,7 +63,7 @@ acquired in a total examination time of 63 minutes. Sequence parameters
 were as follows:
 
 **Calibration scans:** B0 mapping was performed using an interleaved dual TE
-spoiled gradient echo sequence and localised image based shimming performed
+spoiled gradient echo sequence and localised image-based shimming performed
 for use with all EPI sequences as described in<sup>2</sup>. B0 field maps
 using the optimised higher order shims were subsequently re-acquired between
 the fMRI and dMRI acquisitions. B1 mapping was performed using the dual 
@@ -92,11 +92,11 @@ unprocessed in the sourcedata folder. Alignment to rs-fMRI data can be achieved
 by means of locating the 'end of scan' marker (scripts are available 
 to aid loading and interpretation of this file<sup>5</sup>), and knowing the 
 frequency of the recordings (496Hz) and TR x number of volumes acquired 
-(0.392 x 2300) in order to identify the start of scan point. 
+(0.392s x 2300) in order to identify the start of scan point. 
 Note, for improved accuracy on this cohort a small delay of ~85ms between the 
 true end of data acquisition and 'end of scan' marker has been identified, 
 after accounting for this the precision of identifying the true start of scan 
-in the physlog should be of the order +/- 50ms, for a complete scan of 15 minutes duration.
+in the physiological file should be of the order +/- 50ms, for a complete scan of 15 minutes duration.
 
 **dMRI:** A spherically optimized set of directions on 4 shells (b0:
 20, b400: 64, b1000: 88, b2600: 128)<sup>6</sup> was split into 4 optimal
