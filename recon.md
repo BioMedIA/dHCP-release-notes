@@ -29,10 +29,10 @@ acquisitions labelled by sequence run number as follows:
 
 | Description                                          | Filename                                             |
 |:-----------------------------------------------------|:-----------------------------------------------------|
-| T1w image (native acquired stack)                    | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_T1w.nii`  |
-| T1w phase (native acquired stack)                    | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_T1w.nii`  |
-| T2w image (native acquired stack)                    | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_T2w.nii`  |
-| T2w phase (native acquired stack)                    | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_T2w.nii`  |
+| T1w magnitude image (native acquired stack)          | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_T1w.nii`  |
+| T1w phase image (native acquired stack)              | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_T1w.nii`  |
+| T2w magnitude image (native acquired stack)          | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_T2w.nii`  |
+| T2w phase image (native acquired stack)              | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_T2w.nii`  |
 
 Motion corrected and super-resolved reconstructions, and phase images, are included for every acquired multislice stack:
 
@@ -92,12 +92,14 @@ one after resting state run), and a spin-echo EPI with matched readout for field
 | 4D Spin Echo EPI with different phase encode directions (for topup fieldmap estimation) | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_epi.nii`  |
 
 ### Primary outputs for field mapping
-Data from calibration scans provide additional outputs for both B1 and B0 field estimates; reconstructed magnitude, phase and calculated field maps are provided:
+Data from calibration scans are provided for B1+ and B0 field estimates, 
+using the DREAM and dual-gradient echo methods, respectively. Reconstructed magnitude and phase 
+images are provided, along with the following calculated field maps as the primary outputs:
 
-| Description                                             | Filename                                        |
-|:--------------------------------------------------------|:------------------------------------------------|
-| Dual echo-time B0 field-map in (Hz) - raw  | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-raw_fieldmap.nii`  |
-| B1 field map (rel. nom. flip)  | `B1/sub-{subid}_ses-{sesid}_run-{seqnum}_b1map.nii`  |
+| Description                                          | Filename                                        |
+|:-----------------------------------------------------|:------------------------------------------------|
+| B0 field-map in (Hz) - unfiltered  | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-raw_fieldmap.nii`  |
+| B1+ field map (rel. nom. flip)  | `B1/sub-{subid}_ses-{sesid}_run-{seqnum}_b1map.nii`  |
 
 
 The full output list can be found in the [Reconstruction pipeline](structure.html#reconstruction-pipeline) 
