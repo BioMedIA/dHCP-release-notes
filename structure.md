@@ -92,46 +92,44 @@ xfm/sub-{subid}_ses-{sesid}_hemi-{hemi}_from-{space-label}_to-{space-label}_dens
 
 | Group   | Description                                                                             | Filename                                                                  |
 |:--------|:----------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|
-| T1      | T1w image (native acquired stack)                                                       | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_T1w.nii`                       |
-| T1      | T1w phase (native acquired stack)                                                       | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_T1w.nii`             |
-| T1      | T1w image (motion corrected and super resolved)                                         | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsr_T1w.nii`              |
-| T1      | T1w phase (motion corrected and super resolved)                                         | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsrphase_T1w.nii`         |
-| T1      | T1w image (motion corrected)                                                            | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mc_T1w.nii`                |
-| T1      | T1w phase (motion corrected)                                                            | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcphase_T1w.nii`           |
+| T1      | T1w magnitude image (native acquired stack)                                             | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_T1w.nii`                       |
+| T1      | T1w phase image (native acquired stack)                                                 | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_T1w.nii`             |
+| T1      | T1w magnitude image (motion corrected and super resolved)                               | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsr_T1w.nii`              |
+| T1      | T1w phase image (motion corrected and super resolved)                                   | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsrphase_T1w.nii`         |
+| T1      | T1w magnitude image (motion corrected)                                                  | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mc_T1w.nii`                |
+| T1      | T1w phase image (motion corrected)                                                      | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcphase_T1w.nii`           |
 | T1      | T1w image (combined Slice-to-Volume reconstruction)                                     | `anat/sub-{subid}_ses-{sesid}_rec-SVR_T1w.nii`                            |
-| T2      | T2w image (native acquired stack)                                                       | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_T2w.nii`                       |
-| T2      | T2w phase (native acquired stack)                                                       | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_T2w.nii`             |
-| T2      | T2w image (motion corrected and super resolved)                                         | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsr_T2w.nii`              |
-| T2      | T2w phase (motion corrected and super resolved)                                         | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsrphase_T2w.nii`         |
-| T2      | T2w image (motion corrected)                                                            | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mc_T2w.nii`                |
-| T2      | T2w phase (motion corrected)                                                            | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcphase_T2w.nii`           |
+| T2      | T2w magnitude image (native acquired stack)                                             | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_T2w.nii`                       |
+| T2      | T2w phase image (native acquired stack)                                                 | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_T2w.nii`             |
+| T2      | T2w magnitude image (motion corrected and super resolved)                               | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsr_T2w.nii`              |
+| T2      | T2w phase image (motion corrected and super resolved)                                   | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcsrphase_T2w.nii`         |
+| T2      | T2w magnitude image (motion corrected)                                                  | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mc_T2w.nii`                |
+| T2      | T2w phase image (motion corrected)                                                      | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-mcphase_T2w.nii`           |
 | T2      | T2w image (combined Slice-to-Volume reconstruction)                                     | `anat/sub-{subid}_ses-{sesid}_rec-SVR_T2w.nii`                            |
-| T13D    | T1w image (3D MPRAGE)                                                                   | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_acq-MPRAGE_T1w.nii`            |
-| T13D    | T1w phase (3D MPRAGE)                                                                   | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_acq-MPRAGE_rec-phase_T1w.nii`  |
+| T13D    | T1w magnitude image (3D MPRAGE)                                                         | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_acq-MPRAGE_T1w.nii`            |
+| T13D    | T1w phase image (3D MPRAGE)                                                             | `anat/sub-{subid}_ses-{sesid}_run-{seqnum}_acq-MPRAGE_rec-phase_T1w.nii`  |
+| dMRI    | Single-band Ref (magnitude)                                                             | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_sbref.nii`                      |
+| dMRI    | Single-band Ref (phase)                                                                 | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_sbref.nii`            |
+| dMRI    | Multi-band dMRI EPI (magnitude)                                                         | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_dwi.nii`                        |
+| dMRI    | Multi-band dMRI EPI (phase)                                                             | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_dwi.nii`              |
+| dMRI    | Multi-band dMRI EPI (denoised magnitude)                                                | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-denoised_dwi.nii`           |
+| dMRI    | Multi-band dMRI EPI (denoised phase)                                                    | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-denoisedphase_dwi.nii`      |
+| dMRI    | Multi-band dMRI EPI (Chi2-maps)                                                         | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-chi2_dwi.nii`               |
+| dMRI    | Estimate of error in denoised data                                                      | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-denoisederror_dwi.nii`      |
+| fMRI    | Single-band Ref (magnitude)                                                             | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_sbref.nii`           |
+| fMRI    | Single-band Ref (phase)                                                                 | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_rec-phase_sbref.nii` |
+| fMRI    | Resting fMRI (magnitude)                                                                | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_bold.nii`            |
+| fMRI    | Resting fMRI (phase)                                                                    | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_phase.nii`           |
 | fMRI    | 4D Spin Echo EPI with different phase encode directions (for topup fieldmap estimation) | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_epi.nii`                       |
 | fMRI    | 4D Spin Echo EPI (phase)                                                                | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_epi.nii`             |
-| dMRI    | Single-band (ref) dMRI EPI                                                              | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_sbref.nii`                      |
-| dMRI    | Single-band dMRI EPI (phase)                                                            | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_sbref.nii`            |
-| dMRI    | Estimate of error in denoised data                                                      | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-denoisederror_dwi.nii`      |
-| dMRI    | Multi-band dMRI EPI                                                                     | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_dwi.nii`                        |
-| dMRI    | Multi-band dMRI EPI (phase)                                                             | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-phase_dwi.nii`              |
-| dMRI    | Multi-band dMRI EPI (Chi2-maps)                                                         | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-chi2_dwi.nii`               |
-| dMRI    | Multi-band dMRI EPI (denoised reconstruction)                                           | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-denoised_dwi.nii`           |
-| dMRI    | Multi-band dMRI EPI (denoised phase)                                                    | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-denoisedphase_dwi.nii`      |
-| fMRI    | Single-band Ref                                                                         | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_sbref.nii`           |
-| fMRI    | Single-band Ref (phase)                                                                 | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_rec-phase_sbref.nii` |
-| fMRI    | Resting fMRI                                                                            | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_bold.nii`            |
-| fMRI    | Resting fMRI (phase)                                                                    | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_phase.nii`           |
-| fMRI    | Single-band Ref                                                                         | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_sbref.nii`           |
-| fMRI    | Single-band Ref (phase)                                                                 | `func/sub-{subid}_ses-{sesid}_run-{seqnum}_task-rest_sbref.nii`           |
 | B0      | Dual echo-time (magnitude)                                                              | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_magnitude.nii`                 |
 | B0      | Dual echo-time (phase)                                                                  | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_phase.nii`                     |
-| B0      | Dual echo-time field-map in (Hz) - filtered and smoothed                                | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-filtered_fieldmap.nii`     |
-| B0      | Dual echo-time field-map in (Hz) - raw                                                  | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-raw_fieldmap.nii`          |
-| B1      | B1 field map (magnitude)                                                                | `B1/sub-{subid}_ses-{sesid}_run-{seqnum}_magnitude.nii`                   |
-| B1      | B1 field map (phase)                                                                    | `B1/sub-{subid}_ses-{sesid}_run-{seqnum}_phase.nii`                       |
-| B1      | B1 field map (rel. nom. flip)                                                           | `B1/sub-{subid}_ses-{sesid}_run-{seqnum}_b1map.nii`                       |
-| recon03 | Multi-band dMRI EPI (Release 2 reconstruction)                                          | `dwi/sub-{subid}_ses-{sesid}_rec-release2_dwi.nii`                        |
+| B0      | B0 field map (Hz) - filtered and smoothed                                               | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-filtered_fieldmap.nii`     |
+| B0      | B0 field map (Hz) - unfiltered                                                          | `fmap/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-raw_fieldmap.nii`          |
+| B1      | DREAM (magnitude)                                                                       | `B1/sub-{subid}_ses-{sesid}_run-{seqnum}_magnitude.nii`                   |
+| B1      | DREAM (phase)                                                                           | `B1/sub-{subid}_ses-{sesid}_run-{seqnum}_phase.nii`                       |
+| B1      | B1+ field map (rel. nom. flip)                                                          | `B1/sub-{subid}_ses-{sesid}_run-{seqnum}_b1map.nii`                       |
+| recon03 | Multi-band dMRI EPI - release 2 reconstruction                                          | `dwi/sub-{subid}_ses-{sesid}_rec-release2_dwi.nii`                        |
 
 **Path:** `sourcedata/sub-{subid}/ses-{sesid}`
 
