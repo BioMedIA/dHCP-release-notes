@@ -10,7 +10,7 @@
     - Structural, Diffusion, Functional, and derivatives
     - http://www.developingconnectome.org/information-registration-and-download/
 
-## Developmental Spatio-Temporal Atlases
+## Developmental Atlases
 1. Volumetric neonatal atlas
     - 35 to 44 weeks post-menstrual age (PMA)
     - https://web.gin.g-node.org/BioMedIA/dhcp-volumetric-atlas-groupwise
