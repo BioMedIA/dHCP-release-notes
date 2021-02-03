@@ -15,10 +15,6 @@
     - 35 to 44 weeks post-menstrual age (PMA)
     - https://web.gin.g-node.org/BioMedIA/dhcp-volumetric-atlas-groupwise
 2. Surface neonatal atlas
-    - 36 to 44 weeks post-menstrual age (PMA)
-    - Asymmetric
-    - https://brain-development.org/brain-atlases/atlases-from-the-dhcp-project/cortical-surface-atlas-bozek/
-3. Surface **extended** neonatal atlas
     - 28 to 44 weeks post-menstrual age (PMA)
     - Symmetric
     - https://brain-development.org/brain-atlases/atlases-from-the-dhcp-project/cortical-surface-template/
