@@ -116,6 +116,7 @@ are listed in the [Functional pipeline](structure.html#functional-pipeline) sect
 
 [![Pipeline schematic](assets/images/pipeline_schematic.png)](assets/images/pipeline_schematic.png)
 
+<a name="fmri-qc"></a>
 ### Quality Control/Assurance
 
 1. Numerous quality assurance metrics are calculated during the

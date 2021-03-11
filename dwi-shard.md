@@ -92,7 +92,7 @@ transformation is combined with a non-linear registration<sup>[9](#ref9)</sup>
 of the T2w volume to the 40 weeks template<sup>[10](#ref10)</sup> to allow
 transformations between diffusion and atlas spaces.
 
-
+<a name="shard-qc"></a>
 ### Diffusion MRI QC
 
 Automated quality control metrics are calculated for several key steps in

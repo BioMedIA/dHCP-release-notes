@@ -13,11 +13,13 @@ inspected and scored as PASS/FAIL.
 2. The **fMRI pipeline** and **dMRI pipelines** generate numerous quantitative
 QC metrics which are described on their respective pages:
 
-   1. [Functional Pipeline](fmri.md#fmri-qc)
+   1. [Structural Pipeline](struct.md#struct-qc)
+   
+   2. [Functional Pipeline](fmri.md#fmri-qc)
 
-   2. [Diffusion EDDY Pipeline](dwi.md#diffusion-mri-qc)
+   2. [Diffusion EDDY Pipeline](dwi.md#eddy-qc)
 
-   3. [Diffusion SHARD Pipeline](dwi-shard.md#diffusion-mri-qc)
+   3. [Diffusion SHARD Pipeline](dwi-shard.md#shard-qc)
    
 3. All QC metrics are available in the `combined.tsv` spreadsheet in the
 [supplementary](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files).

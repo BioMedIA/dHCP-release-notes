@@ -63,6 +63,7 @@ transformation is combined with a non-linear registration<sup>10</sup> of
 the T2w volume to the 40 weeks template<sup>11</sup> to allow transformations
 between diffusion and atlas spaces.
 
+<a name="eddy-qc"></a>
 ## Diffusion MRI QC
 
 1. Numerous quality assurance metrics are calculated by the EDDY QC

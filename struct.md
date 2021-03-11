@@ -106,6 +106,27 @@ The structural pipline generates the files listed in the [Structural pipeline](s
 
 The structural pipeline is described in detail elsewhere<sup>9</sup>.
 
+<a name="struct-qc"></a>
+### Quality Control/Assurance
+
+The dHCP structural data set contains MR imaging of whole brain anatomy across a wide gestational age. The data collected contains rapidly changing anatomical variation across age, that inherently provides challenges for automatic segmentation processes. For this reason, we carried out a visual inspection of the segmentation pipeline on a random set of 30 datasets (gestational age range at scan 27.14 weeks-44.14 weeks). 
+
+The following anatomical segmentations were assessed:
+- Cortical ribbon
+- Ventricular space including the cavum septum pellucidum
+- Whole brain white matter
+- Deep grey matter (basal ganglia)
+
+The results showed some small areas of common segmentation errors across the dataset that can be easily correctable with some fine editing:
+1. The cortical ribbon segmentation can contain small regions of highly convoluted cortex that may not be sufficiently delineated due to partial volume effects and there is consistent mis-registration of the cortex in the medial temporal lobe.
+2. The anterior cavum septum pellucidum can be mis-labelled as ventricular space.
+3. The basal ganglia/deep grey matter anatomy may have a small chunk of anatomy mislabelled as white matter. 
+4. The whole brain white matter segmentation was found to be consistently accurate across subjects. 
+
+We therefore recommend that visual inspection of the segmentation data in this cohort is carried out before inclusion in analysis.
+
+
+
 ### References
 
 1. Tustison, N. J., Avants, B. B., Cook, P. A., Zheng, Y., Egan, A.,
