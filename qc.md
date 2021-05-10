@@ -46,21 +46,25 @@ The inclusion criteria for **fMRI pipeline outputs** is:
 
 1. Raw fMRI & T2w must pass the recon QC.
 
-2. All preprocessed fMRI is released. Data that failed fMRI
+2. Preprocessed T2w must pass the sMRI pipeline QC.
+
+3. All preprocessed fMRI is released. Data that failed fMRI
 pipeline QC is flagged in the `combined.tsv` spreadsheet in the
 [supplementary](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files)
 
-3. Transforms to standard space are dependent upon availability of extracted
+4. Transforms to standard space are dependent upon availability of extracted
 (white and pial) surfaces from sMRI pipeline.
 
 The inclusion criteria for **dMRI pipeline outputs** is:
 
 1. Raw dMRI & T2w must pass the recon QC.
 
-2. All preprocessed dMRI is released. Data that failed dMRI
+2. Preprocessed T2w must pass the sMRI pipeline QC.
+
+3. All preprocessed dMRI is released. Data that failed dMRI
 pipeline/s QC is flagged in the `combined.tsv` spreadsheet in the
 [supplementary](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files)
 
-3. Transforms to standard space are dependent upon availability of extracted
+4. Transforms to standard space are dependent upon availability of extracted
 (white and pial) surfaces from sMRI pipeline.
 
