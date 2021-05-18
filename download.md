@@ -107,4 +107,4 @@ Column | Notes
 `sedation` |  1 if the subject was sedated during the scan, 0 otherwise
 
 The file can be downloaded from
-[combined_rel02.tsv](supplementary_files/combined_rel02.tsv).
+[combined.tsv](supplementary_files/combined.tsv).
