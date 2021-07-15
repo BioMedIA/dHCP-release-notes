@@ -62,6 +62,8 @@ Over time, the dataset will grow and your contribution will be more and
 more important so that each and everyone of you can still obtain the data
 in the smoothest possible way.
 
+#### NOTE: To obtain complete dataset of fMRI, you need to download the fMRI and fMRI patch (via torrent).
+
 ##  Downloading non-imaging data
 
 ### List of Subjects, Gender, GA
