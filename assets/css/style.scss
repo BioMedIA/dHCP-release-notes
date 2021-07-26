@@ -3,7 +3,8 @@
 
 $body-text-color: #2f444c;
 
-@import "{{ site.theme }}";
+// @import "{{ site.theme }}";
+@import "jekyll-theme-cayman";
 
 // strange, you'd think setting $body-text-color would do this, but it doesn't
 // you also can't use a variable here
