@@ -1,7 +1,7 @@
 ---
 ---
 
-## Functional (fMRI) Pipeline
+## Neonatal Functional (fMRI) Pipeline
 
 ### Inputs
 

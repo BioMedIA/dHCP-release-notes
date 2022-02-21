@@ -9,17 +9,14 @@
 
 ## Pipelines
 
-### [Reconstruction pipeline](recon.md)
-
-### [Structural pipeline](struct.md)
-
-### [Diffusion EDDY pipeline](dwi.md)
-
-### [Diffusion SHARD pipeline](dwi-shard.md)
-
-### [Functional pipeline](fmri.md)
-
-### [Directory structure and file naming conventions](structure.md)
+| Neonatal                                                           | Fetal                                                               |
+|:-------------------------------------------------------------------|:--------------------------------------------------------------------|
+|                                                   [Reconstruction pipeline](recon.md)                                                   ||
+| [Structural pipeline](struct.md)                                   | [Structural pipeline](struct-fetal.md)                              |
+| [Diffusion EDDY pipeline](dwi.md)                                  | N/A                                                                 |
+| [Diffusion SHARD pipeline](dwi-shard.md)                           | [Diffusion SHARD pipeline](dwi-shard-fetal.md)                      |
+| [Functional pipeline](fmri.md)                                     | [Functional pipeline](fmri-fetal.md)                                |
+|                                         [Directory structure and file naming conventions](structure.md)                                 ||
 
 ## Acknowledgments
 

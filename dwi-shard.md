@@ -1,7 +1,7 @@
 ---
 ---
 
-## The diffusion SHARD pipeline
+## Neonatal diffusion SHARD pipeline
 
 ### Inputs
 

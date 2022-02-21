@@ -1,14 +1,15 @@
 ---
 ---
 
-## Third Data Release
+## Fourth Data Release
 
-We would like to announce the third release of data as part of the Developing
+We would like to announce the fourth release of data as part of the Developing
 Human Connectome Project (dHCP) – an ERC-funded collaboration between
 King’s College London, Imperial College London and University of Oxford.
 
-This is the project’s third open access data release which consists of
-images of 783 neonatal subjects (886 datasets). The imaging data includes structural imaging,
+This is the project’s fourth open access data release which consists of
+images of 783 neonatal subjects (886 scan sessions) and **XX** fetal subjects 
+(**XX** scan sessions). The imaging data includes structural imaging,
 structural connectivity data (diffusion MRI) and functional connectivity
 data (resting-state fMRI). This data release comes with minimal accompanying
 metadata: sex, age at birth, age at scan, birthweight, head circumference

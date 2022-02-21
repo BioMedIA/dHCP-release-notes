@@ -1,7 +1,7 @@
 ---
 ---
 
-## Diffusion EDDY Pipeline
+## Neonatal Diffusion EDDY Pipeline
 
 ### Inputs
 

@@ -1,7 +1,7 @@
 ---
 ---
 
-## The structural pipeline
+## Neonatal structural pipeline
 
 The [structural
 pipeline](https://github.com/BioMedIA/dhcp-structural-pipeline) was
