@@ -32,18 +32,18 @@ section of the directory structure summary.
 
 ### Pipeline
 
-The fetal dMRI pipeline<sup>[3](#ref3)</sup> consists of the following 
+The fetal dMRI pipeline<sup>[3](#ref1)</sup> consists of the following 
 processing steps:
 
 1. Image denoising using random matrix theory with optimal
 shrinkage in the complex domain (i.e., using magnitude and phase
-images)<sup>[1](#ref1)</sup>. This denoising approach also accounts
+images)<sup>[2](#ref2)</sup>. This denoising approach also accounts
 for spatial noise correlations introduced by SENSE and Partial Fourier
 subsampling. After denoising, the magnitude images are extracted.
 
 2. The B0 field map, used to model susceptibility-induced distortion,
 is estimated *dynamically* from the phase difference between spin echo and 
-field echo (SAFE) images<sup>[6](#ref6)</sup>. The magnitude images are then
+field echo (SAFE) images<sup>[3](#ref3)</sup>. The magnitude images are then
 unwarped using sinc-interpolation.
 
 3. The denoised and unwarped images are corrected for intensity inhomogeneity 
@@ -52,7 +52,7 @@ estimated based on the mean spin echo b=0 image (before motion correction) and
 multiplicatively applied to all spin echo and field echo volumes.
 
 4. Motion correction using SHARD slice-to-volume 
-reconstruction<sup>[2](#ref2)</sup>. The inputs are the unwarped and bias field 
+reconstruction<sup>[5](#ref5)</sup>. The inputs are the unwarped and bias field 
 corrected spin echo and field echo dMRI images (stage 3). The output are 
 estimated subject motion traces, slice weights used to correct dropouts, and 
 the SHARD representation fitted to the scattered slice data of the spin echo 
@@ -66,7 +66,7 @@ image information. Note that motion-induced gradient reorientation is modelled
 during SHARD slice-to-volume reconstruction in step 4; the gradient table
 hence remains unchanged.
 
-7. TODO Rigid alignement to high-resolution structural (T2-weighted) space
+6. **TODO** Rigid alignement to high-resolution structural (T2-weighted) space
 using normalised mutual information (NMI) based registration with FSL
 Flirt <sup>[8](#ref8)</sup>on the mean b=1000 s/mm<sup>2</sup> shell. This
 transformation is combined with a non-linear registration<sup>[9](#ref9)</sup>
@@ -75,8 +75,6 @@ transformations between diffusion and atlas spaces.
 
 <a name="shard-qc"></a>
 ### Diffusion MRI QC
-
-TODO
 
 Automated quality control metrics are calculated for several key steps in
 the pipeline. Specifically, the data release includes estimates of:
@@ -87,12 +85,12 @@ the pipeline. Specifically, the data release includes estimates of:
   mean b=0 signal.
 
 - **Motion metrics**: Measures of the mean translation and rotation that was
-  detected/estimated in the motion correction method.<sup>[2](#ref2)</sup>
+  detected/estimated in the motion correction method.<sup>[5](#ref5)</sup>
   These metrics are based on the gradient of the motion trace, thus measuring
   the subject activity during the scan.
 
 - **Outlier ratio**: The mean outlier weight of all slices in the data, as
-  detected in slice-to-volume reconstruction.<sup>[2](#ref2)</sup>
+  detected in slice-to-volume reconstruction.<sup>[5](#ref5)</sup>
 
 In addition, overview screenshots of the motion traces and destriped output
 data are generated. Based on these screenshots, visual pass/fail Quality
@@ -104,42 +102,34 @@ All QC metrics are available in the `combined.tsv` spreadsheet in the
 
 ### References
 
-TODO
+<a name="ref1"/>1. Christiaens, D., Cordero-Grande, L., Price, A.N.,
+Hutter, J., Hughes, E.J., Counsell, S.J., Tournier, J-D., Hajnal, J.V. **Fetal
+diffusion MRI acquisition and analysis in the developing Human Connectome
+Project** *ISMRM 2019, 0629.* [abstract](http://archive.ismrm.org/2019/0629.html)
 
-<a name="ref1"/>1. Cordero-Grande, L., Christiaens, D., Hutter, J., Price,
+<a name="ref2"/>2. Cordero-Grande, L., Christiaens, D., Hutter, J., Price,
 A.N., Hajnal, J.V.  **Complex diffusion-weighted image estimation via matrix
 recovery under general noise models** *Neuroimage (2019), 200: 391-404.* [DOI:
 10.1016/j.neuroimage.2019.06.039](https://doi.org/10.1016/j.neuroimage.2019.06.039)
 
-<a name="ref2"/>2. Christiaens, D., Cordero-Grande, L., Pietsch, M.,
+<a name="ref3"/>3. Cordero-Grande, L., Price. A.N., Ferrazzi, G., Hutter, J.,
+Christiaens, D., Hughes, E., Hajnal, J. **Spin And Field Echo (SAFE) dynamic 
+field correction in 3T fetal EPI.** *ISMRM 2018, 0208.* 
+[abstract](http://archive.ismrm.org/2018/0208.html)
+
+<a name="ref4"/>4. Tustison, N.J., Avants, B.B., Cook, P.A., Zheng, Y., Egan, 
+A., Yushkevich, P.A., Gee, J.C. **N4ITK: improved N3 bias correction** *IEEE 
+Trans Med Imaging (2010), 29(6): 1310-20* [DOI: 
+10.1109/TMI.2010.2046908](https://doi.org/10.1109/TMI.2010.2046908)
+
+<a name="ref5"/>5. Christiaens, D., Cordero-Grande, L., Pietsch, M.,
 Hutter, J., Price, A.N., Hughes, E.J., Vecchiato, K., Deprez, M., Edwards,
 A.D., Hajnal, V., Tournier, J-D.  **Scattered slice SHARD reconstruction
 for motion correction in multi-shell diffusion MRI** *NeuroImage (2021),
 225: 117437.* [DOI:
  10.1016/j.neuroimage.2020.117437](https://doi.org/10.1016/j.neuroimage.2020.117437)
 
-<a name="ref3"/>3. Christiaens, D., Cordero-Grande, L., Price, A.N.,
-Hutter, J., Hughes, E.J., Counsell, S.J., Tournier, J-D., Hajnal, J.V. **Fetal
-diffusion MRI acquisition and analysis in the developing Human Connectome
-Project** *ISMRM 2020, O629.*
 
-<a name="ref4"/>4. Tustison et al. TODO
-
-<a name="ref5"/>5. Christiaens, D., Cordero-Grande, L., Hutter, J.,
-Price, A.N., O'Murchearthaigh, J., Vecchiato, K., Hajnal, J.V., Tournier,
-J-D. **Fat-shift suppression in diffusion MRI using rotating phase encoding
-and localised outlier weighting** *ISMRM 2020, O981.*
-
-<a name="ref6"/>6. Andersson, J.L., Skare, S., and
-Ashburner, J. **How to correct susceptibility distortions
-in spin-echo echo-planar images: application to diffusion
-tensor imaging** *Neuroimage (2003), 20(2): 870-888.* [DOI:
-10.1016/S1053-8119(03)00336-7](https://doi.org/10.1016/S1053-8119(03)00336-7)
-
-<a name="ref7"/>7. Pietsch, M. and Christiaens, D. and Hajnal, J.V. &
-Tournier, J-D. **dStripe: slice artefact correction in diffusion
-MRI via constrained neural network** *biorxiv (2020)* [DOI:
-10.1101/2020.10.20.347518](https://doi.org/10.1101/2020.10.20.347518)
 
 <a name="ref8"/>8. Jenkinson, M., Bannister, P., Brady, M., and Smith,
 S. **Improved optimization for the robust and accurate linear registration
