@@ -1,7 +1,7 @@
 ---
 ---
 
-## Neonatal diffusion SHARD pipeline
+## Fetal diffusion SHARD pipeline
 
 ### Inputs
 
@@ -9,8 +9,8 @@
 
 | Description                                                                             | Filename                                                                  |
 |:----------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|
-| Multi-band dMRI EPI (denoised reconstruction)                                           | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-denoised_dwi.nii`           |
-| Multi-band dMRI EPI (Chi2-maps)                                                         | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-chi2_dwi.nii`               |
+| Multi-band dMRI EPI (spin echo)                                                         | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-???.nii`                    |
+| Multi-band dMRI EPI (field echo)                                                        | `dwi/sub-{subid}_ses-{sesid}_run-{seqnum}_rec-???.nii`                    |
 
 
 ### Outputs
@@ -32,13 +32,8 @@ section of the directory structure summary.
 
 ### Pipeline
 
-The third data release includes an alternative dMRI processing
-pipeline based on denoising<sup>[1](#ref1)</sup> and SHARD motion
-correction<sup>[2](#ref2)</sup>. This pipeline correponds more closely to
-the fetal processing pipeline<sup>[3](#ref3)</sup>, and is therefore better
-suited for studies that include both the fetal and the neonatal data.
-
-The pipeline consists of the following processing steps:
+The fetal dMRI pipeline<sup>[3](#ref3)</sup> consists of the following 
+processing steps:
 
 1. Image denoising using random matrix theory with optimal
 shrinkage in the complex domain (i.e., using magnitude and phase
@@ -46,46 +41,32 @@ images)<sup>[1](#ref1)</sup>. This denoising approach also accounts
 for spatial noise correlations introduced by SENSE and Partial Fourier
 subsampling. After denoising, the magnitude images are extracted.
 
-2. The denoised images are then corrected for Gibbs
-ringing<sup>[4](#ref4)</sup>.
+2. The B0 field map, used to model susceptibility-induced distortion,
+is estimated *dynamically* from the phase difference between spin echo and 
+field echo (SAFE) images<sup>[6](#ref6)</sup>. The magnitude images are then
+unwarped using sinc-interpolation.
 
-3. Fat shift suppression is achieved through local outlier reweighting in
-slice-to-volume reconstruction (step 5)<sup>[5](#ref5)</sup>. The local
-outlier weights are computed independently based on the residuals of the
-SENSE reconstruction (Chi2-maps). This is achieved using a 2-class Gaussian 
-Mixture Model with a Markov Random Field, fitted using Expectation-Maximization.
+3. The denoised and unwarped images are corrected for intensity inhomogeneity 
+using static N4 bias field correction<sup>[4](#ref4)</sup>. The bias field is 
+estimated based on the mean spin echo b=0 image (before motion correction) and 
+multiplicatively applied to all spin echo and field echo volumes.
 
-4. The B0 field map, used to model susceptibility-induced distortion,
-is estimated using FSL Topup<sup>[6](#ref6)</sup>. As input for topup, we
-selected the two "best" b=0 volumes for each of the 4 phase encoding (PE)
-directions based on a edge-detection filter in the slice direction. The
-indices of the selected 8 volumes are stored and used as reference; the
-ordering of the image volumes and the corresponding diffusion encoding is
-thus never changed.
+4. Motion correction using SHARD slice-to-volume 
+reconstruction<sup>[2](#ref2)</sup>. The inputs are the unwarped and bias field 
+corrected spin echo and field echo dMRI images (stage 3). The output are 
+estimated subject motion traces, slice weights used to correct dropouts, and 
+the SHARD representation fitted to the scattered slice data of the spin echo 
+and field echo images. The motion- and distortion-corrected image is stored as 
+a series of Spherical Harmonics (SH) coefficients for each shell.
 
-5. Motion correction using SHARD slice-to-volume
-reconstruction<sup>[2](#ref2)</sup>. The inputs are the denoised and
-degibbsed multiband dMRI images (stage 2), the voxel weights (step 3),
-and the field map (step 4). The output are estimated subject motion traces,
-slice weights used to correct dropouts, and the SHARD representation fitted
-to the scattered slice data. The SHARD reconstruction also models the
-slice profile to recover the images at isotropic resolution. The motion-
-and distortion-corrected image is stored as a series of Spherical Harmonics
-(SH) coefficients for each shell.
-
-6. The 5D SHARD output image is projected onto the original diffusion encoding
+5. The 5D SHARD output image is projected onto the original diffusion encoding
 used during acquisition, to provide the dMRI output in a format compatible with
 conventional software. This is a one-to-one mapping representing identical
 image information. Note that motion-induced gradient reorientation is modelled
-during SHARD slice-to-volume reconstruction in step 5; the gradient table
+during SHARD slice-to-volume reconstruction in step 4; the gradient table
 hence remains unchanged.
 
-7. Inter-slice intensity inhomogeneities were subsequently estimated and
-corrected on the motion-corrected projected dMRI volumes from step 6 using
-*dStripe*<sup>[7](#ref7)</sup>.  Note that these corrections were applied
-to the reconstructed dMRI data, not to the 5D SHARD output image.
-
-8. Rigid alignement to high-resolution structural (T2-weighted) space
+7. TODO Rigid alignement to high-resolution structural (T2-weighted) space
 using normalised mutual information (NMI) based registration with FSL
 Flirt <sup>[8](#ref8)</sup>on the mean b=1000 s/mm<sup>2</sup> shell. This
 transformation is combined with a non-linear registration<sup>[9](#ref9)</sup>
@@ -94,6 +75,8 @@ transformations between diffusion and atlas spaces.
 
 <a name="shard-qc"></a>
 ### Diffusion MRI QC
+
+TODO
 
 Automated quality control metrics are calculated for several key steps in
 the pipeline. Specifically, the data release includes estimates of:
@@ -121,6 +104,8 @@ All QC metrics are available in the `combined.tsv` spreadsheet in the
 
 ### References
 
+TODO
+
 <a name="ref1"/>1. Cordero-Grande, L., Christiaens, D., Hutter, J., Price,
 A.N., Hajnal, J.V.  **Complex diffusion-weighted image estimation via matrix
 recovery under general noise models** *Neuroimage (2019), 200: 391-404.* [DOI:
@@ -138,10 +123,7 @@ Hutter, J., Hughes, E.J., Counsell, S.J., Tournier, J-D., Hajnal, J.V. **Fetal
 diffusion MRI acquisition and analysis in the developing Human Connectome
 Project** *ISMRM 2020, O629.*
 
-<a name="ref4"/>4. Kellner, E., Dhital, B., Kiselev, V.G., Reisert,
-M. **Gibbs-ringing artifact removal based on local subvoxel-shifts.**
-*Magnetic Resonance in Medicine (2016) 76: 1574–1581.* [DOI:
-10.1002/mrm.26054](https://doi.org/10.1002/mrm.26054)
+<a name="ref4"/>4. Tustison et al. TODO
 
 <a name="ref5"/>5. Christiaens, D., Cordero-Grande, L., Hutter, J.,
 Price, A.N., O'Murchearthaigh, J., Vecchiato, K., Hajnal, J.V., Tournier,
