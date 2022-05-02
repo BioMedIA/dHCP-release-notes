@@ -178,4 +178,6 @@ atlas of neonatal brain development** *bioRxiv (2018), 251512.* [DOI:
 10.1101/251512](https://doi.org/10.1101/251512)
 
 
+### Pipeline scripts
 
+The processing scripts used in the dMRI SHARD pipeline are published on [GitHub](https://github.com/dchristiaens/dhcp-shard-pipeline).
