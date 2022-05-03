@@ -41,6 +41,10 @@ are listed in the [Functional pipeline](structure.html#functional-pipeline) sect
 
 ### Pipeline
 
+Version `1.2.0` of the dHCP neonatal fMRI pipeline was used for release 3 and can be downloaded here: https://git.fmrib.ox.ac.uk/seanf/dhcp-neonatal-fmri-pipeline/-/tree/1.2.0
+
+The preprocessing steps implemented in the pipeline are as follows:
+
 1. Prepare fieldmaps for correction of susceptibility distortions
 
     1. Estimate field map from the two “best” spin-echo volumes (1 per
