@@ -1,8 +1,10 @@
 ---
 ---
-## fetal data
+## Data download update (Oct 2023)
 
-Coming soon....
+Please follow this guideline for downloading data from NDA. 
+
+[Guidelines - download from NDA](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files/NDA_guidelines.pdf)
 
 ## Third Data Release
 
