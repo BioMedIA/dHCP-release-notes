@@ -4,7 +4,7 @@
 
 Please follow this guideline for downloading data from NDA. 
 
-[Guidelines - download from NDA](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files/NDA_guidelines.pdf)
+[Updated guidelines - download from NDA](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files/Guidelines downloading data v3.pdf)
 
 ## Third Data Release
 
