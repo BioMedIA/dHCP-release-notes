@@ -1,8 +1,21 @@
 ---
 ---
-## Data download update (Oct 2023)
+## update December 2023
 
-Please follow this guideline for downloading data from NDA. 
+The third data release in currently underway. 
+
+Data that are available now:
+- Neonatal data: native and processed. Structural, DTI, fMRI.
+- Fetal data: native and processed. Structural, DTI, fMRI.
+- Clinical information about pregnancy and birth.
+- Genomics.
+- Eye-tracking data at 18 months of age.
+
+Upcoming data (pending NDA approval):
+- Neurodevelopmental outcome at 18 months of age.
+
+## HOW TO ACCESS AND DOWNLOAD THE DATA:
+All data are uploaded on the NDA website https://nda.nih.gov/edit_collection.html?id=3955. The NDA is responsible for all data governance. Please follow the guidelines below on how to request access and download the data:
 
 [Updated guidelines - download from NDA](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files/Guidelines%20downloading%20data%20v3.pdf)
 
@@ -18,11 +31,7 @@ structural connectivity data (diffusion MRI) and functional connectivity
 data (resting-state fMRI). This data release comes with minimal accompanying
 metadata: sex, age at birth, age at scan, birthweight, head circumference
 and radiology score. More specific information about the available data
-can be found in the [data organisation notes](organisation.html). To
-access the data you will be required to agree to a simple [data sharing
-agreement](http://www.developingconnectome.org/open-access-dhcp-data-terms-of-use-version-4-0_2019-05-23/)
-and will then be provided with access routes to two different modes of
-data download.
+can be found in the [data organisation notes](organisation.html). 
 
 We invite colleagues in the field to explore and
 [feedback](https://neurostars.org/tags/developing-hcp) on the value and
@@ -31,10 +40,7 @@ using analysis pipelines that are subject to further development.  If you
 use this data or the pipelines please cite the appropriate publications as
 detailed in the [How to cite](cite.html) notes.
 
-The project to date has successfully completed over 800 neonatal scans and
-300 fetal scans. Further
-data releases are planned - these will be announced on the dHCP website
-when they are ready.
+
 
 <!---
 ## News
@@ -62,32 +68,6 @@ by the Wellcome/EPSRC Centre for Medical Engineering [WT 203148/Z/16/Z]. We are
 also thankful to the WU-Minn-Oxford Human Connectome Project consortium
 (1U54MH091657-01) for access to their computing resources.
 
-Study data were collected and managed using REDCap electronic data capture
-tools hosted at King's College, London.
 
-REDCap (Research Electronic Data Capture) is a secure, web-based software
-platform designed to support data capture for research studies, providing
-1) an intuitive interface for validated data capture; 2) audit trails
-for tracking data manipulation and export procedures; 3) automated export
-procedures for seamless data downloads to common statistical packages; and 4)
-procedures for data integration and interoperability with external sources.
-
-Harris, PA., Taylor, R., Thielke, R., Payne, J., Gonzalez, N., Conde,
-JG., **Research electronic data capture (REDCap) – A metadata-driven
-methodology and workflow process for providing translational research
-informatics support**, *J Biomed Inform. 2009 Apr;42(2):377-81.* [DOI:
-10.1016/j.jbi.2008.08.010](https://doi.org/10.1016/j.jbi.2008.08.010)
-
-Harris, PA., Taylor, R., Minor, BL., Elliott, V., Fernandez, M.,
-O’Neal, L., McLeod, L., Delacqua, G., Delacqua, F., Kirby, J., Duda,
-SN., REDCap Consortium, **The REDCap consortium: Building an international
-community of software partners**, *J Biomed Inform. 2019 May 9* [DOI:
-10.1016/j.jbi.2019.103208](https://doi.org/10.1016/j.jbi.2019.103208)
-
-Burns, SS., Browne, A., Davis, GN., Rimrodt, SL., Cutting, LE. **PyCap
-(Version 1.0)** *Nashville, TN: Vanderbilt University
-and Philadelphia, PA: Childrens Hospital of Philadelphia. 
-[https://github.com/sburns/PyCap](https://github.com/sburns/PyCap)*
-[DOI: 10.5281/zenodo.9917](http://doi.org/10.5281/zenodo.9917)
 
 
