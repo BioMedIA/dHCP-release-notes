@@ -1,6 +1,6 @@
 ---
 ---
-## update December 2023
+## Updated January 2024
 
 The third data release in currently underway. 
 
@@ -15,7 +15,7 @@ Upcoming data (pending NDA approval):
 - Neurodevelopmental outcome at 18 months of age.
 
 ## HOW TO ACCESS AND DOWNLOAD THE DATA:
-All data are uploaded on the NDA website https://nda.nih.gov/edit_collection.html?id=3955. The NDA is responsible for all data governance. Please follow the guidelines below on how to request access and download the data:
+All data are uploaded on the [NDA website](https://nda.nih.gov/edit_collection.html?id=3955). The NDA is responsible for all data governance. Please follow the guidelines below on how to request access and download the data:
 
 [Updated guidelines - download from NDA](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files/Guidelines%20downloading%20data%20v3.pdf)
 
