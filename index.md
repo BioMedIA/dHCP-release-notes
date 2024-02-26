@@ -1,38 +1,36 @@
 ---
 ---
-## Updated January 2024
+## Fourth data release (Feb 2024)
+## Consolidated release, now including data from both fetuses and neonates
 
-The third data release in currently underway. 
+## 1.	Cohort 
+•	Neonatal participants: 783 subjects (886 datasets).  
+•	Fetal participants: 273 subjects (297 datasets).
 
-Data that are available now:
-- Neonatal data: native and processed. Structural, DTI, fMRI.
-- Fetal data: native and processed. Structural, DTI, fMRI.
-- Clinical information about pregnancy and birth.
-- Genomics.
-- Eye-tracking data at 18 months of age.
+## 2.	MR Imaging data
+•	Native and processed. Structural, DTI, fMRI.
 
-Upcoming data (pending NDA approval):
-- Neurodevelopmental outcome at 18 months of age.
+## 3.	Clinical information about pregnancy and birth
+•	Pregnancy: Data include previous obstetric history, pre-pregnancy and antenatal maternal conditions, medication. 
+•	Birth: data include gestational age at birth, birth weight, length, and head circumference, presentation and mode of birth, medication required at delivery, nutrition and feeding, apgar scores at 1 and 5 min of age. For babies that were admitted to the intensive care unit, there are clinical details about their stay.
+
+## 4.	Genomics
+•	Saliva-derived DNA sample were genotyped for single-nucleotide polymorphisms and also processed for methylation analysis. 
+
+## 5.	Eye-tracking data at 18 months of age
+•	Visual attention metrics
+
+## Upcoming data (pending NDA approval):
+•	Neurodevelopmental outcome at 18 months of age.
+
 
 ## HOW TO ACCESS AND DOWNLOAD THE DATA:
-All data are uploaded on the [NDA website](https://nda.nih.gov/edit_collection.html?id=3955). The NDA is responsible for all data governance. Please follow the guidelines below on how to request access and download the data:
+All data are available from the NDA website [NDA website](https://nda.nih.gov/edit_collection.html?id=3955). The NDA is responsible for all data governance. Instructions for how to access and download the data can be found:
 
 [Updated guidelines - download from NDA](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files/Guidelines%20downloading%20data%20v3.pdf)
 
-## Third Data Release
 
-We would like to announce the third release of data as part of the Developing
-Human Connectome Project (dHCP) – an ERC-funded collaboration between
-King’s College London, Imperial College London and University of Oxford.
-
-This is the project’s third open access data release which consists of
-images of 783 neonatal subjects (886 datasets). The imaging data includes structural imaging,
-structural connectivity data (diffusion MRI) and functional connectivity
-data (resting-state fMRI). This data release comes with minimal accompanying
-metadata: sex, age at birth, age at scan, birthweight, head circumference
-and radiology score. More specific information about the available data
-can be found in the [data organisation notes](organisation.html). 
-
+## Feedback
 We invite colleagues in the field to explore and
 [feedback](https://neurostars.org/tags/developing-hcp) on the value and
 characteristics of the image dataset. The image data have been processed
