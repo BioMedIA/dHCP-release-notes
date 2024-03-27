@@ -1,14 +1,7 @@
 # Open Science Resources
 
 ## Data
-1. First Release (2017)
-    - 40 representative neonatal subjects
-    - Structural, Diffusion, Functional, and derivatives
-    - [http://www.developingconnectome.org/project/data-release-user-guide/](http://www.developingconnectome.org/project/data-release-user-guide/)
-2. Second Release (2019)
-    - 569 sessions from 511 neonatal subjects
-    - Structural, Diffusion, Functional, and derivatives
-    - [http://www.developingconnectome.org/information-registration-and-download/](http://www.developingconnectome.org/information-registration-and-download/)
+Data are available from the [NDA website](https://nda.nih.gov/experiment.html?id=2018&collectionId=3955).
 
 ## Developmental Atlases
 1. Volumetric neonatal atlas
@@ -20,12 +13,15 @@
     - [https://brain-development.org/brain-atlases/atlases-from-the-dhcp-project/cortical-surface-template/](https://brain-development.org/brain-atlases/atlases-from-the-dhcp-project/cortical-surface-template/)
     
 ## Pipelines
-1. Structural Pipeline
-    - [https://github.com/BioMedIA/dhcp-structural-pipeline](https://github.com/BioMedIA/dhcp-structural-pipeline)
-2. Diffusion Pipeline
-    - [https://git.fmrib.ox.ac.uk/matteob/dHCP_neo_dMRI_pipeline_release](https://git.fmrib.ox.ac.uk/matteob/dHCP_neo_dMRI_pipeline_release)
-3. Functional Pipeline
-    - [https://git.fmrib.ox.ac.uk/seanf/dhcp-neonatal-fmri-pipeline](https://git.fmrib.ox.ac.uk/seanf/dhcp-neonatal-fmri-pipeline)
+See modality specific [papers](https://biomedia.github.io/dHCP-release-notes/cite.html).
+## Neonatal
+1. Anatomical
+2. Functional
+3. Diffusion
+## Fetal
+1. Anatomical
+2. Functional
+3. Diffusion
     
 ## Other
 1. Scripts to align dHCP native surfaces to the dHCP surface template/atlas
