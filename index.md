@@ -1,8 +1,8 @@
 ---
 ---
-## Fourth data release (Feb 2024)
+## Fourth data release (Mar 2024)
 ## Consolidated release, now including data from both fetuses and neonates
-Details to be found in https://pubmed.ncbi.nlm.nih.gov/35677357/.
+Details to be found in (https://pubmed.ncbi.nlm.nih.gov/35677357/)
 
 ## 1.	Cohort 
 •	Neonatal participants: 783 subjects (886 datasets).  
