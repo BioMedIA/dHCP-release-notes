@@ -2,7 +2,7 @@
 ---
 ## Fourth data release (Mar 2024)
 ## Consolidated release, now including data from both fetuses and neonates
-Details to be found in (https://pubmed.ncbi.nlm.nih.gov/35677357/)
+Details can be found in [The Developing Human Connectome Project Neonatal Data Release](https://pubmed.ncbi.nlm.nih.gov/35677357/).
 
 ## 1.	Cohort 
 •	Neonatal participants: 783 subjects (886 datasets).  
@@ -29,15 +29,6 @@ Details to be found in (https://pubmed.ncbi.nlm.nih.gov/35677357/)
 All data are available from the NDA website [NDA website](https://nda.nih.gov/edit_collection.html?id=3955). The NDA is responsible for all data governance. Instructions for how to access and download the data can be found:
 
 [Updated guidelines - download from NDA](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files/Guidelines%20downloading%20data%20v3.pdf)
-
-
-## Feedback
-We invite colleagues in the field to explore and
-[feedback](https://neurostars.org/tags/developing-hcp) on the value and
-characteristics of the image dataset. The image data have been processed
-using analysis pipelines that are subject to further development.  If you
-use this data or the pipelines please cite the appropriate publications as
-detailed in the [How to cite](cite.html) notes.
 
 
 
