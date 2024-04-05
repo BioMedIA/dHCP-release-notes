@@ -3,7 +3,8 @@
 
 # Consolidated release, now including data from both fetuses and neonates
 
-Details can be found in this paper [The Developing Human Connectome Project Neonatal Data Release](https://pubmed.ncbi.nlm.nih.gov/35677357/).
+Details can be found in the neonatal data release paper [The Developing Human Connectome Project Neonatal Data Release](https://pubmed.ncbi.nlm.nih.gov/35677357/).
+Fetal data release paper in preparation.
 
 
 ## 1.	Cohort 
