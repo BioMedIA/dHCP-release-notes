@@ -1,8 +1,9 @@
 ---
 ---
-## Fourth data release (Mar 2024)
+
 ## Consolidated release, now including data from both fetuses and neonates
-Details can be found in [The Developing Human Connectome Project Neonatal Data Release](https://pubmed.ncbi.nlm.nih.gov/35677357/).
+
+Details can be found in this paper [The Developing Human Connectome Project Neonatal Data Release](https://pubmed.ncbi.nlm.nih.gov/35677357/).
 
 ## 1.	Cohort 
 •	Neonatal participants: 783 subjects (886 datasets).  
@@ -13,16 +14,19 @@ Details can be found in [The Developing Human Connectome Project Neonatal Data R
 
 ## 3.	Clinical information about pregnancy and birth
 •	Pregnancy: Data include previous obstetric history, pre-pregnancy and antenatal maternal conditions, medication. 
+
 •	Birth: data include gestational age at birth, birth weight, length, and head circumference, presentation and mode of birth, medication required at delivery, nutrition and feeding, apgar scores at 1 and 5 min of age. For babies that were admitted to the intensive care unit, there are clinical details about their stay.
 
 ## 4.	Genomics
-•	Saliva-derived DNA sample were genotyped for single-nucleotide polymorphisms and also processed for methylation analysis. 
+•	Saliva-derived DNA samples were genotyped for single-nucleotide polymorphisms and also processed for methylation analysis. 
 
 ## 5.	Eye-tracking data at 18 months of age
-•	Visual attention metrics
+•	Native data collected during visual attention tasks. 
 
-## Upcoming data (pending NDA approval):
-•	Neurodevelopmental outcome at 18 months of age.
+•	Processed measures of social, non-social, exogenous and endogenous attention.
+
+## 6. Neurodevelopmental outcome at 18 months of age
+•	Awaiting release by the NDA.
 
 
 ## HOW TO ACCESS AND DOWNLOAD THE DATA:
