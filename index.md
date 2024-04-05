@@ -1,9 +1,10 @@
 ---
 ---
 
-## Consolidated release, now including data from both fetuses and neonates
+# Consolidated release, now including data from both fetuses and neonates
 
 Details can be found in this paper [The Developing Human Connectome Project Neonatal Data Release](https://pubmed.ncbi.nlm.nih.gov/35677357/).
+
 
 ## 1.	Cohort 
 •	Neonatal participants: 783 subjects (886 datasets).  
@@ -29,10 +30,14 @@ Details can be found in this paper [The Developing Human Connectome Project Neon
 •	Awaiting release by the NDA.
 
 
-## HOW TO ACCESS AND DOWNLOAD THE DATA:
-All data are available from the NDA website [NDA website](https://nda.nih.gov/edit_collection.html?id=3955). The NDA is responsible for all data governance. Instructions for how to access and download the data can be found:
 
-[Updated guidelines - download from NDA](https://github.com/BioMedIA/dHCP-release-notes/tree/master/supplementary_files/Guidelines%20downloading%20data%20v3.pdf)
+---
+
+
+
+
+## HOW TO ACCESS AND DOWNLOAD THE DATA:
+Instructions on how to download data can be found [here](https://biomedia.github.io/dHCP-release-notes/supplementary_files/Guidelines%20downloading%20data%20v3.pdf).
 
 
 
