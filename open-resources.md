@@ -1,7 +1,9 @@
 # Open Science Resources
 
+***This page is under development***
+
 ## Data
-Data are available from the [NDA website](https://nda.nih.gov/experiment.html?id=2018&collectionId=3955).
+Data are available from the [NDA website](https://nda.nih.gov/edit_collection.html?id=3955).
 
 ## Developmental Atlases
 1. Volumetric neonatal atlas
