@@ -29,7 +29,9 @@ Fetal data release paper in preparation.
 •	Processed measures of social, non-social, exogenous and endogenous attention.
 
 ## 6. Neurodevelopmental outcome at 18 months of age
-•	Awaiting release by the NDA.
+• Bayley-III Scales of Infant Development.
+• Neurological examination.
+• Parenal completed questionnaires about child's behaviour, parenting style and home environment. 
 
 
 
